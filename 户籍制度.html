@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-03 Wed 17:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>户籍制度</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="dctrl" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/worg.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">户籍制度</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org9634190">1. 户籍制度及其功能</a></li>
+<li><a href="#org6e047bf">2. 户籍制度的历史变迁</a>
+<ul>
+<li><a href="#orge7a8044">2.1. 第一阶段，人口自由迁徙阶段 &#x2013; 1958</a></li>
+<li><a href="#org84f2de6">2.2. 第二阶段，人口迁移流动控制阶段 &#x2013; 1958～1978 (<b>key:人口迁移控制</b>)</a></li>
+<li><a href="#orgc514119">2.3. 第三阶段，人口迁移流动逐步松动阶段 &#x2013; 1978年后 (os:没想到是一个松紧松的过程)</a></li>
+</ul>
+</li>
+<li><a href="#org54e9a6f">3. 户籍制度的多样化模式和未来趋势</a>
+<ul>
+<li><a href="#org7dc1463">3.1. 投资入户模式</a></li>
+<li><a href="#orge4e0847">3.2. 居住证模式</a></li>
+<li><a href="#org2dbde6e">3.3. 务工迁入模式</a></li>
+<li><a href="#orgdd42f29">3.4. 亲属投靠模式</a></li>
+<li><a href="#orgdcbe397">3.5. 准入与计划并行模式</a></li>
+</ul>
+</li>
+<li><a href="#org0fdba6e">4. 关于户籍制度的思考</a>
+<ul>
+<li><a href="#org96065bc">4.1. 城乡人口迁移之屏障</a></li>
+<li><a href="#org4ce97a9">4.2. 事实上的准分裂和条块分割国家</a></li>
+</ul>
+</li>
+<li><a href="#orga849d35">5. 参考</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9634190" class="outline-2">
+<h2 id="org9634190"><span class="section-number-2">1</span> 户籍制度及其功能</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+一言以蔽之：户籍制度即对公民基本情况的收集确认的行政管理制度。人口登记是户籍制度的基本内容，而人口管理则是政府有关部门依据
+人口登记的内容，对人口的活动实施的管理，与*人口城市化关系最为密切的是人口迁移管理*。
+户籍制度的基本功能 —— 公民身份证明和为行政管理提供人口资料 是*任何国家户籍管理都具有的功能*。
+而我国户籍制度则有如下两个特别的功能：一为“附属”功能；二为限制功能。前者指附属于户籍制度的门类繁多的社会福利制度。后者为限制人口迁移
+和流动的功能。*户籍区分城市和农村和，则两者有不同的户籍身份，也享有不同的社会福利。则，城乡口人的迁移和流动被明确限制。*
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e047bf" class="outline-2">
+<h2 id="org6e047bf"><span class="section-number-2">2</span> 户籍制度的历史变迁</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge7a8044" class="outline-3">
+<h3 id="orge7a8044"><span class="section-number-3">2.1</span> 第一阶段，人口自由迁徙阶段 &#x2013; 1958</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+1956年全国首次户口工作会议明确了户口管理的三大基本功能：证明公民身份，便利公民行使权力和履行义务；统计人口数字，为国家经济、文化、
+国防建设提供人口资料；*发现和防止反革命和各种犯罪分子活动，密切配合斗争。*
+</p>
+</div>
+</div>
+<div id="outline-container-org84f2de6" class="outline-3">
+<h3 id="org84f2de6"><span class="section-number-3">2.2</span> 第二阶段，人口迁移流动控制阶段 &#x2013; 1958～1978 (<b>key:人口迁移控制</b>)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+*1957年12月，中共中央、国务院联合发出《关于制止农村人口盲目外流的指示》，要求城乡户口管理部门严格户籍管理，切实做好制止农业人口
+盲目外流工作。*1958年1月，我国第一个户籍管理法规——《中华人民共和国户口登记条例》正式颁布。此法规，将户籍管理纳入法制轨道。正式确立
+户口迁移审批制度和凭证落户制度，首次以法规形式限制农村人口迁往城镇。
+1961年、1962年等相关法规意见，都贯彻了严格控制人口迁移和流动的基本精神。
+</p>
+</div>
+</div>
+<div id="outline-container-orgc514119" class="outline-3">
+<h3 id="orgc514119"><span class="section-number-3">2.3</span> 第三阶段，人口迁移流动逐步松动阶段 &#x2013; 1978年后 (os:没想到是一个松紧松的过程)</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+改开后，由计划经济体制向市场经济体制转型，户籍制度严格限制人口流动的特征开始发生松动。
+1980年9月，公安部、粮食部、国家人事局联合颁布的《关于解决部分专业技术干部的农村家属迁往城镇由国家供应粮食问题规定》，标志着户籍制度
+开始打破严格的指标控制。
+1984年，国务院颁发的《国务院关于农民进入集镇落户问题的通知》规定，凡申请到集镇务工、经商、办服务业等等的农民和亲属，准予自理口粮
+落户集镇<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>，我国户籍制度改革在集镇开始由指标控制向准入条件控制过渡。
+1958年7月，公安部出台《关于城镇暂住人口管理规定》，*标志中国公民在非户籍地长期居住具有了合法性*。
+1992年8月，公安部发出《关于实行当地有效城镇居民户口的通知》，决定在小城镇、经济特区、经济开发区、高新产业开发区实行当地有效城镇
+户口制度。即“蓝印户口”，其基本原则是户口在当地有效。从此，户口准入制度扩大到小城镇。
+2001年5月，国务院批转公安部《关于推进小城镇户籍制度改革意见》，全面推进小城镇户籍制度的改革，进一步放宽农村户口迁移到小城镇的条件，
+并且允许各地按照具体情况推进本地户籍制度改革。
+2001年8月，石家庄户籍制度的改革，标志着大城市户籍制度开始进入以住房和职业为基本条件的“准入条件”制阶段。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org54e9a6f" class="outline-2">
+<h2 id="org54e9a6f"><span class="section-number-2">3</span> 户籍制度的多样化模式和未来趋势</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org7dc1463" class="outline-3">
+<h3 id="org7dc1463"><span class="section-number-3">3.1</span> 投资入户模式</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+允许在本地投资或纳税达到一定额度的人员迁入户口, 有的还规定购买有自主产权的商品房达到一定面积的人员, 也可将户口迁入城市。
+</p>
+</div>
+</div>
+<div id="outline-container-orge4e0847" class="outline-3">
+<h3 id="orge4e0847"><span class="section-number-3">3.2</span> 居住证模式</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+居住证是处于正式户籍和暂住户籍之间的一种户籍模式。
+这种模式是一种人才引进的绿色通道对于城市发展需要,而又无法马上给予户籍的人才,可以先申请人才居住证,持有人居住证也可享受正式户籍所附着的某些福利。
+</p>
+</div>
+</div>
+<div id="outline-container-org2dbde6e" class="outline-3">
+<h3 id="org2dbde6e"><span class="section-number-3">3.3</span> 务工迁入模式</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+务工迁入是针对较低层次劳动力放开户籍的一种模式,通常要求在当地工作达到一定年限,就是签有就业合同达到一定年限便可将户口迁入。
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd42f29" class="outline-3">
+<h3 id="orgdd42f29"><span class="section-number-3">3.4</span> 亲属投靠模式</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+亲属投靠模式多是指在当地有常住户口的居民可以申请其配偶、子女、父母与其共同居住生
+活，这一模式是针对直系亲属间的投靠，强调家庭的团聚，是最为人性化的户籍改革模式。
+</p>
+</div>
+</div>
+<div id="outline-container-orgdcbe397" class="outline-3">
+<h3 id="orgdcbe397"><span class="section-number-3">3.5</span> 准入与计划并行模式</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+准入与计划并行是准入制度在取代计划指标的过程中出现的一种过渡模式, 是为防止人口大量涌入城市, 而用计划指标进行调节的一种手段。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0fdba6e" class="outline-2">
+<h2 id="org0fdba6e"><span class="section-number-2">4</span> 关于户籍制度的思考</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org96065bc" class="outline-3">
+<h3 id="org96065bc"><span class="section-number-3">4.1</span> 城乡人口迁移之屏障</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+改开前，保障城市劳动力全面就业为目标的排他性劳动就业制度就是城市福利体制的核心。以推进工业化，对农村进行剥夺，实现以农养工的目标。
+改开后，改革阻力来自于城市既得利益集团和“城市国家保护策略”及政府官员城市政绩目标的影响 —— 所以说，越难落户的地区，对农民越不友好，但实际而言，数据会更好看。
+改开后，户籍制度“社会屏蔽”的功能已走向末路，而逐渐被一种后天所获得的“自致因素”所替代，如产权、文凭、技术证书等。相较而言，后者把对社会某个群体的排斥转换为
+对某个个体的排斥，从而减少社会冲突。但就如今来看，既得利益集团，通过资本筑起了新时代的阶级壁垒，“自致因素”在如此环境下，能否再发挥良好的效果呢？值得让人怀疑。
+</p>
+<blockquote>
+<p>
+从20世纪50年代中期至今，我国一直施行着严格的户籍制度。
+我国为实行赶超战略，从农业中获取资金，在资源的配置上必然有轻重缓急之分，为此，要把不同的人群区分开来，而户籍制度就起了这样的社会屏蔽作用。
+户籍制度最主要的作用就是将人群分为两类：城市户口和农村户口。
+户籍制度的基本特征之一就是对于城乡人口迁移进行严格的控制。
+我国建立起严格的户籍制度，户籍制度本质上是一种“社会屏蔽”制度，将占我国人口绝大多数的农村人口屏蔽在分享城市社会资源之外。
+户籍制度建立后，起到了两个主要的社会功能：
+维护经济分配、资源分享的秩序，以“非使用权”的手段来维持社会经济秩序 ；
+依靠户籍阻止农民进城，以实行工业发展的原始积累（李强，2004）。
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-org4ce97a9" class="outline-3">
+<h3 id="org4ce97a9"><span class="section-number-3">4.2</span> 事实上的准分裂和条块分割国家</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+户籍制度带来了各种天然歧视，就我个人认为比较尖锐的在于：教育资源的分配问题、贫富差距问题、农村贫困问题..
+户籍制度亦造成了：虽然中国各个省都承认自己是中国人，但大家似乎更承认自己是“某某省人”
+户籍制度之存在的悖论之一：城市负载过重，资源匮乏，人口过多，不得不实施户口准入限制。但现实情况是，由于城市之间的差距不断拉大，户口并不能挡住外来人口的涌入，
+只不过造成了歧视和不公平的待遇。
+户籍制度之国际与国内的差异：前者一般为服务人口管理&amp;行政管理便利。后者在此之上，还有人口迁移限制以及福利制度定制化之功能。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga849d35" class="outline-2">
+<h2 id="orga849d35"><span class="section-number-2">5</span> 参考</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="http:://rkyj.ruc.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&amp;id=261">户籍制度50年</a>
+<a href="http://www.dajunzk.com/hujifeichu.htm">
+户籍制度的危害与废除户籍制度</a>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://baike.baidu.com/item/%E8%87%AA%E7%90%86%E5%8F%A3%E7%B2%AE">自理口粮户口</a> &#x2013; 在当年，自己解决口粮的特殊户型&#x2026;
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: dctrl</p>
+<p class="date">Created: 2018-10-03 Wed 17:17</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

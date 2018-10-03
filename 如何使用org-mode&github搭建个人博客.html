@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-03 Wed 17:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如何使用org-mode and github搭建博客</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="dctrl" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/worg.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">如何使用org-mode and github搭建博客</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org60449ec">1. 问题：如何使用org-mode and github搭建博客</a>
+<ul>
+<li><a href="#orga276789">1.1. 一.为实现该目的所使用的Emacs Package(Emacs 插件)</a>
+<ul>
+<li><a href="#org4fe74cf">1.1.1. org-mode</a></li>
+<li><a href="#org5ddf91c">1.1.2. ox-publish</a></li>
+</ul>
+</li>
+<li><a href="#org3c63092">1.2. 二.所面临的问题</a>
+<ul>
+<li><a href="#org14be75c">1.2.1. index.org -&gt; index.html 要如何(高效)实现？</a>
+<ul>
+<li><a href="#orgd1a55fc">1.2.1.1. a.手动添加实现 -&gt; 比较简单，但效率低下，很蠢</a></li>
+<li><a href="#orgaa57c78">1.2.1.2. b.自动化实现 -&gt; 目前没头绪</a></li>
+</ul>
+</li>
+<li><a href="#org230308b">1.2.2. org-mode的配置&amp;优化</a></li>
+</ul>
+</li>
+<li><a href="#org2cb547a">1.3. 三.参考的资料</a>
+<ul>
+<li><a href="#orgc0f266a">1.3.1. Publishing Org-mode files to HTML- official tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0b8d9af">2. 动手 &#x2013; log</a>
+<ul>
+<li><a href="#org7352e94">2.1. 一. follow official tutorial</a>
+<ul>
+<li><a href="#orga8bf17b">2.1.1. 二. index pages</a></li>
+<li><a href="#org5beff2a">2.1.2. 三. Publishing the <i>org</i> project</a></li>
+<li><a href="#orgd5d04b6">2.1.3. 四. Basis Components</a>
+<ul>
+<li><a href="#orgaa03abb">2.1.3.1. 1. Publish Dynamic Org Notes to html</a></li>
+<li><a href="#org8179b1a">2.1.3.2. 2. Publish Static files Component</a></li>
+<li><a href="#orgaa81f2a">2.1.3.3. 3. Publish Component</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org60449ec" class="outline-2">
+<h2 id="org60449ec"><span class="section-number-2">1</span> 问题：如何使用org-mode and github搭建博客</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga276789" class="outline-3">
+<h3 id="orga276789"><span class="section-number-3">1.1</span> 一.为实现该目的所使用的Emacs Package(Emacs 插件)</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org4fe74cf" class="outline-4">
+<h4 id="org4fe74cf"><span class="section-number-4">1.1.1</span> org-mode</h4>
+</div>
+<div id="outline-container-org5ddf91c" class="outline-4">
+<h4 id="org5ddf91c"><span class="section-number-4">1.1.2</span> ox-publish</h4>
+</div>
+</div>
+<div id="outline-container-org3c63092" class="outline-3">
+<h3 id="org3c63092"><span class="section-number-3">1.2</span> 二.所面临的问题</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org14be75c" class="outline-4">
+<h4 id="org14be75c"><span class="section-number-4">1.2.1</span> index.org -&gt; index.html 要如何(高效)实现？</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<div id="outline-container-orgd1a55fc" class="outline-5">
+<h5 id="orgd1a55fc"><span class="section-number-5">1.2.1.1</span> a.手动添加实现 -&gt; 比较简单，但效率低下，很蠢</h5>
+</div>
+<div id="outline-container-orgaa57c78" class="outline-5">
+<h5 id="orgaa57c78"><span class="section-number-5">1.2.1.2</span> b.自动化实现 -&gt; 目前没头绪</h5>
+</div>
+</div>
+<div id="outline-container-org230308b" class="outline-4">
+<h4 id="org230308b"><span class="section-number-4">1.2.2</span> org-mode的配置&amp;优化</h4>
+</div>
+</div>
+<div id="outline-container-org2cb547a" class="outline-3">
+<h3 id="org2cb547a"><span class="section-number-3">1.3</span> 三.参考的资料</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgc0f266a" class="outline-4">
+<h4 id="orgc0f266a"><span class="section-number-4">1.3.1</span> <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">Publishing Org-mode files to HTML- official tutorial</a></h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0b8d9af" class="outline-2">
+<h2 id="org0b8d9af"><span class="section-number-2">2</span> 动手 &#x2013; log</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org7352e94" class="outline-3">
+<h3 id="org7352e94"><span class="section-number-3">2.1</span> 一. follow official tutorial</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+依官网给出的指引，创建如下文档架构&#x2026;
+css &#x2013; 网页风格涉及文件夹
+img &#x2013; 网页图片文件夹
+html_posts &#x2013; 生成的html文档的目标存放文件夹
+</p>
+<pre class="example">
+~/org/
+   |- css/
+   |  `- stylesheet.css
+   |- img/
+   |- html_posts/
+   |- index.org
+   `- remember.org
+
+</pre>
+</div>
+<div id="outline-container-orga8bf17b" class="outline-4">
+<h4 id="orga8bf17b"><span class="section-number-4">2.1.1</span> 二. index pages</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+关于首页的生成的指引，官网给出如下方法
+</p>
+<blockquote>
+<p>
+index html页面的生成方式
+When ever you want to add link to a file, do it the usual way. To link from
+  <code>index.org</code> to <code>remember.org</code>, just write
+</p>
+<pre class="example">
+[[file:remember.org][remember]]
+
+</pre>
+<p>
+Org will convert those links to HTML links for you on export:
+</p>
+<pre class="example">
+&lt;a href="./remember.html"&gt;remember&lt;/a&gt;
+
+</pre>
+
+<p>
+img的添加方式
+  Same is true for images. To add an image, put it in <code>~/org/img/test.jpg</code> and
+  refer to it by
+</p>
+<pre class="example">
+[[file:img/test.jpg]]
+
+</pre>
+</blockquote>
+<p>
+该方法的缺点为每次新增文章后，需要手动修改index.org以把文章链接到index pages
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5beff2a" class="outline-4">
+<h4 id="org5beff2a"><span class="section-number-4">2.1.2</span> 三. Publishing the <i>org</i> project</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+关于发布整个org project(即将org blog发布为.html file)
+org manual给出如下指引
+</p>
+<blockquote>
+<p>
+
+</p>
+
+<p>
+To publish the <code>~/org/</code> project to HTML, we'll have to setup the variable
+<code>org-publish-project-alist</code> <sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.  I tend to split each project in three basic
+<i>components</i> as described in the manual. We need these different components,
+since we want org to use two different functions to publish dynamic content
+(org =&gt; html) and static content like scripts, images, stylesheets or even
+.htaccess files (org =&gt; copy). The third component is just for convenience and
+tells org to execute the former ones.
+</p>
+</blockquote>
+
+<p>
+org mamual在关于publish org project这一节中指出，为了达成publish的目的，我们需要设置Emacs Variable <code>org-publish-project-alisht</code> = <sup><a id="fnr.1.100" class="footref" href="#fn.1">1</a></sup>
+且，文档指出，其将org-publish工具划分为如下三个基本部件 &#x2013; 1. publish org to html 2. publish static content liek ..  to thml 3. for convenience
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd5d04b6" class="outline-4">
+<h4 id="orgd5d04b6"><span class="section-number-4">2.1.3</span> 四. Basis Components</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #51afef;">require</span> '<span style="color: #a9a1e1;">ox-publish</span>)
+(<span style="color: #51afef;">setq</span> org-publish-project-alist
+      '(
+
+       <span style="color: #5B6268;">;; </span><span style="color: #5B6268;">... add all the components here (see below)...</span>
+
+      ))
+</pre>
+</div>
+</div>
+<div id="outline-container-orgaa03abb" class="outline-5">
+<h5 id="orgaa03abb"><span class="section-number-5">2.1.3.1</span> 1. Publish Dynamic Org Notes to html</h5>
+<div class="outline-text-5" id="text-2-1-3-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #5B6268;">;; </span><span style="color: #5B6268;">The /notes/ component publishes all the Org-mode files to HTML. Hence the</span>
+<span style="color: #5B6268;">;; </span><span style="color: #5B6268;">=publishing-function= is set to =org-publish-org-to-html=. Here is an example</span>
+<span style="color: #5B6268;">;; </span><span style="color: #5B6268;">of the notes component:</span>
+
+(<span style="color: #98be65;">"org-notes"</span>
+ <span style="color: #c678dd;">:base-directory</span> <span style="color: #98be65;">"~/blog/src"</span>
+ <span style="color: #c678dd;">:base-extension</span> <span style="color: #98be65;">"org"</span>
+ <span style="color: #c678dd;">:publishing-directory</span> <span style="color: #98be65;">"~/blog/src/html_posts"</span>
+ <span style="color: #c678dd;">:recursive</span> t
+ <span style="color: #c678dd;">:publishing-function</span> org-html-publish-to-html
+ <span style="color: #c678dd;">:headline-levels</span> 4             <span style="color: #5B6268;">; </span><span style="color: #5B6268;">Just the default for this project.</span>
+ <span style="color: #c678dd;">:auto-preamble</span> t
+ )
+
+</pre>
+</div>
+<p>
+关于org-notes部件，最为重要的设定参数如下
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><code>base-directory</code></td>
+<td class="org-left">部件根目录.</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>base-extension</code></td>
+<td class="org-left">部件针对的文件的文件扩展类型</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>publishing-directory</code></td>
+<td class="org-left">部件输出的htlm files目的地址</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>recursive</code></td>
+<td class="org-left">若部件输出的html files目的地址文件夹不存在，则自动创建</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>publishing-function</code></td>
+<td class="org-left">指明org在该部件下应当如何运行文件。于该情境下，org应当把org-mode files 转换为 HTML files</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>headline-levels</code></td>
+<td class="org-left">默认headlind级别，用于控制headline生成时的大小</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>auto-preamble</code></td>
+<td class="org-left">效果未知</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8179b1a" class="outline-5">
+<h5 id="org8179b1a"><span class="section-number-5">2.1.3.2</span> 2. Publish Static files Component</h5>
+<div class="outline-text-5" id="text-2-1-3-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #98be65;">"org-static"</span>
+ <span style="color: #c678dd;">:base-directory</span> <span style="color: #98be65;">"~/blog/src"</span>
+ <span style="color: #c678dd;">:base-extension</span> <span style="color: #98be65;">"css</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">js</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">png</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">jpg</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">gif</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">pdf</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">mp3</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">ogg</span><span style="color: #51afef; font-weight: bold;">\\</span><span style="color: #51afef; font-weight: bold;">|</span><span style="color: #98be65;">swf"</span>
+ <span style="color: #c678dd;">:publishing-directory</span> <span style="color: #98be65;">"~/public_html/"</span>
+ <span style="color: #c678dd;">:recursive</span> t
+ <span style="color: #c678dd;">:publishing-function</span> org-publish-attachment
+ )
+</pre>
+</div>
+<p>
+关于org-static部件，参数解析如下
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><code>base-derectory</code></td>
+<td class="org-left">部件根目录</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>base-extension</code></td>
+<td class="org-left">部件针对的文件的文件扩展类型</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>publishing-directory</code></td>
+<td class="org-left">部件输出的html files目的地址</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>recursive</code></td>
+<td class="org-left">若部件输出的html files目的地址文件夹不存在，则自动创建</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>publishing-function</code></td>
+<td class="org-left">指明部件应使用的Emacs Function</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgaa81f2a" class="outline-5">
+<h5 id="orgaa81f2a"><span class="section-number-5">2.1.3.3</span> 3. Publish Component</h5>
+<div class="outline-text-5" id="text-2-1-3-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(<span style="color: #98be65;">"org"</span> <span style="color: #c678dd;">:components</span> (<span style="color: #98be65;">"org-notes"</span> <span style="color: #98be65;">"org-static"</span>))
+</pre>
+</div>
+<p>
+添加这一组件之目的，仅为了便利性
+至此，便可进行blog的publish工作了
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+footnote 1 m2
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="author">Author: dctrl</p>
+<p class="date">Created: 2018-10-03 Wed 17:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

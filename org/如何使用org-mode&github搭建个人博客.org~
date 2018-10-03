@@ -1,0 +1,127 @@
+#+TITLE: 如何使用org-mode and github搭建博客
+
+* 问题：如何使用org-mode and github搭建博客 
+** 一.为实现该目的所使用的Emacs Package(Emacs 插件)
+*** org-mode
+*** ox-publish
+** 二.所面临的问题
+*** index.org -> index.html 要如何(高效)实现？
+**** a.手动添加实现 -> 比较简单，但效率低下，很蠢 
+**** b.自动化实现 -> 目前没头绪
+*** org-mode的配置&优化
+** 三.参考的资料
+*** [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][Publishing Org-mode files to HTML- official tutorial]]
+
+* 动手 -- log
+** 一. follow official tutorial
+依官网给出的指引，创建如下文档架构...
+css -- 网页风格涉及文件夹
+img -- 网页图片文件夹
+html_posts -- 生成的html文档的目标存放文件夹
+  : ~/org/
+  :    |- css/
+  :    |  `- stylesheet.css
+  :    |- img/
+  :    |- html_posts/
+  :    |- index.org
+  :    `- remember.org
+*** 二. index pages
+关于首页的生成的指引，官网给出如下方法
+#+BEGIN_QUOTE
+index html页面的生成方式
+When ever you want to add link to a file, do it the usual way. To link from
+  =index.org= to =remember.org=, just write
+  : [[file:remember.org][remember]]
+  Org will convert those links to HTML links for you on export:
+  : <a href="./remember.html">remember</a>
+
+img的添加方式
+  Same is true for images. To add an image, put it in =~/org/img/test.jpg= and
+  refer to it by
+  : [[file:img/test.jpg]]
+#+END_QUOTE
+该方法的缺点为每次新增文章后，需要手动修改index.org以把文章链接到index pages
+
+*** 三. Publishing the /org/ project
+关于发布整个org project(即将org blog发布为.html file)
+org manual给出如下指引
+#+begin_quote
+
+To publish the =~/org/= project to HTML, we'll have to setup the variable
+=org-publish-project-alist= [fn:1].  I tend to split each project in three basic
+/components/ as described in the manual. We need these different components,
+since we want org to use two different functions to publish dynamic content
+(org => html) and static content like scripts, images, stylesheets or even
+.htaccess files (org => copy). The third component is just for convenience and
+tells org to execute the former ones.
+
+#+END_quote
+
+org mamual在关于publish org project这一节中指出，为了达成publish的目的，我们需要设置Emacs Variable =org-publish-project-alisht= = [fn:1]
+且，文档指出，其将org-publish工具划分为如下三个基本部件 -- 1. publish org to html 2. publish static content liek ..  to thml 3. for convenience
+
+*** 四. Basis Components
+#+begin_src emacs-lisp
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+
+       ;; ... add all the components here (see below)...
+
+      ))
+#+end_src
+**** 1. Publish Dynamic Org Notes to html
+
+#+begin_src emacs-lisp
+;; The /notes/ component publishes all the Org-mode files to HTML. Hence the
+;; =publishing-function= is set to =org-publish-org-to-html=. Here is an example
+;; of the notes component:
+
+("org-notes"
+ :base-directory "~/blog/src"
+ :base-extension "org"
+ :publishing-directory "~/blog/src/html_posts"
+ :recursive t
+ :publishing-function org-html-publish-to-html
+ :headline-levels 4             ; Just the default for this project.
+ :auto-preamble t
+ )
+
+#+end_src
+关于org-notes部件，最为重要的设定参数如下
+  | =base-directory=       | 部件根目录.                                                                              |
+  | =base-extension=       | 部件针对的文件的文件扩展类型                                                             |
+  | =publishing-directory= | 部件输出的htlm files目的地址                                                             |
+  | =recursive=            | 若部件输出的html files目的地址文件夹不存在，则自动创建                                   |
+  | =publishing-function=  | 指明org在该部件下应当如何运行文件。于该情境下，org应当把org-mode files 转换为 HTML files |
+  | =headline-levels=      | 默认headlind级别，用于控制headline生成时的大小                                           |
+  | =auto-preamble=        | 效果未知                                                                                 |
+
+#+TBLFM: $1=headline-levels
+**** 2. Publish Static files Component
+#+begin_src emacs-lisp
+("org-static"
+ :base-directory "~/blog/src"
+ :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+ :publishing-directory "~/public_html/"
+ :recursive t
+ :publishing-function org-publish-attachment
+ )
+#+end_src
+关于org-static部件，参数解析如下
+  | =base-derectory=       | 部件根目录                   |
+  | =base-extension=       | 部件针对的文件的文件扩展类型 |
+  | =publishing-directory= | 部件输出的html files目的地址 |
+  | =recursive=            | 若部件输出的html files目的地址文件夹不存在，则自动创建 |
+  | =publishing-function=  | 指明部件应使用的Emacs Function       |
+
+**** 3. Publish Component
+#+begin_src emacs-lisp
+ ("org" :components ("org-notes" "org-static"))
+#+end_src
+添加这一组件之目的，仅为了便利性
+至此，便可进行blog的publish工作了
+
+* Footnotes
+[fn:1] footnote 1 m2
+

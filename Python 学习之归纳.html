@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-03 Wed 17:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Python学习之归纳</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="dctrl" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/worg.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Python学习之归纳</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2530e80">1. 列表</a>
+<ul>
+<li><a href="#org11f59ba">1.1. 构成</a></li>
+<li><a href="#org2a63cae">1.2. 访问</a>
+<ul>
+<li><a href="#org34caaf6">1.2.1. 索引之特点</a></li>
+</ul>
+</li>
+<li><a href="#orga8f91a1">1.3. 修添删元素</a>
+<ul>
+<li><a href="#orgdc1cb67">1.3.1. 修改元素</a></li>
+<li><a href="#org6cd1bd6">1.3.2. 添加元素 &#x2013; append方法、insert方法</a></li>
+<li><a href="#org6f4df47">1.3.3. 删除元素 &#x2013; del方法、pop方法、remove方法</a></li>
+</ul>
+</li>
+<li><a href="#orgdc917e2">1.4. 组织列表 &#x2013; sort方法、sorted方法、reverse方法、len方法</a></li>
+<li><a href="#org5c5d96e">1.5. 遍历列表 &#x2013; for</a></li>
+<li><a href="#orgc3cf45e">1.6. 创建数值列表 &#x2013; range方法、list方法</a></li>
+</ul>
+</li>
+<li><a href="#org9c8db2d">2. __name__</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2530e80" class="outline-2">
+<h2 id="org2530e80"><span class="section-number-2">1</span> 列表</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org11f59ba" class="outline-3">
+<h3 id="org11f59ba"><span class="section-number-3">1.1</span> 构成</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+由一系列按特定顺序排列的元素组成。用方括号([ ])表示列表，并用逗号分隔其中的元素。
+</p>
+<div class="org-src-container">
+<pre class="src src-Python">bicycles.py
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2a63cae" class="outline-3">
+<h3 id="org2a63cae"><span class="section-number-3">1.2</span> 访问</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+列表是有序集合，因此要访问列表的任何元素，只需告知位置或索引。
+也可使用title方法，使得输出更加整洁。
+</p>
+</div>
+<div id="outline-container-org34caaf6" class="outline-4">
+<h4 id="org34caaf6"><span class="section-number-4">1.2.1</span> 索引之特点</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Python为访问最后一个列表元素提供了一种特殊语法。通过将索引指定为-1，可让Python返回最后一个列表元素
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8f91a1" class="outline-3">
+<h3 id="orga8f91a1"><span class="section-number-3">1.3</span> 修添删元素</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-orgdc1cb67" class="outline-4">
+<h4 id="orgdc1cb67"><span class="section-number-4">1.3.1</span> 修改元素</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<div class="org-src-container">
+<pre class="src src-Python">motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+motorcycles[0] = 'ducati'
+print(motorcycles)”
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6cd1bd6" class="outline-4">
+<h4 id="org6cd1bd6"><span class="section-number-4">1.3.2</span> 添加元素 &#x2013; append方法、insert方法</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<div class="org-src-container">
+<pre class="src src-Python"># 末尾添加元素
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+motorcycles.append('ducati')
+print(motorcycles)
+
+# 列表中添加元素
+motorcycles = ['honda', 'yamaha', 'suzuki']
+
+motorcycles.insert(0, 'ducati')
+print(motorcycles)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6f4df47" class="outline-4">
+<h4 id="org6f4df47"><span class="section-number-4">1.3.3</span> 删除元素 &#x2013; del方法、pop方法、remove方法</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<div class="org-src-container">
+<pre class="src src-Python"># del方法 -- 当知道要删除的元素在列表中的位置，则可以使用del语句
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+del motorcycles[0]
+print(motorcycles)
+
+# pop方法 -- 将元素从列表中删除，并接着要使用它的值。
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+popped_motorcycle = motorcycles.pop()
+print(motorcycles)
+
+# pop方法用法2 -- 从列表中任何位置中删除元素
+motorcycles = ['honda', 'yamaha', 'suzuki']
+
+first_owned = motorcycles.pop(0)
+print('The first motorcycle I owned was a ' + first_owned.title() + '.')
+
+# remove方法 -- 根据要删除的元素的值，可据值删除元素
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+print(motorcycles)
+
+motorcycles.remove('ducati')
+print(motorcycles)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdc917e2" class="outline-3">
+<h3 id="orgdc917e2"><span class="section-number-3">1.4</span> 组织列表 &#x2013; sort方法、sorted方法、reverse方法、len方法</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="org-src-container">
+<pre class="src src-Python"># sort方法 -- 较轻松地对列表进行排序
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)”
+
+# sort方法 -- 逆序
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort(reverse=True)
+print(cars)
+
+# sorted方法 --  为保留列表元素原来的排列顺序，但输出的时候以特定的顺序呈现它们
+# 若要逆序，上同sort方法
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+
+print("Here is the original list:")
+print(cars)
+
+print("\nHere is the sorted list:")
+print(sorted(cars))  
+
+# reverse方法 -- 反转列表元素的排列顺序，非排序
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(cars)
+
+cars.reverse()
+print(cars)
+
+# len方法 -- 可快速获悉列表的长度
+&gt;&gt;&gt; cars = ['bmw', 'audi', 'toyota', 'subaru']
+&gt;&gt;&gt; len(cars)
+4
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5c5d96e" class="outline-3">
+<h3 id="org5c5d96e"><span class="section-number-3">1.5</span> 遍历列表 &#x2013; for</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="org-src-container">
+<pre class="src src-Python">magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+print(magician.title() + ", that was a great trick!")
+print("I can't wait to see your next trick, " + magician.title() + ".\n")
+
+print("Thank you everyone, that was a great magic show!")
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3cf45e" class="outline-3">
+<h3 id="orgc3cf45e"><span class="section-number-3">1.6</span> 创建数值列表 &#x2013; range方法、list方法</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+值得关注的一点是range不仅仅可以生成数字元素，还可以指定步长
+以及列表解析这一概念
+</p>
+<div class="org-src-container">
+<pre class="src src-Python">even_numbers = list(range(2,11,2)
+print(even_numbers)
+
+squares = [value**2 for value in range(1,11)]
+print(squares)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9c8db2d" class="outline-2">
+<h2 id="org9c8db2d"><span class="section-number-2">2</span> __name__</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+一言以蔽之，__name__打印当前模块名。若当前模块被直接运行时，模块名为__main__..
+若模块被导入时import xxx，模块名 = xxx
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: dctrl</p>
+<p class="date">Created: 2018-10-03 Wed 17:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+#+TITLE: org-mode 小细节归纳
+
+* 数学公式
+
+  org-mode对于数学公式是原生支持的。
+  其支持嵌入LaTex代码到文件中。因而可以直接使用类Tex的宏来输入特殊符号或者直接输入整个LaTex环境
+  如下例
+  : Angles are written as Greek letters \alpha, \beta and \gamma. The mass if
+  : the sun is M_sun = 1.989 x 10^30 kg. The radius of the sun is R_{sun} =
+  : 6.96 x 10^8 m. If $a^2=b$ and $b=2$, then the solution must be either
+  : $a=+\sqrt{2}$ or $a=-\sqrt{2}$.
+
+  : \begin{equation}
+  : x=\sqrt{b}
+  : \end{equation}
+  : #+end_quote
+  效果如下:
+  Angles are written as Greek letters \alpha, \beta and \gamma. The mass if
+  the sun is M_sun = 1.989 x 10^30 kg. The radius of the sun is R_{sun} =
+  6.96 x 10^8 m. If $a^2=b$ and $b=2$, then the solution must be either
+  $a=+\sqrt{2}$ or $a=-\sqrt{2}$.
+  
+  \begin{equation}
+  x=\sqrt{b}
+  \end{equation}
+** 参考
+   [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-11-5][参考1]]
+   
+* 字体相关
+  [[http://www.bagualu.net/wordpress/archives/6551][上下标处理]]
+#+begin_src emacs-lisp
+(setq org-export-with-sub-superscripts '{})
+#+end_src  

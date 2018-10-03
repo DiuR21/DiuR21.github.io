@@ -1,0 +1,26 @@
+#+TITLE: 感知器（Perceptron)
+
+* 相关概念
+** [[https://blog.csdn.net/dengheCSDN/article/details/77313758][超平面]]
+*** [[https://blog.csdn.net/qq_22709065/article/details/71170559][点到超平面的距离推导]]
+*** 线性方程组的概念
+   重点是在于N维空间下，自由度比空间维度小1，由此自然便可得到N维空间对
+   N-1维空间的一个子集合。
+*** 感知器的对偶形式
+    关键：将w和b表示为实例x_{i}和y_{i}的[[https://baike.baidu.com/item/%E7%BA%BF%E6%80%A7%E7%BB%84%E5%90%88][线性组合]]的形式，通过求解其系数而求的w和b。
+**** 对偶形式的意义
+      [[https://www.zhihu.com/question/26526858][为何存在]]
+      对偶形式的目的是降低运算量，当特征空间维度很高时可以起作用。
+      因为，当维度很高，原始形式为判断某点是否为误判点，则需要花费较长时间进行关于w和x_{i}的内积运算
+      两公式对比如下：
+      \begin{equation}
+      y_{i}(wx_{i} + b) \leq 0\\
+      y_{i}(\sum_{i=1}^{N}a_{j}y_{j}x_{j}x_{i} + b) \leq 0\\
+
+      \end{equation}
+      由对偶形式的公式可知，所有输入实例都以内积形式出现，则可以预先计算两两之间的内积，得到所谓
+      Gram矩阵 $G = [x_{i}x_{j}]_{N \times N}$
+*** 总结   
+    w为超平面法向量，超平面到平面上任意一点的距离为 $d=\frac{|w \cdot x_{0}+b|}{||w||}$
+
+

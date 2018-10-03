@@ -1,0 +1,14 @@
+#+TITLE: Emacs
+
+*2018-09*
+
+[[https://www.youtube.com/watch?v=lsgPNVIMkIE][Emacs ido-mode Demon]]
+
+[[file:PythonProgrammingInEmacs.org][Python Programming]]
+
+[[file:org-mode之小细节归纳.org][org-mode之小细节归纳]]
+
+[[https://orgmode.org/worg/org-tutorials/][org tutorial]]
+
+[[file:如何使用org-mode&github搭建个人博客.org][如何使用org-mode&github搭建个人博客]]
+

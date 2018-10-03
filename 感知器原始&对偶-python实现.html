@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-10-03 Wed 17:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Python 感知器(PLA)实现</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="dctrl" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/css/worg.css"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Python 感知器(PLA)实现</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgeea8f7d">1. PLA回顾</a></li>
+<li><a href="#orgae27763">2. PLA &#x2013; 原始形式</a></li>
+<li><a href="#orgaebc4eb">3. PLA &#x2013; pocket algorithm</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeea8f7d" class="outline-2">
+<h2 id="orgeea8f7d"><span class="section-number-2">1</span> PLA回顾</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+PLA是一种构建于感知器的学习算法。其本质为超平面对线性可分的N维数据集合的线性分割
+PLA算法的目的，即通过不断的修正超平面本身法向量，来寻找到当前Training Set下没有任何错误的超平面。
+而PLA有两种类型，一种为经典的PLA形式，其表现为超平面法向量的朴素表达。而另外一种，则为PLA的对偶形式，表现为超平面法向量由Traning Set中元素的线性集合
+前者在Traning Set维度很大时，效率不如后者来的高。至于原因，不再赘述。
+
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgae27763" class="outline-2">
+<h2 id="orgae27763"><span class="section-number-2">2</span> PLA &#x2013; 原始形式</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-Python">import numpy as np
+import matplotlib.pyplot as plt
+
+
+def create_train_data_set():
+    train_data_mat = np.array([[1, 1, 4],
+			       [1, 2, 3],
+			       [1, -2, 3],
+			       [1, -2, 2],
+			       [1, 0, 1],
+			       [1, 1, 2]])
+    train_data_res = np.array([1, 1, 1, -1, -1, -1])
+    train_data_res = train_data_res[:, np.newaxis]
+    return train_data_mat, train_data_res
+
+
+def pla(in_train_mat, in_train_mat_res):
+    pla_weight = np.ones((3, 1))
+    while True:
+	pla_finish = True
+	for i in range(len(in_train_mat)):
+	    x = in_train_mat[i][:]
+	    y = np.dot(pla_weight.T, x)
+	    if np.sign(y) == np.sign(in_train_mat_res[i]):
+		continue
+	    else:
+		pla_finish = False
+		w_i = x * in_train_mat_res[i]
+		w_i = w_i[:, np.newaxis]
+		pla_weight = pla_weight + w_i
+	if pla_finish:
+	    break
+    return pla_weight
+
+
+def plot(point_mat, pla_res):
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    xx = list(filter(lambda x: x[3] == -1, point_mat))
+    ax.scatter([x[1] for x in xx], [x[2] for x in xx], s=100, c='b', marker="x", label='-1')
+    oo = list(filter(lambda x: x[3] == 1, point_mat))
+    ax.scatter([x[1] for x in oo], [x[2] for x in oo], s=100, c='r', marker="o", label='1')
+
+    x = np.linspace(-3, 3, 50)
+    #b*pla_res[0] + x*pla_res[1] + y*pla_res[2] = 0
+    #y = ax+b --&gt; a = - pla_res[1]/pla_res[2] + - pla_res[0]/pra_res[2] pla_res[2]!=0
+    #pla_res[2]=0 --&gt; x = -pla_res[0]/pla_res[1]b
+    if pla_res[2]:
+	a, b = -pla_res[1] / pla_res[2], -pla_res[0] / pla_res[2]
+	y = a*x+b
+	ax.plot(x, y, 'b-')
+    else:
+	b = -pla_res[0]/pla_res[1]
+	ax.plot(b * len(x), x, 'b')
+
+
+
+    plt.legend(loc='upper left', scatterpoints=1)
+    plt.show()
+
+def main():
+    train_data_mat, train_mat_res = create_train_data_set()
+    weight = pla(train_data_mat, train_mat_res)
+
+    point_mat = np.hstack((train_data_mat, train_mat_res))
+    plot(point_mat, weight)
+
+if __name__ == '__main__':
+    main()
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgaebc4eb" class="outline-2">
+<h2 id="orgaebc4eb"><span class="section-number-2">3</span> PLA &#x2013; pocket algorithm</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+正如我们所知，PLA(原始形式)仅可在数据集线性可分的前提下才能work perfectly..然而在现实世界中，
+</p>
+
+<p>
+实际上，抛开数据集是否可分不谈，对于一个具有生产价值的系统而言，要如何保证数据集必定线性可分呢？
+</p>
+
+<p>
+也许我们会说，我的数据属性决定了，我的数据集合必定是可分的，但不能忽略，现实世界中的数据，往往带有噪音。
+</p>
+
+<p>
+如何确保程序在该情形下也可以正常的工作？原始形式，显然是行不通的。
+</p>
+
+<p>
+因此，我们提出PLA &#x2013; pocket algorithm
+</p>
+
+<p>
+而pocket algorithm的不同，一言以蔽之，即：有限次数的随机迭代
+</p>
+
+<div class="org-src-container">
+<pre class="src src-Python">
+  import random
+import numpy as np
+import matplotlib.pyplot as plt
+
+# train_data_mat 6*3
+train_data_mat = np.array([[1, 1, 4],
+			   [1, 2, 3],
+			   [1, -2, 3],
+			   [1, -2, 2],
+			   [1, 0, 1],
+			   [1, 1, 2]])
+# train_data_res_mat 6*1
+train_data_res = np.array([[1], [1], [1], [-1], [-1], [-1]])
+
+
+def cheack(nw):
+    cnt_nw = 0
+
+    for i in range(len(train_data_mat)):
+	y_nw = np.dot(nw, train_data_mat[i])
+	if np.sign(y_nw) != np.sign(train_data_res[i]):
+	    cnt_nw = cnt_nw + 1
+    return cnt_nw
+
+
+def pla_pocket():
+    w = np.ones((1, 3))
+    least_false = cheack(w)
+    for i in range(0,100000):
+	de_choice = random.randint(0,5)
+
+	de_data = train_data_mat[de_choice]
+	de_res = train_data_res[de_choice]
+
+	y = np.dot(w, de_data)
+	if np.sign(y) != np.sign(de_res):
+	    n_w = w + de_res * de_data
+	    n_cnt = cheack(n_w)
+
+	    w = n_w 
+
+	    '''
+	    只要出现错误的点，就一定要更新。不这么做的话，可能会出现w根本无法进行更改的情况。
+	    因为，可能存在这样的w，在任何wrong point上都无法获得比当前更好的结果，则iter停顿。
+	    '''
+
+	    if n_cnt &lt;= least_false:
+		least_false = n_cnt
+		res = n_w
+
+    return res
+
+
+def pla_plot(w):
+    point_mat = np.hstack((train_data_mat, train_data_res))
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    xx = list(filter(lambda x: x[3] == -1, point_mat))
+    ax.scatter([x[1] for x in xx], [x[2] for x in xx], s=100, c='b', marker="x", label='-1')
+    oo = list(filter(lambda x: x[3] == 1, point_mat))
+    ax.scatter([x[1] for x in oo], [x[2] for x in oo], s=100, c='r', marker="o", label='1')
+
+    x = np.linspace(-3, 3, 50)
+    # b*pla_res[0] + x*pla_res[1] + y*pla_res[2] = 0
+    # y = ax+b --&gt; a = - pla_res[1]/pla_res[2] + - pla_res[0]/pra_res[2] pla_res[2]!=0
+    # pla_res[2]=0 --&gt; x = -pla_res[0]/pla_res[1]b
+    if w[2]:
+	print('w2')
+	a, b = -w[1] / w[2], -w[0] / w[2]
+	y = a * x + b
+	ax.plot(x, y, 'b-')
+    else:
+	print('w2nil')
+	b = (-w[0] / w[1]) * x
+	ax.plot(b, x, 'b')
+
+    plt.legend(loc='upper left', scatterpoints=1)
+    plt.show()
+
+
+def main():
+
+    w = pla_pocket()
+    pla_plot(w[0])
+
+
+if __name__ == '__main__':
+    main()
+
+</pre>
+</div>
+
+<p>
+附上各种各样的结果图[include the error versions]
+</p>
+
+
+<div class="figure">
+<p><img src="./img/PLA-1.png" alt="PLA-1.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./img/PLA-2.png" alt="PLA-2.png" />
+</p>
+</div>
+
+
+<div class="figure">
+<p><img src="./img/PLA-3.png" alt="PLA-3.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: dctrl</p>
+<p class="date">Created: 2018-10-03 Wed 17:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

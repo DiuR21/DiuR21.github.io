@@ -1,0 +1,6 @@
+#+TITLE: 学习的种类
+
+* Learning with Different Output Space
+  aasdsa
+
+  [[./img/ML-2-1.png]

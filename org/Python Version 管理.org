@@ -1,0 +1,46 @@
+#+TITLE: Python Version 管理
+
+* WHy I Need That
+
+  After update to macOS10.14
+
+  在使用Emacs Jedi时，Python报出错误为：don't have module jedi..so install it？..
+
+  使用pip3 install jedi后，Python依然报出相同的错误..我才明白，原来，系统默认Python Version为2.7..pip3 安装的module竟然是不能通用的..WTF
+
+  好吧，在macOS10.13之前，我也碰过这个问题，那时简单粗暴的修改了软连接就完事了..
+
+  这次，还是好好的学习下Python的Version管理的吧
+
+  所以，需要的工具为：pyenv
+
+* What is pyenv？ How it work？
+  
+  Simple Python Version Management: pyenv
+  
+  [[https://github.com/pyenv/pyenv/raw/master/terminal_output.png]]
+
+  顾名思义，pyenv服务于Pyhton的版本控制。
+
+  其通过在系统的$PATH变量中，inject垫片执行路径。
+  
+  以决定使用哪个Python版本，并将命令仅仅传递给这些版本
+
+  而至于$PATH变量干了什么呢？实际上，当我们执行如python或pip这样的命令时，系统开始
+  搜索一系列的文件夹以找到那些与命令相同名称的执行文件。而这一系列的文件夹列表，便是由$PATH变量给出。
+
+  在$PATH变量中的文件夹以从左到右的顺序被搜索，而当我们知悉了这一工作特性后，便可开始解释pyenv到底做了什么工作了
+
+  一言以蔽之，pyenv通过在$pyenv中嵌入shims directory以截断所有对Python以及pip等命令的调用。
+
+  : Search Your PATH for an executable file named pip
+  : Find the pyenv shim named pip at the beginning of your PATH
+  : Run the shim namped pip, which in turn passes the command along to pyenv
+  
+
+
+* 参阅
+  
+  [[https://github.com/pyenv/pyenv][pyenv-git]]
+
+  [[https://zhuanlan.zhihu.com/p/25990928][使用pyenv管理多个Python版本依赖环境]]

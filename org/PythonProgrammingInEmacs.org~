@@ -1,0 +1,21 @@
+#+TITLE: Python Programming Under Emacs
+
+* Why
+  Pycharm&Anaconda太重了..实在有点接受不能。
+  因而探索下，在Emacs可否提供IDE所提供的基本功能
+* What I Need
+  : 自动补全 
+* Log
+** Follow the Tutorial  
+*** Python Modes
+    Emacs出厂就支持Python Modes.问题是这个原装货非常的简陋不好用。自动补全都没有，可以说，要不是pycharm这么重。我是不可能考虑用Emacs来写Python的，因为可预知的是，折腾的成本应该不低。
+    但生命就在于折腾。所以接下来，即为如何扩展Emacs，使之成为一个优良可用的Python IDE之LOG
+*** Emacs Auto Complete -> Python Auto Complete
+    翻Python自动补全时，巧合之下，也翻到了[[https://www.emacswiki.org/emacs/AutoComplete][Emacs自动补全]]。先看看是什么玩意再说。
+    即Emacs Lisp的自动补全Package..
+    回到Python Auto Complete。原来也是要依托于Auto Complete的..这里需要依靠的package为[[http://tkf.github.io/emacs-jedi/released/][emacs-jedi-document]];[[https://github.com/davidhalter/jedi][jedi]]
+    
+    
+
+* 参考
+  [[https://www.emacswiki.org/emacs/PythonProgrammingInEmacs][EmacsWiki]]

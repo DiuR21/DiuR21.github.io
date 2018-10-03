@@ -1,0 +1,31 @@
+#+TITLE: Python
+
+*2018-09*
+
+[[file:Python virtualenv.org][Python virtualenv]]
+
+[[file:Python Version 管理.org][Python Version 管理]]
+
+[[https://www.zhihu.com/question/19794855/answer/129270643][怎样算是精通Python]]
+
+[[https://www.zhihu.com/question/20829330][如何更好地理解Python迭代器和生成器？]]
+
+[[https://eastlakeside.gitbooks.io/interpy-zh/content/Comprehensions/list-comprehensions.html][Python-列表推导式子]]
+
+[[file:Python-mathplotlib.org][Python-mathplotlib]]
+
+[[http://www.datadependence.com/2016/02/pythonic-idioms-others/][How to Write Beautiful Code with Pythonic Idioms]]
+
+[[https://www.zhihu.com/question/38857862][Python import xxx & from xxx import xxx 异同]]
+#+begin_quote
+import Module 引入模块
+from Module import Other 引入模块中的类、函数或者变量
+from Module import * 引入模块中的所有‘公开’成员
+#+end_quote
+
+[[file:Python-numpy.org][Python-Numpy]]
+
+[[file:Python 学习之归纳.org][Python 学习之归纳]]
+
+[[http://blog.konghy.cn/2017/04/24/python-entry-program/][Python 中的if __name__ = '__main__' 理解]]
+
