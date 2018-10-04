@@ -188,15 +188,10 @@ content: "*** "
     }
 
     img{
-	margin-left: -2em
 	max-width: 700px;
     }
 
-    figure{
-	text-align: center;	
-    }
-
-    .figure p{
+    .figure{
 	box-shadow: 0 0 20px 1px black;
     }
 
