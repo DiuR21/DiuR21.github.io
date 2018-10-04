@@ -189,11 +189,11 @@ content: "*** "
 
     img{
 	margin-left: -2em
-	max-width: 700px;
+	max-width: 200px;
     }
 
     figure{
-	text-align: center;
+	text-align: left;
     }
 
     .share img {
