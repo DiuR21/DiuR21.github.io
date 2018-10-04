@@ -8,7 +8,7 @@ data: 2018-10-04
 @media all
 {
     img {
-	margin-left: auto;
+	margin-left: -2em;
 	max-width: 100px;
     }
     figure{
