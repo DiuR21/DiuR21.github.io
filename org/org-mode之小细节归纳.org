@@ -31,3 +31,15 @@
 #+begin_src emacs-lisp
 (setq org-export-with-sub-superscripts '{})
 #+end_src  
+* cssstyle相关
+  修改特定页面css
+  #+begin_src css
+  #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="orgstyle.css"/>
+  #+end_src
+  
+  global setting css
+  #+begin_src lisp
+  :style "<link rel='stylesheet' type='text/css' href='css/style.css' />"
+  #+end_src
+
+

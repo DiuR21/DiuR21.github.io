@@ -1,7 +1,5 @@
 #+TITLE: Emacs
 
-*2018-09*
-
 [[https://www.youtube.com/watch?v=lsgPNVIMkIE][Emacs ido-mode Demon]]
 
 [[file:PythonProgrammingInEmacs.org][Python Programming]]
