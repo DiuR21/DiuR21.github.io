@@ -188,10 +188,12 @@ content: "*** "
     }
 
     img{
-	max-width: 700px;
+	max-width: 1080px;
     }
 
     .figure{
+	margin-left: left;
+	padding: 0em;
 	box-shadow: 0 0 20px 1px black;
     }
 
