@@ -197,7 +197,7 @@ content: "*** "
     }
 
     .figure p{
-	margin-left: left;
+	text-align: left;
     }
 
     .share img {
