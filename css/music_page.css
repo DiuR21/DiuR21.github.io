@@ -3,7 +3,7 @@ author: dctrl
 mail: dctrlbox@gmail.com
 data: 2018-10-04
 */
-@import url(https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif);
+/*@import url(https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif);*/
 
 @media all
 {
@@ -192,14 +192,18 @@ content: "*** "
 	padding: 0px 0.2em;
     }
 
-    img {
-	margin-left: -2em;
-	max-width: 100px;
+    .figure {
+	padding: 0em;
     }
-
-    figure{
+    .figure p{
 	text-align: left;
     }
+    
+    img {
+	margin-left: 0px;
+	max-width: 200px;
+    }
+
 
     .share img {
 	opacity: .4;

@@ -30,6 +30,19 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 
 * Else
 
+*2018-10*
+
+[[https://www.howsci.com/css-dot-and-pound-sign.html][届不到的css设计逻辑--点号的意思]]
+
+特附上两张mdzz图
+
+[[http://ok8er9pip.bkt.clouddn.com/1538642580.png]]
+
+[[http://ok8er9pip.bkt.clouddn.com/1538642667.png]]
+
+
+*2018-09*
+
 [[https://linux.cn/article-10027-1.html?utm_source=rss&utm_medium=rss][Python Simple Gui]]
 
 [[https://www.inmediahk.net/node/1043826][telegram 并不安全]] ; [[https://security.stackexchange.com/questions/49782/is-telegram-secure][stack-exchange about tg security]]
