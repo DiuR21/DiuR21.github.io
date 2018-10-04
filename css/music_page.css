@@ -1,0 +1,18 @@
+/*
+author: dctrl
+mail: dctrlbox@gmail.com
+data: 2018-10-04
+*/
+
+
+@media all
+{
+    img {
+	margin-left: auto;
+	max-width: 100px;
+    }
+    figure{
+	text-align: left;
+    }
+}
+	   
