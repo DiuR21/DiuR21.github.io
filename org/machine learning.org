@@ -1,7 +1,11 @@
 #+TITLE: Machine Learning
 
+*2018-10*
+
+[[file:假设集合h的合理性--hoeffding不等式.org][假设集合h的合理性--hoeffding不等式]]
+
 *2018-09*
 
-* [[file:感知器.org][感知器]]
+[[file:感知器.org][感知器]]
 
-* [[file:感知器原始&对偶-python实现.org][感知器(pocket)-python实现]]
+[[file:感知器原始&对偶-python实现.org][感知器(pocket)-python实现]]
