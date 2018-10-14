@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-03 Wed 21:32 -->
+<!-- 2018-10-12 Fri 19:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -231,30 +231,43 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Machine Learning</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org48682ec">1. 感知器</a></li>
-<li><a href="#orgf273f50">2. 感知器(pocket)-python实现</a></li>
-</ul>
-</div>
-</div>
+<p>
+<b>2018-10</b>
+</p>
+
+<p>
+<a href="深度神经网络(Deep Neural Networks).html">深度神经网络(Depp Nerual Networks)</a>
+</p>
+
+<p>
+<a href="https://www.quora.com/What-is-the-target-function-in-machine-learning">What is target function in Machine Learning</a>
+</p>
+<blockquote>
+<p>
+针对很多人把target function套到hypothesis funcion上..
+特贴此文
+</p>
+</blockquote>
+
+<p>
+<a href="机器学习为什么是可行的.html">机器学习为什么是可行的</a>
+</p>
+
 <p>
 <b>2018-09</b>
 </p>
 
-<div id="outline-container-org48682ec" class="outline-2">
-<h2 id="org48682ec"><span class="section-number-2">1</span> <a href="感知器.html">感知器</a></h2>
-</div>
+<p>
+<a href="感知器.html">感知器</a>
+</p>
 
-<div id="outline-container-orgf273f50" class="outline-2">
-<h2 id="orgf273f50"><span class="section-number-2">2</span> <a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a></h2>
-</div>
+<p>
+<a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a>
+</p>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-03 Wed 21:32</p>
+<p class="date">Created: 2018-10-12 Fri 19:46</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

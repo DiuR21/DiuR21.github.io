@@ -1,0 +1,10 @@
+#+TITLE: 深度神经网络
+
+* 基石
+  高深莫测的DNN，其基石，无非是简单的感知器。关于感知器，我不再赘叙。仅给出感知器的hypothesis function：
+  
+  \begin{equation}
+  z = \sum_{i=1}^{N}w_{i}x_{i} + b
+  \end{equation}
+  
+  而因感知器针对 *线性分割* 数据时的无能性，

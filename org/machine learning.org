@@ -2,7 +2,15 @@
 
 *2018-10*
 
-[[file:假设集合h的合理性--hoeffding不等式.org][假设集合h的合理性--hoeffding不等式]]
+[[file:深度神经网络(Deep Neural Networks).org][深度神经网络(Depp Nerual Networks)-资料收集]]
+
+[[https://www.quora.com/What-is-the-target-function-in-machine-learning][What is target function in Machine Learning]]
+#+begin_quote
+针对很多人把target function套到hypothesis funcion上..
+特贴此文
+#+end_quote
+
+[[file:机器学习为什么是可行的.org][机器学习为什么是可行的]]
 
 *2018-09*
 

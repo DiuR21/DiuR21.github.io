@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-14 Sun 18:12 -->
+<!-- 2018-10-12 Fri 19:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Machine Learning</title>
+<title>深度神经网络</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -227,47 +227,61 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
-<h1 class="title">Machine Learning</h1>
+<h1 class="title">深度神经网络</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org73905ba">1. 基石</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org73905ba" class="outline-2">
+<h2 id="org73905ba"><span class="section-number-2">1</span> 基石</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-<b>2018-10</b>
+高深莫测的DNN，其基石，无非是简单的感知器。关于感知器，我不再赘叙。仅给出感知器的hypothesis function：
 </p>
 
-<p>
-<a href="深度神经网络(Deep Neural Networks).html">深度神经网络(Depp Nerual Networks)-资料收集</a>
-</p>
+\begin{equation}
+z = \sum_{i=1}^{N}w_{i}x_{i} + b
+\end{equation}
 
 <p>
-<a href="https://www.quora.com/What-is-the-target-function-in-machine-learning">What is target function in Machine Learning</a>
+而因感知器针对 <b>线性分割</b> 数据时的无能性，
 </p>
-<blockquote>
-<p>
-针对很多人把target function套到hypothesis funcion上..
-特贴此文
-</p>
-</blockquote>
-
-<p>
-<a href="机器学习为什么是可行的.html">机器学习为什么是可行的</a>
-</p>
-
-<p>
-<b>2018-09</b>
-</p>
-
-<p>
-<a href="感知器.html">感知器</a>
-</p>
-
-<p>
-<a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a>
-</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-14 Sun 18:12</p>
+<p class="date">Created: 2018-10-12 Fri 19:46</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

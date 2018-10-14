@@ -1,5 +1,7 @@
 #+TITLE: Emacs
 
+[[file:Emacs-Eshell.org][Emacs-Eshell-no-finifhs]]
+
 [[https://www.youtube.com/watch?v=lsgPNVIMkIE][Emacs ido-mode Demon]]
 
 [[file:PythonProgrammingInEmacs.org][Python Programming]]

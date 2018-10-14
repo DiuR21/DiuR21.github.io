@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-14 Sun 18:12 -->
+<!-- 2018-10-04 Thu 21:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Machine Learning</title>
+<title>假设集合h的合理性&#x2013;hoeffding不等式</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,44 +230,106 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Machine Learning</h1>
-<p>
-<b>2018-10</b>
-</p>
+<h1 class="title">假设集合h的合理性&#x2013;hoeffding不等式</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org65e1eb9">1. 学习是否是可行的？</a></li>
+<li><a href="#orgccd78e3">2. 学习是不可行的吗？</a></li>
+<li><a href="#org72e789f">3. 对f未知的情形推论</a></li>
+<li><a href="#org8c26d36">4. 参阅</a></li>
+</ul>
+</div>
+</div>
 
+<div id="outline-container-org65e1eb9" class="outline-2">
+<h2 id="org65e1eb9"><span class="section-number-2">1</span> 学习是否是可行的？</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-<a href="深度神经网络(Deep Neural Networks).html">深度神经网络(Depp Nerual Networks)-资料收集</a>
-</p>
-
-<p>
-<a href="https://www.quora.com/What-is-the-target-function-in-machine-learning">What is target function in Machine Learning</a>
-</p>
-<blockquote>
-<p>
-针对很多人把target function套到hypothesis funcion上..
-特贴此文
-</p>
-</blockquote>
-
-<p>
-<a href="机器学习为什么是可行的.html">机器学习为什么是可行的</a>
-</p>
-
-<p>
-<b>2018-09</b>
-</p>
-
-<p>
-<a href="感知器.html">感知器</a>
-</p>
-
-<p>
-<a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a>
+讨论机器学习，我们常常将目光聚焦于Algorithm上，却甚少考虑，Algorithm所得出来的所谓结果，是否是可行的。
 </p>
 </div>
+</div>
+
+<div id="outline-container-orgccd78e3" class="outline-2">
+<h2 id="orgccd78e3"><span class="section-number-2">2</span> 学习是不可行的吗？</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+聚焦下图
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538644614.png" alt="1538644614.png" />
+</p>
+</div>
+
+<p>
+上图表述了如此的事实，即针对以上训练集，我们从假设集合H中训练得到所谓目标函数g。所得的g，最多最多也即针对训练集合内数据正确。
+</p>
+
+<p>
+而在训练集合外呢？事实上，从训练集合学习D时，若任何f(现实世界中，针对某环境的真理函数)中，未知的情况可发生，那么我们结论为从训练集合D中学习得到的事物是注定要失败的。
+</p>
+</div>
+</div>
+
+<div id="outline-container-org72e789f" class="outline-2">
+<h2 id="org72e789f"><span class="section-number-2">3</span> 对f未知的情形推论</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+充分理解上图后，我们难免会想，按此说法，岂不是说ML本身就是不合理的？
+</p>
+
+<p>
+那要如何针对f未知的情形进行推论？以找到一些论据，以支撑ML的合理性呢？此时，我们需要引入概率论这一工具。
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538660471.png" alt="1538660471.png" />
+</p>
+</div>
+
+<p>
+如上图，其阐述的情景如图所述，不再多言。若无法理解，请自行观看视频<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
+</p>
+
+<p>
+针对此抽样场景，我们关注的是两个事实
+</p>
+
+<ul class="org-ul">
+<li>抽样结果无参考价值。因为，抽取的样本可能会与罐内实际情形相差甚远</li>
+<li>抽样结果有参考价值。因为臭氧样本一般而言其情形会接近于实际情形</li>
+</ul>
+
+<p>
+d
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c26d36" class="outline-2">
+<h2 id="org8c26d36"><span class="section-number-2">4</span> 参阅</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+1.<a href="https://www.bilibili.com/video/av1624332/?p=15">NTU-Fundation</a>
+</p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-14 Sun 18:12</p>
+<p class="date">Created: 2018-10-04 Thu 21:52</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

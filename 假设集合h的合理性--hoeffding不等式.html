@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-04 Thu 13:13 -->
+<!-- 2018-10-07 Sun 12:50 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>假设集合h的合理性&#x2013;hoeffding不等式</title>
@@ -237,6 +237,8 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#org65e1eb9">1. 学习是否是可行的？</a></li>
 <li><a href="#orgccd78e3">2. 学习是不可行的吗？</a></li>
+<li><a href="#orgf95eb69">3. 对目标函数f未知的情形推论</a></li>
+<li><a href="#org8c26d36">4. 参阅</a></li>
 </ul>
 </div>
 </div>
@@ -259,15 +261,108 @@ for the JavaScript code in this tag.
 
 
 <div class="figure">
-<p><img src="http://ok8er9pip.bkt.clouddn.com/1538629956.png" alt="1538629956.png" />
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538644614.png" alt="1538644614.png" />
+</p>
+</div>
+
+<p>
+上图表述了如此的事实，即针对以上训练集，我们从假设集合H中训练得到所谓假设函数g。所得的g，最多最多也即针对训练集合内数据正确。
+</p>
+
+<p>
+而在训练集合外呢？事实上，从训练集合学习D时，target function中，未知的情况可发生，那么我们结论为从训练集合D中学习得到的事物是注定要失败的。
 </p>
 </div>
 </div>
+
+<div id="outline-container-orgf95eb69" class="outline-2">
+<h2 id="orgf95eb69"><span class="section-number-2">3</span> 对目标函数f未知的情形推论</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+充分理解上图后，我们难免会想，按此说法，岂不是说ML本身就是不合理的？
+</p>
+
+<p>
+那要如何针对f未知的情形进行推论？以找到一些论据，以支撑ML的合理性呢？此时，我们需要引入概率论这一工具。
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538660471.png" alt="1538660471.png" />
+</p>
+</div>
+
+<p>
+如上图，其阐述的情景如图所述，不再多言。若无法理解，请自行观看视频<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
+</p>
+
+<p>
+针对此抽样场景，我们关注的是两个事实
+</p>
+
+<ul class="org-ul">
+<li>抽样结果无参考价值。因为，抽取的样本有一定的概率会与罐内实际情形相差甚远</li>
+<li>抽样结果有参考价值。因为抽样样本一般而言其情形会接近于实际情形</li>
+</ul>
+
+<p>
+口说无凭，数学上是否有说明抽样与实际情形的相关定理呢？
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538661340.png" alt="1538661340.png" />
+</p>
+</div>
+
+<p>
+上图所给出不等式<a href="https://zh.wikipedia.org/zh-hans/Hoeffding%E4%B8%8D%E7%AD%89%E5%BC%8F">霍夫丁不等式</a>，给出了所讨论情形的答案。
+</p>
+
+<p>
+该不等式揭露了，若我们所能接受的bound或抽样的样本大小足够大时，抽样样本是可信的，即probably approximately correct(PAC)
+</p>
+
+<p>
+说完弹珠的例子，未免要想，这弹珠和机器学习有什么必然的关联吗？为何谈论机器学习中假设函数g是否具有学习的能力，要扯到弹珠呢？请看下图
+</p>
+
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1538662221.png" alt="1538662221.png" />
+</p>
+</div>
+
+<p>
+观察上图
+</p>
 </div>
 </div>
+
+<div id="outline-container-org8c26d36" class="outline-2">
+<h2 id="org8c26d36"><span class="section-number-2">4</span> 参阅</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+1.<a href="https://www.bilibili.com/video/av1624332/?p=15">NTU-Fundation</a>
+</p>
+
+<p class="footpara">
+统计学习方法 &#x2013; 李航
+</p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-04 Thu 13:13</p>
+<p class="date">Created: 2018-10-07 Sun 12:50</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

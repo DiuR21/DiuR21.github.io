@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-14 Sun 18:12 -->
+<!-- 2018-10-10 Wed 23:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Machine Learning</title>
+<title>机器学习的可行性</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,44 +230,221 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Machine Learning</h1>
+<h1 class="title">机器学习的可行性</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org94b595f">1. 前言</a></li>
+<li><a href="#org0376c43">2. no free lunch</a></li>
+<li><a href="#orgf904d33">3. </a></li>
+<li><a href="#org874449c">4. 参阅</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org94b595f" class="outline-2">
+<h2 id="org94b595f"><span class="section-number-2">1</span> 前言</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-<b>2018-10</b>
+就通常而言，对一个机器学习model。一般而言，我们会从测试集合出发，测试得到模型关于测试集合的误差，以评估模型的性能。
 </p>
 
 <p>
-<a href="深度神经网络(Deep Neural Networks).html">深度神经网络(Depp Nerual Networks)-资料收集</a>
+然而，这种做法，实际上是有问题的，因为测试数据总是有限的，很可能由此方法得到的结果是不可靠的。如此，要如何从更加“无懈”的角度，去推得一个更为合理的结果？
 </p>
 
 <p>
-<a href="https://www.quora.com/What-is-the-target-function-in-machine-learning">What is target function in Machine Learning</a>
+<b>统计学习理论</b> 试图从理论上对学习方法的泛化能力进行分析。
 </p>
+</div>
+</div>
+
+<div id="outline-container-org0376c43" class="outline-2">
+<h2 id="org0376c43"><span class="section-number-2">2</span> no free lunch</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">样本编号</td>
+<td class="org-right">特征(feature)</td>
+<td class="org-right">标注(tag)</td>
+<td class="org-right">model1-result</td>
+<td class="org-right">model2-result</td>
+<td class="org-right">model3-result</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s0</td>
+<td class="org-right">000</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s1</td>
+<td class="org-right">001</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s2</td>
+<td class="org-right">010</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s3</td>
+<td class="org-right">011</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s4</td>
+<td class="org-right">100</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+假设我们如今手头上有如上，四个data，分别给出了其特征以及标注。并且，还有3个针对该数据，学习完美的模型。
+</p>
+
+<p>
+不妨想想，如上数据的规律是什么呢？想过之后，则继续观看后续表格。
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">样本标号</td>
+<td class="org-right">特征(feature)</td>
+<td class="org-right">标注</td>
+<td class="org-right">model1-result</td>
+<td class="org-right">model2-result</td>
+<td class="org-right">model3-result</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s5</td>
+<td class="org-right">101</td>
+<td class="org-right">1</td>
+<td class="org-right">-1</td>
+<td class="org-right">1</td>
+<td class="org-right">-1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s6</td>
+<td class="org-right">110</td>
+<td class="org-right">-1</td>
+<td class="org-right">1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+</tr>
+
+<tr>
+<td class="org-left">样本s7</td>
+<td class="org-right">111</td>
+<td class="org-right">1</td>
+<td class="org-right">-1</td>
+<td class="org-right">-1</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+续给出下表后，实际上。上述数据，根本没有规律而言，数据都是我瞎骗的。
+</p>
+
+<p>
+那，这向我们揭示了一个非常有趣的事实：没有任何一个模型，其天然就比另外一个模型高明。
+</p>
+
+<p>
+哎，这岂不是说明，任何模型，实际就跟瞎猜一回事？实际上，其向我们表明了：Everything is wrong， but some are useful.
+</p>
+
+<p>
+至于在何种情形中，不管什么模型其实都和瞎猜差不多呢？请记住如下情形
+</p>
+
 <blockquote>
 <p>
-针对很多人把target function套到hypothesis funcion上..
-特贴此文
+NFL定理在阐述的过程中假设了f的均匀分布，即所有潜在的可能性发生的概率是一样的。
+&#x2014; <a href="https://zhuanlan.zhihu.com/p/25721582">八汰知乎专栏</a>
 </p>
 </blockquote>
 
 <p>
-<a href="机器学习为什么是可行的.html">机器学习为什么是可行的</a>
+说白了，即产生样本时，没有具体的场景，导致产生如上数据时，多个“上帝函数”发生的概率是均匀的。则，在模型对这些“上帝函数”进行倾向时，
 </p>
 
 <p>
-<b>2018-09</b>
+无论倾向了任何一个f，其最终的算法的期望水平便是一样的。而具体生产环境下，则一般不会有此问题，某一个现实的数据集合，其“上帝函数s”发生的概率一般不会是俊平的
 </p>
+</div>
+</div>
 
-<p>
-<a href="感知器.html">感知器</a>
-</p>
+<div id="outline-container-orgf904d33" class="outline-2">
+<h2 id="orgf904d33"><span class="section-number-2">3</span> </h2>
+</div>
 
-<p>
-<a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a>
-</p>
+<div id="outline-container-org874449c" class="outline-2">
+<h2 id="org874449c"><span class="section-number-2">4</span> 参阅</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-14 Sun 18:12</p>
+<p class="date">Created: 2018-10-10 Wed 23:42</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
