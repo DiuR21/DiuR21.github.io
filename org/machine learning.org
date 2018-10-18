@@ -2,6 +2,8 @@
 
 *2018-10*
 
+[[file:机器学习实战.org][机器学习实战]]
+
 [[file:深度神经网络(Deep Neural Networks).org][深度神经网络(Depp Nerual Networks)-资料收集]]
 
 [[https://www.quora.com/What-is-the-target-function-in-machine-learning][What is target function in Machine Learning]]

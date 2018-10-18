@@ -1,5 +1,9 @@
 #+TITLE: Emacs
 
+[[file:E-lisp.org][E-lisp]]
+
+[[file:Emacs-configure log.org][Emacs-configure-log]]
+
 [[file:Emacs-Eshell.org][Emacs-Eshell-no-finifhs]]
 
 [[https://www.youtube.com/watch?v=lsgPNVIMkIE][Emacs ido-mode Demon]]

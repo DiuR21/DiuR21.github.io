@@ -1,0 +1,11 @@
+#+TITLE: 算法 Algorithm
+
+
+* 排序
+  [[file:归并排序.org][归并排序]]
+
+  
+* Else
+  [[file:动态规划.org][动态规划]]
+
+

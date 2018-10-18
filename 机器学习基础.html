@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-14 Sun 18:12 -->
+<!-- 2018-10-18 Thu 23:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Machine Learning</title>
+<title>机器学习基础</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,44 +230,78 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Machine Learning</h1>
+<h1 class="title">机器学习基础</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org415fc6b">1. 算法的选择</a></li>
+<li><a href="#org79d55c7">2. 开发步骤</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org415fc6b" class="outline-2">
+<h2 id="org415fc6b"><span class="section-number-2">1</span> 算法的选择</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-<b>2018-10</b>
+众所周知，机器学习中针对各类问题是有多种多样的学习算法的。
 </p>
 
 <p>
-<a href="深度神经网络(Deep Neural Networks).html">深度神经网络(Depp Nerual Networks)-资料收集</a>
+如，监督学习中的K-近邻算法、线性回归、朴素贝叶斯、局部加权线性回归、支持向量机、Ridge回归、决策树、Lasso最小回归系数估计
 </p>
 
 <p>
-<a href="https://www.quora.com/What-is-the-target-function-in-machine-learning">What is target function in Machine Learning</a>
-</p>
-<blockquote>
-<p>
-针对很多人把target function套到hypothesis funcion上..
-特贴此文
-</p>
-</blockquote>
-
-<p>
-<a href="机器学习为什么是可行的.html">机器学习为什么是可行的</a>
+及无监督学习中的K-均值、最大期望算法、DBSCAN、Parzen窗设计
 </p>
 
 <p>
-<b>2018-09</b>
+针对此，须考虑如下问题：
 </p>
 
 <p>
-<a href="感知器.html">感知器</a>
+1.使用机器学习算法的目的，比如想要完成何种任务。是预测明日气象还是对投票者依据兴趣分组。
 </p>
 
 <p>
-<a href="感知器原始&amp;对偶-python实现.html">感知器(pocket)-python实现</a>
+2.需要分析和收集的数据是什么，如果想要预测目标变量的值，则可以选择监督学习算法，否则可以选择无监督学习算法。确定选择监督算法后，可进一步确定目标变量类型，如果目标变量是离散型，如是/否、1/2/3等，则选择分类器算法。如果为连续性，则需要选择回归算法。
 </p>
+</div>
+</div>
+
+<div id="outline-container-org79d55c7" class="outline-2">
+<h2 id="org79d55c7"><span class="section-number-2">2</span> 开发步骤</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+1.收集数据。一般方法有，使用爬虫抽取数据、从RSS反馈或者API中得到信息、设备处得到的实测数据。
+</p>
+
+<p>
+2.准备输入数据。得到数据之后，需确保数据格式符合要求。
+</p>
+
+<p>
+3.分析输入数据。人工分析得到的数据，确保前两步的工作有效。检验是否存在明显的异常值；图形化展示也是个好方法
+</p>
+
+<p>
+4.训练算法。将格式化数据输入到算法，从中抽取知识或信息。而对于无监督学习算法，由于不存在目标变量值，因而也不存在“训练”这一概念。
+</p>
+
+<p>
+5.测试算法。这一步将评估第四步经由学习得到的只是信息。对于监督学习，必须已知用于评估算法的目标变量值；对于无监督学习，也必须用其他的评测手段来检验算法的成功率。
+</p>
+
+<p>
+6.使用算法。balalal&#x2026;.
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-14 Sun 18:12</p>
+<p class="date">Created: 2018-10-18 Thu 23:33</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

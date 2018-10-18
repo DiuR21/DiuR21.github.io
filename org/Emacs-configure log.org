@@ -1,0 +1,5 @@
+#+TITLE: Emacs-configure-log
+
+* init-benchmarking
+** What is that for?  
+   用于测算启动耗时
