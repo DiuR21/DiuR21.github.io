@@ -23,7 +23,5 @@
    #+begin_src emacs-lisp
    (setq fucker "I'm fucker")
    (message fucker)
-
-   
    #+end_src
   
