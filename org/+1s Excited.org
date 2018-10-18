@@ -1,7 +1,6 @@
 #+TITLE: +1s Excited
 
 *2018-09*
-
 * Linux文件系统
 
   : 元数据
@@ -31,6 +30,8 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 * Else
 
 *2018-10*
+
+[[https://linux.cn/article-10113-1.html?utm_source=rss&utm_medium=rss][给*nix系统包管理系统加个前端]] -- xixi...
 
 [[https://github.com/octowhale/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md][别像弱智一样提问]]
 
