@@ -1,6 +1,10 @@
 #+TITLE: 音乐 music
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/music_page.css"/>
-*2018-10*
+*2018*
+
+[[https://itunes.apple.com/cn/album/%E6%94%BE%E8%AA%B2%E5%BE%8C%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-single/1429442761][放課後ディストラクション - やくしまるえつこ]] -- 如果你吹爆おおの あきら我們就是好朋友喵
+
+[[http://ok8er9pip.bkt.clouddn.com/1539877561.png]]
 
 [[https://itunes.apple.com/cn/album/%E4%BA%BA%E5%A6%BB%E7%9A%84%E4%BC%AA%E6%9C%AF/1395829490?i=1395829508][人妻的偽術 - 謝安琪]]
 
