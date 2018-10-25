@@ -9,6 +9,7 @@ A hook is a Lisp variable which holds a list of functions,
 to be called on some *well-defined occasion.*
 
 '-hooks' is a normal hook -- hook function that with no arguments.
+
 '-functions' is a abnormal hook -- hook function that with arguments.
 #+end_quote
 
