@@ -1,0 +1,6 @@
+#+TITLE: mode-line configure
+
+* (setq mode-line-front)
+
+* 参考
+

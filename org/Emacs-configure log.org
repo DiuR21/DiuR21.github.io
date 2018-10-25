@@ -3,3 +3,7 @@
 * init-benchmarking
 ** What is that for?  
    用于测算启动耗时
+* mode-line
+  自定义mode-line..追求简单以及快速启动..
+  
+  后续还需要结合fly-cheack，做一个error&wrong的counter...暂时不管，bc在编辑器上开project，没这个需求。

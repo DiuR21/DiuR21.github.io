@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-14 Sun 18:12 -->
+<!-- 2018-10-18 Thu 23:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs</title>
@@ -232,6 +232,14 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Emacs</h1>
 <p>
+<a href="E-lisp.html">E-lisp</a>
+</p>
+
+<p>
+<a href="Emacs-configure log.html">Emacs-configure-log</a>
+</p>
+
+<p>
 <a href="Emacs-Eshell.html">Emacs-Eshell-no-finifhs</a>
 </p>
 
@@ -257,7 +265,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-14 Sun 18:12</p>
+<p class="date">Created: 2018-10-18 Thu 23:33</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

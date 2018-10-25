@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-25 Thu 20:14 -->
+<!-- 2018-10-25 Thu 01:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Emacs-configure-log</title>
+<title>正则化 - Regularizaiton</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,50 +230,57 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Emacs-configure-log</h1>
+<h1 class="title">正则化 - Regularizaiton</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org34f6535">1. init-benchmarking</a>
-<ul>
-<li><a href="#orgcd9fee2">1.1. What is that for?</a></li>
-</ul>
-</li>
-<li><a href="#org80a913d">2. mode-line</a></li>
+<li><a href="#org2869c1a">1. 正则化是什么</a></li>
+<li><a href="#org31701c4">2. 参考</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org34f6535" class="outline-2">
-<h2 id="org34f6535"><span class="section-number-2">1</span> init-benchmarking</h2>
+<div id="outline-container-org2869c1a" class="outline-2">
+<h2 id="org2869c1a"><span class="section-number-2">1</span> 正则化是什么</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-orgcd9fee2" class="outline-3">
-<h3 id="orgcd9fee2"><span class="section-number-3">1.1</span> What is that for?</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-用于测算启动耗时
+多次在有关ML的资料中，看到 <b>正则化</b> 这一词。本文力求深入浅出，解释正则化到底是什么。
+</p>
+
+<p>
+众所周知，ML中的学习算法根据训练集(train set)训练后可能会出现如下两种问题：过拟合(overfitting)以及欠拟合(underfitting)
+</p>
+
+<p>
+而 <b>正则化是为了防止过拟合，进而提高模型的泛化能力所诞生的</b> 。
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1540133419.png" alt="1540133419.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org80a913d" class="outline-2">
-<h2 id="org80a913d"><span class="section-number-2">2</span> mode-line</h2>
+
+
+<div id="outline-container-org31701c4" class="outline-2">
+<h2 id="org31701c4"><span class="section-number-2">2</span> 参考</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-自定义mode-line..追求简单以及快速启动..
+<a href="https://charlesliuyx.github.io/2017/10/03/%E3%80%90%E7%9B%B4%E8%A7%82%E8%AF%A6%E8%A7%A3%E3%80%91%E4%BB%80%E4%B9%88%E6%98%AF%E6%AD%A3%E5%88%99%E5%8C%96/">什么是正规化</a>
 </p>
 
 <p>
-后续还需要结合fly-cheack，做一个error&amp;wrong的counter&#x2026;暂时不管，bc在编辑器上开project，没这个需求。
+mofan-ML 
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-25 Thu 20:14</p>
+<p class="date">Created: 2018-10-25 Thu 01:52</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

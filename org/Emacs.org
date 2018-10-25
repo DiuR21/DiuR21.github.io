@@ -1,6 +1,24 @@
 #+TITLE: Emacs
 
-[[file:E-lisp.org][E-lisp]]
+*2018-10*
+
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html][Emacs Hooks]]
+#+begin_quote
+Hooks are an important mechanism for customizing Emacs.
+A hook is a Lisp variable which holds a list of functions, 
+to be called on some *well-defined occasion.*
+
+'-hooks' is a normal hook -- hook function that with no arguments.
+'-functions' is a abnormal hook -- hook function that with arguments.
+#+end_quote
+
+[[http://www.newsmth.net/bbsanc.php?path=%2Fgroups%2Fcomp.faq%2FEmacs%2Felisp%2Fhappierbee%2FM.1184679743.j0&ap=64311][E-lisp tutorial]]
+
+[[file:mode-line configure.org][mode-line configure]]
+
+*2018-09*
+
+[[file:E-lisp.org][E-lisp]] -- unfinish.
 
 [[file:Emacs-configure log.org][Emacs-configure-log]]
 

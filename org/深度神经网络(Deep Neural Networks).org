@@ -1,1 +1,12 @@
-* 基石
+#+TITLE: DNN-资料收集
+
+* DNN相关概念
+
+* BP算法的证明
+  [[https://zhuanlan.zhihu.com/p/26765585][BP算法的证明 - 1]]
+
+  [[http://deeplearning.stanford.edu/wiki/index.php/Backpropagation_Algorithm][BP算法的证明 - 2]]
+
+  [[http://ok8er9pip.bkt.clouddn.com/1540025906.png]]
+
+  公式第一项为误差项等式平方差值和的均值。而第二项则是一个正则项(也被称之为 weight decay term)，该项被用于减小

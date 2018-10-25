@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-25 Thu 20:14 -->
+<!-- 2018-10-18 Thu 23:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs-configure-log</title>
@@ -240,7 +240,6 @@ for the JavaScript code in this tag.
 <li><a href="#orgcd9fee2">1.1. What is that for?</a></li>
 </ul>
 </li>
-<li><a href="#org80a913d">2. mode-line</a></li>
 </ul>
 </div>
 </div>
@@ -258,22 +257,10 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-org80a913d" class="outline-2">
-<h2 id="org80a913d"><span class="section-number-2">2</span> mode-line</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-自定义mode-line..追求简单以及快速启动..
-</p>
-
-<p>
-后续还需要结合fly-cheack，做一个error&amp;wrong的counter&#x2026;暂时不管，bc在编辑器上开project，没这个需求。
-</p>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-25 Thu 20:14</p>
+<p class="date">Created: 2018-10-18 Thu 23:33</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
