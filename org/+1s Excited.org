@@ -2,6 +2,8 @@
 
 *2018-10*
 
+[[https://github.com/Hawstein/snake-ai][snake-ai-github]] -- 有空就蛇皮一下
+
 [[https://program-think.blogspot.com/2018/09/Why-You-Should-Switch-from-Chrome-to-Firefox.html][弃用 Chrome 改用 Firefox 的几点理由——Chrome69隐私丑闻]] -- F**k Google. 手机端与pc的隔离.
 
 [[https://tls.ulfheim.net/][The Illustrated TLS Connection]]

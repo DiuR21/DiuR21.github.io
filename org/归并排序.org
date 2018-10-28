@@ -1,9 +1,144 @@
 #+TITLE: 归并排序
 
-[[http://ok8er9pip.bkt.clouddn.com/1540737125.png]]
+[[./img/megasort-1.jpg]]
 
-* 时间复杂度
-  O(N*lgN)
+* 基本思想
+  建立在递归(recursive)的基础上的排序算法。其通过递归，将数组按 *分治法* 的原则进行分割。
+
+  归并排序只对相邻的数组元素进行处理。而缺点为，归并排序因使用递归的方法，同一变量或会存在大量的备份，造成内存的浪费。
+
+  *归并两个数组时，其思想为，从两个有序数组中按序取相应的元素构成新数组*
+
+* 基本归并排序 -- C++  
+#+begin_src cpp
+#include <cstdio>
+#include <vector>
+#include <iostream>
+
+template<typename T>
+class MergeSort
+{
+public:
+  friend std::istream& operator>>(std::istream&, MergeSort<T>& m);
+  friend std::ostream& operator<<(std::ostream&, const MergeSort<T>& m);
   
+  void Sort();
+private:
+  void _sort(std::vector<T>&);
+  void _merge(std::vector<T>&, std::vector<T>&, std::vector<T>&);
+
+  std::vector<T> Array;
+};
+
+template<typename T>
+std::istream& operator>>(std::istream& in, MergeSort<T>& m)
+{
+  char _template_char;
+  std::cout << "input data, '#' mean stop. use Enter to seperate the Num" << std::endl;
+
+  while(true)
+  {
+    std::cin >> _template_char;
+    if( _template_char == '#') break;
+    else
+    {
+      int _template_num = 0;
+      while(true)
+      {
+      	if(_template_char == '\n') break;
+      	else  
+        {
+	        _template_num = _template_num * 10 + _template_char - '0';
+        } 
+      }
+    }
+  }
+}
+
+template<typename T>
+std::ostream& operator<<(std::ostream& out, const MergeSort<T>& m) 
+{
+  typename std::vector<T>::iterator iter;
+  for( iter = m.Array.begin() ; iter != m.Array.end() )
+  {
+    std::cout << *iter;
+  }
+}
+
+template<typename T>
+void MergeSort<T>::Sort()
+{
+  _sort(this -> Array);
+}
+
+template<typename T>
+void MergeSort<T>::_sort(std::vector<T>& array)
+{
+  if(1 < array.size() )
+  {
+    std::vector<T> array_left(array.begin(), array.begin() + array.size() / 2);
+    _sort(array_left);
+    std::vector<T> array_right(array.begin() + array.size() / 2, array.end());
+    _sort(array_right);
+    _merge(array, array_left, array_right);
+  }
+}
+
+template<typename T>
+void MergeSort<T>::_merge(std::vector<T>& array, std::vector<T>& array_left, std::vector<T>& array_right)
+{
+  array.clear();
+  
+  typename std::vector<T>::iterator  iter_left, iter_right;
+
+  while(iter_left != array_left.end() && iter_right!= array_right.end())
+  {
+    if( *iter_left <= *iter_right )
+    {
+      array.push_back(*iter_right);
+      iter_right++;
+    }
+    else
+    {
+      array.push_back(*iter_left);
+      iter_left++;
+    }
+  }
+
+  while( iter_left != array_left.end() )
+    array.push_back(*iter_left), iter_left++;
+  
+  while( iter_right != array_right.end() )
+    array.push_back(*iter_right), iter_right++;
+}
+
+int main()
+{
+  MergeSort<int> N;
+  std::cin >> N;
+
+  N.Sort();
+
+  std::cout << N;
+}
+
+#+end_src
+  
+
+* 自然归并排序 -- C++
+  说白了，即数组分割时，先做一个扫描，如果是有序的，则不将其进行细分
+  
+#+begin_src cpp
+
+#+end_src
+* 时间复杂度
+  T(n) = 2T(n/2) + f(n) f(n) -- 归并操作
+
+  T(n) = 4T(n/4) + 2f(n)
+
+  ...log2n = k，共进行k层递归
+
+  T(n) = nT(1) + kf(n) = O(n*logn)
+
 * 参考
   [[https://blog.csdn.net/MoreWindows/article/details/6678165][白话经典算法系列之五 归并排序的实现]]

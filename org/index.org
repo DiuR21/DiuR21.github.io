@@ -7,4 +7,5 @@
 * [[file:算法 Algorithm.org][算法 Algorithm]]
 * [[file:machine learning.org][机器学习 Machine Learning]]
 * [[file:Python.org][Python]]
+* [[file:C++.org][C++]]
 

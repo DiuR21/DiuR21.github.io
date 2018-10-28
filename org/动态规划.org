@@ -2,6 +2,117 @@
 
 * 0-1背包
 * 最小编辑距离
-* 参考
+* 最长单调递增子序列
+  即找到一个给定序列的最长递增子序列，如{3, 2, 1 , 4, 5, 2, 6}的最长递增子序列为：{3, 4, 5, 6}
 
-[[https://www.zhihu.com/question/23995189][动态规划的本质]]
+  此问题，即原问题从最长递增子序列，“降解”为，当序列以$a_i$为最末尾元素时，仅存在如下两种情形：
+  
+  1.当前序列为仅包含$a_i$的序列
+  2.当前序列为在满足 *j<i* 且 $a_j$ < $a_i$ 的前提下，将 $a_i$ 添加到“旧”子序列的子序列。
+
+#+begin_src cpp
+int array[n];
+
+int dp()
+{
+  int []dp_maze = new int[n];
+
+  for(int i = 0;i < n;i++)
+  {
+     dp_maze[i] = 1;
+     for(int j = 0;j < i;j++)
+     { 
+     if( dp_maze[j] < dp_maze[i] && array[j] > array[i] - 1 )
+        dp_maze[i] = dp_maze[j] + 1;
+     }
+   }
+   
+   return dp_maze[n-1];
+}
+#+end_src  
+* 编辑距离问题 -- 转
+  操作允许三种：插入一个字符、删除一个字符、替换一个字符
+  
+  假设字符串 a, 共 m 位，从 a[1] 到 a[m]
+  字符串 b, 共 n 位，从 b[1] 到 b[n]
+  d[i][j] 表示字符串 a[1]-a[i] 转换为 b[1]-b[j] 的编辑距离
+
+  那么有如下递归规律（a[i] 和 b[j] 分别是字符串 a 和 b 的最后一位）：
+
+    当 a[i] 等于 b[j] 时，d[i][j] = d[i-1][j-1], 比如 fxy -> fay 的编辑距离等于 fx -> fa 的编辑距离
+    
+    当 a[i] 不等于 b[j] 时，d[i][j] 等于如下 3 项的最小值：
+      
+      d[i-1][j] + 1（删除 a[i]）， 比如 fxy -> fab 的编辑距离 = fx -> fab 的编辑距离 + 1
+      
+      d[i][j-1] + 1（插入 b[j])， 比如 fxy -> fab 的编辑距离 = fxyb -> fab 的编辑距离 + 1 = fxy -> fa 的编辑距离 + 1
+    
+      d[i-1][j-1] + 1（将 a[i] 替换为 b[j]）， 比如 fxy -> fab 的编辑距离 = fxb -> fab 的编辑距离 + 1 = fx -> fa 的编辑距离 + 1
+  
+    递归边界：
+  
+      a[i][0] = i, b 字符串为空，表示将 a[1]-a[i] 全部删除，所以编辑距离为 i
+     
+      a[0][j] = j, a 字符串为空，表示 a 插入 b[1]-b[j]，所以编辑距离为 j
+
+      i,j 的前移，即完成了相应的搜索过程。
+#+begin_src
+int edit_distance(char *a, char *b, int i, int j)
+{
+    if (j == 0) {
+        return i;
+    } else if (i == 0) {
+        return j;
+    // 算法中 a, b 字符串下标从 1 开始，c 语言从 0 开始，所以 -1
+    } else if (a[i-1] == b[j-1]) {
+        return edit_distance(a, b, i - 1, j - 1);
+    } else {
+        return min_of_three(edit_distance(a, b, i - 1, j) + 1,
+                            edit_distance(a, b, i, j - 1) + 1,
+                            edit_distance(a, b, i - 1, j - 1) + 1);
+    }
+}
+
+edit_distance(stra, strb, strlen(stra), strlen(strb));
+#+end_src
+ 
+  动态规划的解法
+
+  即颠倒过来，从前往后算。没什么好说的。
+
+#+begin_src
+int edit_distance(char *a, char *b)
+{
+    int lena = strlen(a);
+    int lenb = strlen(b);
+    int d[lena+1][lenb+1];
+    int i, j;
+
+    for (i = 0; i <= lena; i++) {
+        d[i][0] = i;
+    }
+    for (j = 0; j <= lenb; j++) {
+        d[0][j] = j;
+    }
+
+    for (i = 1; i <= lena; i++) {
+        for (j = 1; j <= lenb; j++) {
+            // 算法中 a, b 字符串下标从 1 开始，c 语言从 0 开始，所以 -1
+            if (a[i-1] == b[j-1]) {
+                d[i][j] = d[i-1][j-1];
+            } else {
+                d[i][j] = min_of_three(d[i-1][j]+1, d[i][j-1]+1, d[i-1][j-1]+1);
+            }
+        }
+    }
+
+    return d[lena][lenb];
+}
+#+end_src  
+* 参考
+  
+  [[https://www.zhihu.com/question/23995189][动态规划的本质]]
+  
+  [[http://www.hawstein.com/posts/dp-novice-to-advanced.html][动态规划：从新手到专家]]
+
+  [[https://www.dreamxu.com/books/dsa/dp/edit-distance.html][编辑距离 (Edit distance)]]

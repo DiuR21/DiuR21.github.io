@@ -1,0 +1,16 @@
+#+TITLE: C++
+
+[[http://www.cplusplus.com/reference/vector/vector/][vector C++ Reference]]
+#+begin_quote
+std::vector::at
+
+The function automatically checks whether n is within the bounds of valid elements in the vector, 
+
+throwing an out_of_range exception if it is not (i.e., if n is greater than, or equal to, its size). 
+
+This is in contrast with member operator[], that does not check against bounds.
+#+end_quote
+
+[[http://www.cplusplus.com/reference/iterator/][C++ iterator]]
+
+[[https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords#][Where and why do I have to put the “template” and “typename” keywords?]]
