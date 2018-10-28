@@ -1,0 +1,38 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/mpcer/Google 云端硬盘/WH GLB/blog/org/mode-line configure.org
+
+
+* Mode Line
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2018-10-27 Sat 21:22
+  :ARCHIVE_FILE: ~/Google 云端硬盘/WH GLB/blog/org/mode-line configure.org
+  :ARCHIVE_CATEGORY: mode-line configure
+  :END:
+  如下图，为Emacs的ModeLine。高可定制化的Emacs，当然ModeLine也是可以定制的啦。我们可以使用Emacs提供的各种各样的Fuc在各种各样的modes(模式下，如org-mode)特制化Emacs ModeLine的机能。
+  
+  [[http://ok8er9pip.bkt.clouddn.com/1540475021.png]]
+
+  使用Emacs，躲不开的modes概念，有两个 -- major mode及minor mode[fn:mode]。在此，我截取gnu官网，关于Minor Modes的一小段作为对Minor Modes的解释。
+  
+  #+begin_quote
+  A minor mode is an optional editing mode that alters the behavior of Emacs in some well-defined way. 
+
+  Unlike major modes, any number of minor modes can be in effect at any time. 
+
+  Some minor modes are buffer-local, and can be turned on (enabled) in certain buffers and off (disabled) in others. 
+
+  Other minor modes are global: while enabled, they affect everything you do in the Emacs session, in all buffers. 
+
+  Most minor modes are disabled by default, but a few are enabled by default.
+  #+end_quote
+
+  至于Mode Line是什么，有何作用。我们接下来慢慢展开。
+
+  #+begin_quote
+  At the bottom of each window is a mode line, which describes what is going on in the current buffer. When there is only one window, the mode line appears right above the echo area; it is the next-to-last line in the frame. On a graphical display, the mode line is drawn with a 3D box appearance. Emacs also usually draws the mode line of the selected window with a different color than that of unselected windows, in order to make it stand out.
+
+
+  #+end_quote
+  

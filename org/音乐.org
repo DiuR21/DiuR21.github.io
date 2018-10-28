@@ -2,6 +2,10 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/music_page.css"/>
 *2018*
 
+[[https://itunes.apple.com/cn/album/miriams-music-box-special-edition/42054300][Miriam's Music Box (Special Edition) - 楊千嬅]] -- 有愛錯無放過好評
+
+[[http://ok8er9pip.bkt.clouddn.com/1540647080.png]]
+
 [[https://itunes.apple.com/cn/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-%E7%94%B5%E5%BD%B1-%E5%A4%AA%E7%A9%BA%E6%97%85%E5%AE%A2-%E4%B8%BB%E9%A2%98%E6%9B%B2/1190070714?i=1190070744][光年之外 (电影《太空旅客》主题曲) - 邓紫棋]]
 
 [[http://ok8er9pip.bkt.clouddn.com/1540470214.png]]

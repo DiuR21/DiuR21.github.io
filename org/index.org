@@ -1,9 +1,5 @@
 #+TITLE: dctrl web site
 
-#+begin_quote
-毫无阅读体验、完全随意而为、看似分享、实际是笔记本（
-#+end_quote
-
 * [[file:音乐.org][音乐 music]]
 * [[file:+1s Excited.org][+1s Excited]]
 * [[file:Emacs.org][编辑器 Emacs]]

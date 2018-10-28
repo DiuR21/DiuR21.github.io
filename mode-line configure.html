@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-25 Thu 20:14 -->
+<!-- 2018-10-28 Sun 00:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>mode-line configure</title>
+<title>Mode Line configure</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,28 +230,183 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">mode-line configure</h1>
+<h1 class="title">Mode Line configure</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8bddd04">1. (setq mode-line-front)</a></li>
-<li><a href="#org1efd4b8">2. 参考</a></li>
+<li><a href="#orgdb6dec8">1. Mode Line</a></li>
+<li><a href="#orge1430c3">2. (setq Mode Line Format)</a></li>
+<li><a href="#org1efd4b8">3. 参考</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org8bddd04" class="outline-2">
-<h2 id="org8bddd04"><span class="section-number-2">1</span> (setq mode-line-front)</h2>
+<div id="outline-container-orgdb6dec8" class="outline-2">
+<h2 id="orgdb6dec8"><span class="section-number-2">1</span> Mode Line</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+如下图，为Emacs的ModeLine。高可定制化的Emacs，当然ModeLine也是可以定制的啦。我们可以使用Emacs提供的各种各样的Fuc在各种各样的modes(模式下，如org-mode)特制化Emacs ModeLine的机能。
+</p>
+
+
+<div class="figure">
+<p><img src="http://ok8er9pip.bkt.clouddn.com/1540475021.png" alt="1540475021.png" />
+</p>
 </div>
 
+<p>
+使用Emacs，躲不开的modes概念，有两个 &#x2013; major mode及minor mode<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。在此，我截取gnu官网，关于Minor Modes的一小段作为对Minor Modes的解释。
+</p>
+
+<blockquote>
+<p>
+A minor mode is an optional editing mode that alters the behavior of Emacs in some well-defined way. 
+</p>
+
+<p>
+Unlike major modes, any number of minor modes can be in effect at any time. 
+</p>
+
+<p>
+Some minor modes are buffer-local, and can be turned on (enabled) in certain buffers and off (disabled) in others. 
+</p>
+
+<p>
+Other minor modes are global: while enabled, they affect everything you do in the Emacs session, in all buffers. 
+</p>
+
+<p>
+Most minor modes are disabled by default, but a few are enabled by default.
+</p>
+</blockquote>
+
+<p>
+至于Mode Line是什么，有何作用。那么，先截取一段来自于GNU文档的介绍。
+</p>
+
+<blockquote>
+<p>
+At the bottom of each window is a mode line, which describes what is going on in the current buffer. 
+</p>
+
+<p>
+When there is only one window, the mode line appears right above the echo area; it is the next-to-last line in the frame. 
+</p>
+
+<p>
+On a graphical display, the mode line is drawn with a 3D box appearance. 
+</p>
+
+<p>
+Emacs also usually draws the mode line of the selected window with a different color than that of unselected windows, in order to make it stand out.
+</p>
+</blockquote>
+
+<p>
+从上，是Mode Line基本功能的阐述。一言概之，Mode Line即当前Emacs编辑器，你本人所打开的Buffer的基本信息的展示栏。
+</p>
+
+<p>
+如果想对Mode Line的原始设定进行一波hack..可以M-x ielm [回车] mode-line-format 然后根据资料慢慢探索。
+</p>
+
+
+<div class="figure">
+<p><img src="https://www.emacswiki.org/pics/static/DrewsEmacsWindowCallouts.jpg" alt="DrewsEmacsWindowCallouts.jpg" />
+</p>
+</div>
+
+<pre class="example">
+cs:ch-fr buf pos line (major minor)
+</pre>
+
+<p>
+关于默认Mode Line各字符含义，请参阅GNU-The Mode Linex。
+</p>
+
+<p>
+major mode &#x2013; A major mode is a principal editing mode for the buffer, such as Text mode, Lisp mode, C mode, and so forth. 
+</p>
+
+<p>
+minor mode &#x2013; minor is a list of some of the enabled minor modes, which are optional editing modes that provide additional features on top of the major mode.
+</p>
+
+<p>
+minor-mode: 1.narrow 2.def &#x2026;嗯，大概知道有啥用了.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orge1430c3" class="outline-2">
+<h2 id="orge1430c3"><span class="section-number-2">2</span> (setq Mode Line Format)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+mode line的显示，与major modes及minor modes有关。即，不一样的modes可以设定，显示不一样的mode mine contentes.
+</p>
+
+<p>
+mode line所显示的内容，由buffer-local变量 mode-line-format 所决定。这个变量包含的mode line结构体:实际为一个控制将在buffer中的mode line所显示信息的模版。
+</p>
+
+<p>
+为效率考量，Emacs不会不断的针对mode line进行compute。如果需要更新Mode Line的状态，需要使用函数 force-mode-line-update(&amp; optional all)来完成。
+</p>
+
+<p>
+显然，为达到mode line自定义的目标，需要做的，即了解mode-line-format这一变量的控制方法，即了解该结构体的组成。<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+</p>
+</div>
+</div>
+
+
+
+
+
 <div id="outline-container-org1efd4b8" class="outline-2">
-<h2 id="org1efd4b8"><span class="section-number-2">2</span> 参考</h2>
+<h2 id="org1efd4b8"><span class="section-number-2">3</span> 参考</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://www.emacswiki.org/emacs/ModeLineConfiguration">EmacsWiki - Mode Line Configuration</a>
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Format.html">GNU-Emacs-Mode Line Format</a>
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html">GNU-Emacs-Minor Modes</a>
+</p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Mode-Line.html#Mode-Line">GNU-The Mode Line</a>
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=rw4xXz7wCIk">Hack Emacs - Hacking the Mode Line</a>
+</p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="http://jixiuf.github.io/blog/00003-emacs-first-class.html/#sec-4">emacs 入门第一课：Emacs里的基本概念</a>
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data">GNU-The Data Structure of the Mode Line</a>
+</p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-25 Thu 20:14</p>
+<p class="date">Created: 2018-10-28 Sun 00:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

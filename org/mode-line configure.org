@@ -1,6 +1,84 @@
-#+TITLE: mode-line configure
+#+TITLE: Mode Line configure
 
-* (setq mode-line-front)
+* Mode Line
+  如下图，为Emacs的ModeLine。高可定制化的Emacs，当然ModeLine也是可以定制的啦。我们可以使用Emacs提供的各种各样的Fuc在各种各样的modes(模式下，如org-mode)特制化Emacs ModeLine的机能。
+  
+  [[http://ok8er9pip.bkt.clouddn.com/1540475021.png]]
+
+  使用Emacs，躲不开的modes概念，有两个 -- major mode及minor mode[fn:mode]。在此，我截取gnu官网，关于Minor Modes的一小段作为对Minor Modes的解释。
+  
+  #+begin_quote
+  A minor mode is an optional editing mode that alters the behavior of Emacs in some well-defined way. 
+
+  Unlike major modes, any number of minor modes can be in effect at any time. 
+
+  Some minor modes are buffer-local, and can be turned on (enabled) in certain buffers and off (disabled) in others. 
+
+  Other minor modes are global: while enabled, they affect everything you do in the Emacs session, in all buffers. 
+
+  Most minor modes are disabled by default, but a few are enabled by default.
+  #+end_quote
+
+  至于Mode Line是什么，有何作用。那么，先截取一段来自于GNU文档的介绍。
+
+  #+begin_quote
+  At the bottom of each window is a mode line, which describes what is going on in the current buffer. 
+  
+  When there is only one window, the mode line appears right above the echo area; it is the next-to-last line in the frame. 
+
+  On a graphical display, the mode line is drawn with a 3D box appearance. 
+  
+  Emacs also usually draws the mode line of the selected window with a different color than that of unselected windows, in order to make it stand out.
+  #+end_quote
+  
+  从上，是Mode Line基本功能的阐述。一言概之，Mode Line即当前Emacs编辑器，你本人所打开的Buffer的基本信息的展示栏。
+  
+  如果想对Mode Line的原始设定进行一波hack..可以M-x ielm [回车] mode-line-format 然后根据资料慢慢探索。
+
+  [[https://www.emacswiki.org/pics/static/DrewsEmacsWindowCallouts.jpg]]
+
+  #+begin_src
+  cs:ch-fr buf pos line (major minor)
+  #+end_src
+
+  关于默认Mode Line各字符含义，请参阅GNU-The Mode Linex。
+
+  major mode -- A major mode is a principal editing mode for the buffer, such as Text mode, Lisp mode, C mode, and so forth. 
+
+  minor mode -- minor is a list of some of the enabled minor modes, which are optional editing modes that provide additional features on top of the major mode.
+
+  minor-mode: 1.narrow 2.def ...嗯，大概知道有啥用了.
+  
+  
+* (setq Mode Line Format)
+  
+  mode line的显示，与major modes及minor modes有关。即，不一样的modes可以设定，显示不一样的mode mine contentes.
+  
+  mode line所显示的内容，由buffer-local变量 mode-line-format 所决定。这个变量包含的mode line结构体:实际为一个控制将在buffer中的mode line所显示信息的模版。
+
+  为效率考量，Emacs不会不断的针对mode line进行compute。如果需要更新Mode Line的状态，需要使用函数 force-mode-line-update(& optional all)来完成。
+
+  显然，为达到mode line自定义的目标，需要做的，即了解mode-line-format这一变量的控制方法，即了解该结构体的组成。[fn:TDSotML]
+
+  
+
+  
 
 * 参考
+
+  [[https://www.emacswiki.org/emacs/ModeLineConfiguration][EmacsWiki - Mode Line Configuration]]
+
+  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Format.html][GNU-Emacs-Mode Line Format]]
+
+  [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Minor-Modes.html][GNU-Emacs-Minor Modes]]
+
+  [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Mode-Line.html#Mode-Line][GNU-The Mode Line]]
+
+  [[https://www.youtube.com/watch?v=rw4xXz7wCIk][Hack Emacs - Hacking the Mode Line]]
+
+[fn:TDSotML]  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data][GNU-The Data Structure of the Mode Line]]
+
+[fn:mode] [[http://jixiuf.github.io/blog/00003-emacs-first-class.html/#sec-4][emacs 入门第一课：Emacs里的基本概念]]
+
+
 

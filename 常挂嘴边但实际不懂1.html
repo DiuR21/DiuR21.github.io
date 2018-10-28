@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-28 Sun 22:27 -->
+<!-- 2018-10-28 Sun 15:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>算法 Algorithm</title>
+<title>常挂嘴边但实际不懂的概念一. 带宽</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,39 +230,85 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">算法 Algorithm</h1>
+<h1 class="title">常挂嘴边但实际不懂的概念一. 带宽</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3bcb035">1. 排序</a></li>
-<li><a href="#org1cb9ed9">2. Else</a></li>
+<li><a href="#org3472732">1. 简介</a></li>
+<li><a href="#org1875227">2. 参考</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org3bcb035" class="outline-2">
-<h2 id="org3bcb035"><span class="section-number-2">1</span> 排序</h2>
+<div id="outline-container-org3472732" class="outline-2">
+<h2 id="org3472732"><span class="section-number-2">1</span> 简介</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-<a href="归并排序.html">归并排序</a>
+带宽(Bandwidth)指信号所占据的频带信宽；在被用于描述信道时，带宽是指能够有效通过的信号的最大频带宽度。
+</p>
+
+<p>
+模拟信号而言的话，带宽又称为频宽，以赫兹(Hz)为单位 &#x2013; 每一秒周期性事件发生的次数<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>。
+</p>
+
+<p>
+数字信号而言，带宽是指单位时间内链路能够通过的数据量。
+</p>
+
+<p>
+数字系统中，带宽有两种含义。技术意义上来说，它是波特率的俗称<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>，波特率是系统传输数据符号的速度；口语中也用来表示信道容量，信道容量是系统能够传输数据的速度。
+</p>
+
+<p>
+带宽 &#x2013; 单位时间能够传输的比特数 带宽 = 时钟频率*总线位数/8
+</p>
+
+<p>
+数据传输速率Rb &#x2013; 比特率，每秒钟实际传输的比特数，是信息传输速率（传信率）的度量。单位为“比特每秒(bps)”
+</p>
+
+<p>
+波特率 &#x2013; 模拟线路信号的速率，以波形每秒的震荡数来衡量。携带数据信息的信号单元称之为码元，每秒钟通过信道传输的码元数称为码元传输速率。波特率，指的是单位时间内载波调制状态改变的次数。说白，即 *每秒调制的符号数*。因而
+</p>
+
+<p>
+比特率 = 波特率*单个调职状态对应的二进制个数 ( Rb=RB*log2 N。N为码元所使用的进制单位）
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org1cb9ed9" class="outline-2">
-<h2 id="org1cb9ed9"><span class="section-number-2">2</span> Else</h2>
+<div id="outline-container-org1875227" class="outline-2">
+<h2 id="org1875227"><span class="section-number-2">2</span> 参考</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-<a href="动态规划.html">动态规划</a>
+<a href="https://zh.wikipedia.org/wiki/%E5%B8%A6%E5%AE%BD">带宽 Wiki</a>
+</p>
+
+<p>
+<a href="https://zhuanlan.zhihu.com/p/31529472">波特和比特 &#x2013; 某乎</a>
 </p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://zh.wikipedia.org/wiki/%E8%B5%AB%E5%85%B9">赫兹 &#x2013; Wiki</a>  
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://zh.wikipedia.org/wiki/%E6%B3%A2%E7%89%B9%E7%8E%87">波特 &#x2013; Wiki</a>
+</p></div></div>
+
+
 </div>
+</div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-28 Sun 22:27</p>
+<p class="date">Created: 2018-10-28 Sun 15:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

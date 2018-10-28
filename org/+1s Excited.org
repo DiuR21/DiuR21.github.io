@@ -1,5 +1,17 @@
 #+TITLE: +1s Excited
 
+*2018-10*
+
+[[https://program-think.blogspot.com/2018/09/Why-You-Should-Switch-from-Chrome-to-Firefox.html][弃用 Chrome 改用 Firefox 的几点理由——Chrome69隐私丑闻]] -- F**k Google. 手机端与pc的隔离.
+
+[[https://tls.ulfheim.net/][The Illustrated TLS Connection]]
+
+[[https://segmentfault.com/a/1190000011185129][HTTP、SSL/TLS和HTTPS协议的区别与联系]]
+
+[[file:常挂嘴边但实际不懂1.org][常挂嘴边但实际不懂的概念一. 带宽]]
+
+[[https://github.com/ipfs/ipfs][ipfs]] -- 分布式文件系统 [[https://zhuanlan.zhihu.com/p/32615963][什么是ipfs - 某乎]]
+
 *2018-09*
 * Linux文件系统
 
@@ -52,4 +64,5 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 #+begin_quote
 只有「私密聊天」是端對端加密。根據原始設定，Telegram對話沒有進行端對端加密，你需要選擇私密聊天，才會啟動端對端加密。然而我們發現很多人不知道此分別，他們以為所有Telegram通訊都「自動地」安全。
 #+end_quote
+
 

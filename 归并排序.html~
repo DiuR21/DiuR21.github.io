@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-28 Sun 22:27 -->
+<!-- 2018-10-15 Mon 09:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>算法 Algorithm</title>
+<title>归并排序</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,39 +230,36 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">算法 Algorithm</h1>
+<h1 class="title">归并排序</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3bcb035">1. 排序</a></li>
-<li><a href="#org1cb9ed9">2. Else</a></li>
+<li><a href="#org37bfadc">1. 时间复杂度</a></li>
+<li><a href="#orgf23430f">2. 参考</a></li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org3bcb035" class="outline-2">
-<h2 id="org3bcb035"><span class="section-number-2">1</span> 排序</h2>
-<div class="outline-text-2" id="text-1">
 <p>
-<a href="归并排序.html">归并排序</a>
+[<img src="http://ok8er9pip.bkt.clouddn.com/1539566801.png" alt="1539566801.png" />]
 </p>
-</div>
+
+<div id="outline-container-org37bfadc" class="outline-2">
+<h2 id="org37bfadc"><span class="section-number-2">1</span> 时间复杂度</h2>
 </div>
 
-
-<div id="outline-container-org1cb9ed9" class="outline-2">
-<h2 id="org1cb9ed9"><span class="section-number-2">2</span> Else</h2>
+<div id="outline-container-orgf23430f" class="outline-2">
+<h2 id="orgf23430f"><span class="section-number-2">2</span> 参考</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-<a href="动态规划.html">动态规划</a>
+<a href="https://blog.csdn.net/MoreWindows/article/details/6678165">白话经典算法系列之五 归并排序的实现</a>
 </p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-28 Sun 22:27</p>
+<p class="date">Created: 2018-10-15 Mon 09:43</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
