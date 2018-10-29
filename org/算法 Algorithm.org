@@ -1,8 +1,10 @@
 #+TITLE: 算法 Algorithm
 
+* LeetCode
+  [[https://leetcode.com/problems/edit-distance/description/][72. Edit Distance]] -- [[./src/leetcode72.cpp]]
+  
 * 排序
   [[file:归并排序.org][归并排序]]
-
   
 * Else
   [[file:动态规划.org][动态规划]]
