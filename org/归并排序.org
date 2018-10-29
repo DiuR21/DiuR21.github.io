@@ -1,6 +1,6 @@
 #+TITLE: 归并排序
 
-[[./img/megasort-1.jpg]]
+[[./img/algo/megasort-1.jpg]]
 
 * 基本思想
   建立在递归(recursive)的基础上的排序算法。其通过递归，将数组按 *分治法* 的原则进行分割。

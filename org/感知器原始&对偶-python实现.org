@@ -189,8 +189,8 @@ if __name__ == '__main__':
 
   附上各种各样的结果图[include the error versions]
 
-  [[./img/PLA-1.png]]
+  [[./img/ML/PLA-1.png]]
 
-  [[./img/PLA-2.png]]
+  [[./img/ML/PLA-2.png]]
 
-  [[./img/PLA-3.png]]
+  [[./img/ML/PLA-3.png]]

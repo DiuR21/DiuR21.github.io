@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-27 Sat 21:38 -->
+<!-- 2018-10-28 Sun 00:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mode Line configure</title>
@@ -236,7 +236,7 @@ for the JavaScript code in this tag.
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#orgdb6dec8">1. Mode Line</a></li>
-<li><a href="#org8bddd04">2. (setq mode-line-front)</a></li>
+<li><a href="#orge1430c3">2. (setq Mode Line Format)</a></li>
 <li><a href="#org1efd4b8">3. 参考</a></li>
 </ul>
 </div>
@@ -308,15 +308,62 @@ Emacs also usually draws the mode line of the selected window with a different c
 </p>
 
 <p>
-Mode Line可以为使用者提供何种信息呢？
+如果想对Mode Line的原始设定进行一波hack..可以M-x ielm [回车] mode-line-format 然后根据资料慢慢探索。
+</p>
+
+
+<div class="figure">
+<p><img src="https://www.emacswiki.org/pics/static/DrewsEmacsWindowCallouts.jpg" alt="DrewsEmacsWindowCallouts.jpg" />
+</p>
+</div>
+
+<pre class="example">
+cs:ch-fr buf pos line (major minor)
+</pre>
+
+<p>
+关于默认Mode Line各字符含义，请参阅GNU-The Mode Linex。
+</p>
+
+<p>
+major mode &#x2013; A major mode is a principal editing mode for the buffer, such as Text mode, Lisp mode, C mode, and so forth. 
+</p>
+
+<p>
+minor mode &#x2013; minor is a list of some of the enabled minor modes, which are optional editing modes that provide additional features on top of the major mode.
+</p>
+
+<p>
+minor-mode: 1.narrow 2.def &#x2026;嗯，大概知道有啥用了.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org8bddd04" class="outline-2">
-<h2 id="org8bddd04"><span class="section-number-2">2</span> (setq mode-line-front)</h2>
+<div id="outline-container-orge1430c3" class="outline-2">
+<h2 id="orge1430c3"><span class="section-number-2">2</span> (setq Mode Line Format)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+mode line的显示，与major modes及minor modes有关。即，不一样的modes可以设定，显示不一样的mode mine contentes.
+</p>
+
+<p>
+mode line所显示的内容，由buffer-local变量 mode-line-format 所决定。这个变量包含的mode line结构体:实际为一个控制将在buffer中的mode line所显示信息的模版。
+</p>
+
+<p>
+为效率考量，Emacs不会不断的针对mode line进行compute。如果需要更新Mode Line的状态，需要使用函数 force-mode-line-update(&amp; optional all)来完成。
+</p>
+
+<p>
+显然，为达到mode line自定义的目标，需要做的，即了解mode-line-format这一变量的控制方法，即了解该结构体的组成。<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
+</p>
 </div>
+</div>
+
+
+
+
 
 <div id="outline-container-org1efd4b8" class="outline-2">
 <h2 id="org1efd4b8"><span class="section-number-2">3</span> 参考</h2>
@@ -336,6 +383,10 @@ Mode Line可以为使用者提供何种信息呢？
 <p>
 <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Mode-Line.html#Mode-Line">GNU-The Mode Line</a>
 </p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=rw4xXz7wCIk">Hack Emacs - Hacking the Mode Line</a>
+</p>
 </div>
 </div>
 <div id="footnotes">
@@ -344,38 +395,10 @@ Mode Line可以为使用者提供何种信息呢？
 
 <div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
 <a href="http://jixiuf.github.io/blog/00003-emacs-first-class.html/#sec-4">emacs 入门第一课：Emacs里的基本概念</a>
-</p>
+</p></div></div>
 
-<p class="footpara">
-(setq-default mode-line-format
- (list
-</p>
-
-<p class="footpara">
-"["
-(propertize "%I" 'face 'font-lock-constant-face) ;; size
-"] "
-</p>
-
-<p class="footpara">
-;; the buffer name; the file name as a tool tip
-'(:eval (propertize "%b " 'face 'font-lock-keyword-face
-		    'help-echo (buffer-file-name)))
-</p>
-
-<p class="footpara">
-;;line and column
-"(" ;; '%02' to set to 2 chars at least; prevents flickering
-(propertize "%02l" 'face 'font-lock-type-face) ","
-(propertize "%02c" 'face 'font-lock-type-face)
-") "
-</p>
-
-<p class="footpara">
-;; relative position, size of file
-" "
-'(:eval (list (nyan-create)))
-" "
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data">GNU-The Data Structure of the Mode Line</a>
 </p></div></div>
 
 
@@ -383,7 +406,7 @@ Mode Line可以为使用者提供何种信息呢？
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-27 Sat 21:38</p>
+<p class="date">Created: 2018-10-28 Sun 00:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

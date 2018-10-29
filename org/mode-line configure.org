@@ -3,7 +3,7 @@
 * Mode Line
   如下图，为Emacs的ModeLine。高可定制化的Emacs，当然ModeLine也是可以定制的啦。我们可以使用Emacs提供的各种各样的Fuc在各种各样的modes(模式下，如org-mode)特制化Emacs ModeLine的机能。
   
-  [[http://ok8er9pip.bkt.clouddn.com/1540475021.png]]
+  [[./img/Emacs/1.png]]
 
   使用Emacs，躲不开的modes概念，有两个 -- major mode及minor mode[fn:mode]。在此，我截取gnu官网，关于Minor Modes的一小段作为对Minor Modes的解释。
   
