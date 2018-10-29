@@ -1,13 +1,20 @@
 #+TITLE: 算法 Algorithm
 
+NDY -- Not Done Yet
+
+D -- Done
+
 * LeetCode
-  [[https://leetcode.com/problems/edit-distance/description/][72. Edit Distance]] -- [[./src/leetcode72.cpp]]
-  
+  [[https://leetcode.com/problems/two-sum/description/][1. Two Sum]] -- D
+
+  [[https://leetcode.com/problems/add-two-numbers/solution/#][2. Add Two Numbers]] -- NDY..最为讨厌的类型题目
+
+  [[https://leetcode.com/problems/edit-distance/description/][72. Edit Distance]] -- D
 * 排序
-  [[file:归并排序.org][归并排序]]
+  [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09
   
 * Else
-  [[file:动态规划.org][动态规划]]
+  [[file:动态规划.org][动态规划]] -- 01/lis/最短编辑距离
 
   
 
