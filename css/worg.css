@@ -92,6 +92,8 @@
 	color: grey;
     }
 
+    
+
     /*
       h2:before {
       content: "* "
@@ -169,17 +171,35 @@ content: "*** "
     }
 
     table {
-	border: none;
+	border: 1px;
     }
 
+    /* Table Head */
+    thead th {
+	background-color: rgb(128, 102, 160);
+	color: #fff;
+	border-bottom-width: 0;
+    }
+
+    /* Column Style */
     td {
-	border: none;
+	color: #000;
+    }
+    /* Heading and Column Style */
+    #table-6 tr, #table-6 th {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(128, 102, 160);
     }
 
-    th {
-	border: none;
+    /* Padding and font style */
+    td, th {
+	padding: 5px 10px;
+	font-size: 12px;
+	font-family: Verdana;
+	font-weight: bold;
     }
-
+    
     code {
 	font-size: 100%;
 	color: black;
@@ -968,3 +988,5 @@ content: "*** "
 	overflow: auto;
     }
 } /* END OF @media screen */
+
+
