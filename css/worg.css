@@ -186,7 +186,7 @@ content: "*** "
 	color: #000;
     }
     /* Heading and Column Style */
-    #table-6 tr, #table-6 th {
+    tr, th {
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgb(128, 102, 160);
