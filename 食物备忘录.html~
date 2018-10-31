@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-31 Wed 16:11 -->
+<!-- 2018-10-31 Wed 16:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>食物备忘录</title>
@@ -256,14 +256,14 @@ for the JavaScript code in this tag.
 
 <col  class="org-left" />
 
-<col  class="org-left" />
+<col  class="org-right" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">name</th>
 <th scope="col" class="org-left">classical</th>
 <th scope="col" class="org-left">feature</th>
-<th scope="col" class="org-left">评分</th>
+<th scope="col" class="org-right">评分</th>
 </tr>
 </thead>
 <tbody>
@@ -271,23 +271,27 @@ for the JavaScript code in this tag.
 <td class="org-left">友臣肉松饼</td>
 <td class="org-left">肉松饼</td>
 <td class="org-left">干、但调味不错。</td>
-<td class="org-left">2.5</td>
+<td class="org-right">2.5</td>
 </tr>
 
 <tr>
 <td class="org-left">海底捞：番茄牛腩</td>
 <td class="org-left">自热火锅</td>
 <td class="org-left">汤的调味很不错，量有点少，自己加包面会比较好。</td>
-<td class="org-left">4星</td>
+<td class="org-right">4</td>
 </tr>
 </tbody>
 </table>
+
+<p>
+= =&#x2026;
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-31 Wed 16:11</p>
+<p class="date">Created: 2018-10-31 Wed 16:26</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
