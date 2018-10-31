@@ -62,13 +62,6 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 
 [[https://www.howsci.com/css-dot-and-pound-sign.html][届不到的css设计逻辑--点号的意思]]
 
-特附上两张mdzz图
-
-[[./img/1sexcited/2.png]]
-
-[[./img/1sexcited/1.png]]
-
-
 *2018-09*
 
 [[https://linux.cn/article-10027-1.html?utm_source=rss&utm_medium=rss][Python Simple Gui]]
