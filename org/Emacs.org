@@ -2,6 +2,11 @@
 
 *2018-10*
 
+[[http://www.zmonster.me/2015/07/12/org-mode-introduction.html][强大的Org mode(1):简单介绍与基本使用]]
+#+begin_quote
+不错的系列文..mark
+#+end_quote
+
 [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html][Emacs Hooks]]
 #+begin_quote
 Hooks are an important mechanism for customizing Emacs.
