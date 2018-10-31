@@ -60,10 +60,9 @@
 
   显然，为达到mode line自定义的目标，需要做的，即了解mode-line-format这一变量的控制方法，即了解该结构体的组成。[fn:TDSotML]
 
-  
+  构成该结构的有如下成员。
 
-  
-
+  string: 
 * 参考
 
   [[https://www.emacswiki.org/emacs/ModeLineConfiguration][EmacsWiki - Mode Line Configuration]]

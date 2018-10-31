@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-29 Mon 02:20 -->
+<!-- 2018-10-31 Wed 16:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>+1s Excited</title>
@@ -245,6 +245,21 @@ for the JavaScript code in this tag.
 </p>
 
 <p>
+<a href="https://www.cnbeta.com/articles/tech/782829.htm">苹果发布八核A12X处理器：自研GPU+7nm工艺</a>
+</p>
+<blockquote>
+<p>
+10月30日的这场发布会，苹果节奏非常快，而好多年没更新的产品都获得了更新，比如Mac mini，当然还有新版的MacBook Air，
+不过我们还是来看看新iPad Pro上的A12X处理器。A12X处理器也采用了台积电的7nm工艺制程，不过相比A12更夸张的是，
+它拥有100亿个晶体管（A12只有69亿个），至于这颗处理器的性能，苹果直接强调，超越了目前92%便携PC的处理器性能。
+</p>
+
+<p>
+炸裂a12x = 2 * a12
+</p>
+</blockquote>
+
+<p>
 <a href="https://github.com/Hawstein/snake-ai">snake-ai-github</a> &#x2013; 有空就蛇皮一下
 </p>
 
@@ -340,13 +355,13 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 
 
 <div class="figure">
-<p><img src="http://ok8er9pip.bkt.clouddn.com/1538642580.png" alt="1538642580.png" />
+<p><img src="./img/1sexcited/2.png" alt="2.png" />
 </p>
 </div>
 
 
 <div class="figure">
-<p><img src="http://ok8er9pip.bkt.clouddn.com/1538642667.png" alt="1538642667.png" />
+<p><img src="./img/1sexcited/1.png" alt="1.png" />
 </p>
 </div>
 
@@ -372,7 +387,7 @@ ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，�
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-29 Mon 02:20</p>
+<p class="date">Created: 2018-10-31 Wed 16:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
