@@ -2,6 +2,8 @@
 
 *2018-10*
 
+[[https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388][EmacsLispCNManual]]
+
 [[http://www.zmonster.me/2015/07/12/org-mode-introduction.html][强大的Org mode(1):简单介绍与基本使用]]
 #+begin_quote
 不错的系列文..mark

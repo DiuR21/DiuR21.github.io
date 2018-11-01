@@ -62,7 +62,14 @@
 
   构成该结构的有如下成员。
 
-  string: 
+  string: string，mode line结构体中的成员，逐字显示，除非包含有 "%-construct"[fn:%construct]，其实为别的变量的替代标示。对于string而言，若如果其包含有 'face' 特性，则该特性会控制其
+
+  显示效果如同问题在buffer中显示的一般。若非如此，则会以default方式显示文字。help-echo则绑定help strings到string上，keymap则可以使得text mouse-sensitive.
+
+  symbol: 暂时不管..因为貌似没有接触到
+
+  list: list构成的mode line成员。区分如下情形，若list的头元素为string或为列表，则递归运行list中元素，并拼接所得结果。而若头元素为:eval，则对后面的FORM求值，并将所得结果作为string输出。
+
 * 参考
 
   [[https://www.emacswiki.org/emacs/ModeLineConfiguration][EmacsWiki - Mode Line Configuration]]
@@ -74,6 +81,10 @@
   [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Mode-Line.html#Mode-Line][GNU-The Mode Line]]
 
   [[https://www.youtube.com/watch?v=rw4xXz7wCIk][Hack Emacs - Hacking the Mode Line]]
+
+  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Properties-in-Mode.html#Properties-in-Mode][Properties in the Mode Line]] -- 解释了在mode line中如何为text添加特定的properties
+
+[fn:%construct] [[https://www.gnu.org/software/emacs/manual/html_node/elisp/_0025_002dConstructs.html#g_t_0025_002dConstructs][%-Constructs in the Mode Line]]
 
 [fn:TDSotML]  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data][GNU-The Data Structure of the Mode Line]]
 
