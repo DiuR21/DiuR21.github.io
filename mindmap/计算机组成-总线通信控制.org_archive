@@ -1,0 +1,23 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/mpcer/Google 云端硬盘/WH GLB/blog/mindmap/计算机组成-总线通信控制.org
+
+
+* 总线通信控制
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2018-11-04 Sun 00:19
+  :ARCHIVE_FILE: ~/Google 云端硬盘/WH GLB/blog/mindmap/计算机组成-总线通信控制.org
+  :ARCHIVE_CATEGORY: 计算机组成-总线通信控制
+  :END:
+
+   
+   主要解决通信双方如何获知传输开始和传输结束，以及通信双方如何协调如何配合。
+
+*** 同步通信
+
+    通信双方由统一时标控制数据传送。
+
+*** 异步通信
+*** 半同步通信
+*** 分离式通信
