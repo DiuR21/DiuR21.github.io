@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-03 Sat 14:20 -->
+<!-- 2018-11-04 Sun 00:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Emacs</title>
+<title>思维导图 Mind Map</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,108 +230,23 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Emacs</h1>
-<blockquote>
-<p>
-宏中，第一次按照定义把你的代码进行展开和替换或者更复杂的操作。
-</p>
+<h1 class="title">思维导图 Mind Map</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0d4f9f4">1. 计算机组成</a></li>
+</ul>
+</div>
+</div>
 
-<p>
-第二次，则将展开后的代码用于求值。
-</p>
-
-<p>
-Emacs虽小众，却灵活，亦强大。
-</p>
-</blockquote>
-
-<p>
-<a href="https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388">EmacsLispCNManual</a> &#x2013; nil 和 t 2018-11-03
-</p>
-
-<p>
-<b>2018-11</b>
-</p>
-
-<p>
-<a href="Emacs-configure log.html">Emacs-configure-log</a>
-</p>
-
-<p>
-<b>2018-10</b>
-</p>
-
-<p>
-<a href="http://www.zmonster.me/2015/07/12/org-mode-introduction.html">强大的Org mode(1):简单介绍与基本使用</a>
-</p>
-<blockquote>
-<p>
-不错的系列文..mark
-</p>
-</blockquote>
-
-<p>
-<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html">Emacs Hooks</a>
-</p>
-<blockquote>
-<p>
-Hooks are an important mechanism for customizing Emacs.
-A hook is a Lisp variable which holds a list of functions, 
-to be called on some <b>well-defined occasion.</b>
-</p>
-
-<p>
-'-hooks' is a normal hook &#x2013; hook function that with no arguments.
-</p>
-
-<p>
-'-functions' is a abnormal hook &#x2013; hook function that with arguments.
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.newsmth.net/bbsanc.php?path=/groups/comp.faq/Emacs/elisp/happierbee/M.1184679743.j0&amp;ap=64311">E-lisp tutorial</a>
-</p>
-
-<p>
-<a href="mode-line configure.html">mode-line configure</a>
-</p>
-
-<p>
-<b>2018-09</b>
-</p>
-
-<p>
-<a href="E-lisp.html">E-lisp</a> &#x2013; unfinish.
-</p>
-
-<p>
-<a href="Emacs-Eshell.html">Emacs-Eshell-no-finifhs</a>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=lsgPNVIMkIE">Emacs ido-mode Demon</a>
-</p>
-
-<p>
-<a href="PythonProgrammingInEmacs.html">Python Programming</a>
-</p>
-
-<p>
-<a href="org-mode之小细节归纳.html">org-mode之小细节归纳</a>
-</p>
-
-<p>
-<a href="https://orgmode.org/worg/org-tutorials/">org tutorial</a>
-</p>
-
-<p>
-<a href="如何使用org-mode&amp;github搭建个人博客.html">如何使用org-mode&amp;github搭建个人博客</a>
-</p>
+<div id="outline-container-org0d4f9f4" class="outline-2">
+<h2 id="org0d4f9f4"><span class="section-number-2">1</span> <a href="计算机组成.html">计算机组成</a></h2>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-11-03 Sat 14:20</p>
+<p class="date">Created: 2018-11-04 Sun 00:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

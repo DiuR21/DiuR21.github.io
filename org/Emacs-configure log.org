@@ -1,10 +1,10 @@
 #+TITLE: Emacs-configure-log
 
-* Emacs configure modularize ??
+* Emacs configure modularize
 
-* mode-line ??
-** error&warning counter ??
-** git support ??
+* mode-line
+** error&warning counterk
+** git support
   
 * org-mode mind map 2018-11-03
   添加org-mode 对 mind-map的支持。 tool: [[https://github.com/theodorewiles/org-mind-map#including-text][org-mind-map]]
