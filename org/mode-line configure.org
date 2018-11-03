@@ -62,7 +62,7 @@
 
   构成该结构的有如下成员。
 
-  string: string，mode line结构体中的成员，逐字显示，除非包含有 "%-construct"[fn:%construct]，其实为别的变量的替代标示。对于string而言，若如果其包含有 'face' 特性，则该特性会控制其
+  string: string，mode line结构体中的成员，逐字显示，除非包含有 "%-construct"[fn:construct]，其实为别的变量的替代标示。对于string而言，若如果其包含有 'face' 特性，则该特性会控制其
 
   显示效果如同问题在buffer中显示的一般。若非如此，则会以default方式显示文字。help-echo则绑定help strings到string上，keymap则可以使得text mouse-sensitive.
 
@@ -84,7 +84,7 @@
 
   [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Properties-in-Mode.html#Properties-in-Mode][Properties in the Mode Line]] -- 解释了在mode line中如何为text添加特定的properties
 
-[fn:%construct] [[https://www.gnu.org/software/emacs/manual/html_node/elisp/_0025_002dConstructs.html#g_t_0025_002dConstructs][%-Constructs in the Mode Line]]
+[fn:construct] [[https://www.gnu.org/software/emacs/manual/html_node/elisp/_0025_002dConstructs.html#g_t_0025_002dConstructs][%-Constructs in the Mode Line]]
 
 [fn:TDSotML]  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data][GNU-The Data Structure of the Mode Line]]
 

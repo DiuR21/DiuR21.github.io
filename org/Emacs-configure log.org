@@ -3,10 +3,11 @@
 * Emacs configure modularize
 
 * mode-line
-** error&warning counterk
+** error and warning counterk
 ** git support
   
 * org-mode mind map 2018-11-03
   添加org-mode 对 mind-map的支持。 tool: [[https://github.com/theodorewiles/org-mind-map#including-text][org-mind-map]]
 
   该工具支持将org文件直接输出为gif、pdf、png、jpg、jpeg等等
+  

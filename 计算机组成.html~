@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-04 Sun 01:13 -->
+<!-- 2018-11-04 Sun 01:17 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>计算机组成</title>
@@ -255,94 +255,18 @@ for the JavaScript code in this tag.
 主要解决通信双方如何获知传输开始和传输结束，以及通信双方如何协调如何配合。
 </p>
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">通信方式</th>
-<th scope="col" class="org-left">描述</th>
-<th scope="col" class="org-left">优点</th>
-<th scope="col" class="org-left">缺点</th>
-<th scope="col" class="org-left">&#xa0;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">同步通信</td>
-<td class="org-left">通信双方由统一时标控制数据传送。</td>
-<td class="org-left">规定明确、统一、模块间的配合简单一致。</td>
-<td class="org-left">主、从模块时间配合属于强制性“同步”，必须在限定时间内完成规定的操作。</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">异步通信</td>
-<td class="org-left">应答方式(握手方式)，主模块发出"请求"(Request)时，待从模块的"响应"(Acknowledge)信号。需要添加应答线。</td>
-<td class="org-left">模块毋需速度一致</td>
-<td class="org-left">设计较同步通信复杂</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">异步不互锁</td>
-<td class="org-left">主模块发出"请求"信号后，不需等待从模块发回"响应"信号，即可撤除"请求"信号。 &#x2013; CPU -&gt; 主存</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">异步半互锁</td>
-<td class="org-left">主模块发出"请求"信号后，需要等待从模块发回"响应"信号，才可撤除"请求"信号。 &#x2013; CPU访问共享存储器-必须确认共享的存储器未被占用</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">异步全互锁</td>
-<td class="org-left">主模块发出"请求"信号后，等待从模块发回"响应"信号，才撤除"请求"信号。从模块也需主模块以取消"请求"信号后后，才可取消"响应"。</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">半同步通信</td>
-<td class="org-left">地址、命令、数据信号的发出时间，严格按照系统时钟的某个前沿开始，接收方则都采用系统时钟后沿时刻来进行判断识别。增加"等待"(Wait)线</td>
-<td class="org-left">比异步通信简单。可靠性高，各模块工作于统一时钟控制下。</td>
-<td class="org-left">系统时钟频率不能太高，适合于较慢的系统</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">分离式通信</td>
-<td class="org-left">P65看书，其实说白了就是每个模块都是主模块。若要进行数据传送，则需要主动申请主线的使用权。</td>
-<td class="org-left">不存在空闲的主线占用时间，利用率高。</td>
-<td class="org-left">控制复杂。</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<p><img src="./mindmap/计算机组成-总线通信控制_diagram.jpg" alt="计算机组成-总线通信控制_diagram.jpg" />
+</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-11-04 Sun 01:13</p>
+<p class="date">Created: 2018-11-04 Sun 01:17</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
