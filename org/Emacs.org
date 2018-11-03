@@ -1,8 +1,19 @@
 #+TITLE: Emacs
+#+begin_quote
+宏中，第一次按照定义把你的代码进行展开和替换或者更复杂的操作。
+
+第二次，则将展开后的代码用于求值。
+
+Emacs虽小众，却灵活，亦强大。
+#+end_quote
+
+[[https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388][EmacsLispCNManual]] -- nil 和 t 2018-11-03
+
+*2018-11*
+
+[[file:Emacs-configure log.org][Emacs-configure-log]]
 
 *2018-10*
-
-[[https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388][EmacsLispCNManual]]
 
 [[http://www.zmonster.me/2015/07/12/org-mode-introduction.html][强大的Org mode(1):简单介绍与基本使用]]
 #+begin_quote
@@ -27,8 +38,6 @@ to be called on some *well-defined occasion.*
 *2018-09*
 
 [[file:E-lisp.org][E-lisp]] -- unfinish.
-
-[[file:Emacs-configure log.org][Emacs-configure-log]]
 
 [[file:Emacs-Eshell.org][Emacs-Eshell-no-finifhs]]
 

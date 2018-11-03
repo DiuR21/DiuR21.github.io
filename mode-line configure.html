@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-31 Wed 16:00 -->
+<!-- 2018-11-02 Fri 00:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mode Line configure</title>
@@ -364,10 +364,23 @@ mode line所显示的内容，由buffer-local变量 mode-line-format 所决定�
 </p>
 
 <p>
-string: 
+string: string，mode line结构体中的成员，逐字显示，除非包含有 "%-construct"<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>，其实为别的变量的替代标示。对于string而言，若如果其包含有 'face' 特性，则该特性会控制其
+</p>
+
+<p>
+显示效果如同问题在buffer中显示的一般。若非如此，则会以default方式显示文字。help-echo则绑定help strings到string上，keymap则可以使得text mouse-sensitive.
+</p>
+
+<p>
+symbol: 暂时不管..因为貌似没有接触到
+</p>
+
+<p>
+list: list构成的mode line成员。区分如下情形，若list的头元素为string或为列表，则递归运行list中元素，并拼接所得结果。而若头元素为:eval，则对后面的FORM求值，并将所得结果作为string输出。
 </p>
 </div>
 </div>
+
 <div id="outline-container-org1efd4b8" class="outline-2">
 <h2 id="org1efd4b8"><span class="section-number-2">3</span> 参考</h2>
 <div class="outline-text-2" id="text-3">
@@ -390,6 +403,10 @@ string:
 <p>
 <a href="https://www.youtube.com/watch?v=rw4xXz7wCIk">Hack Emacs - Hacking the Mode Line</a>
 </p>
+
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Properties-in-Mode.html#Properties-in-Mode">Properties in the Mode Line</a> &#x2013; 解释了在mode line中如何为text添加特定的properties
+</p>
 </div>
 </div>
 <div id="footnotes">
@@ -404,12 +421,16 @@ string:
 <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Mode-Line-Data.html#Mode-Line-Data">GNU-The Data Structure of the Mode Line</a>
 </p></div></div>
 
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+<a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/_0025_002dConstructs.html#g_t_0025_002dConstructs">%-Constructs in the Mode Line</a>
+</p></div></div>
+
 
 </div>
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-31 Wed 16:00</p>
+<p class="date">Created: 2018-11-02 Fri 00:31</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

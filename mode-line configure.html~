@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-29 Mon 16:15 -->
+<!-- 2018-10-31 Wed 16:00 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mode Line configure</title>
@@ -358,13 +358,16 @@ mode line所显示的内容，由buffer-local变量 mode-line-format 所决定�
 <p>
 显然，为达到mode line自定义的目标，需要做的，即了解mode-line-format这一变量的控制方法，即了解该结构体的组成。<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>
 </p>
+
+<p>
+构成该结构的有如下成员。
+</p>
+
+<p>
+string: 
+</p>
 </div>
 </div>
-
-
-
-
-
 <div id="outline-container-org1efd4b8" class="outline-2">
 <h2 id="org1efd4b8"><span class="section-number-2">3</span> 参考</h2>
 <div class="outline-text-2" id="text-3">
@@ -406,7 +409,7 @@ mode line所显示的内容，由buffer-local变量 mode-line-format 所决定�
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-10-29 Mon 16:15</p>
+<p class="date">Created: 2018-10-31 Wed 16:00</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

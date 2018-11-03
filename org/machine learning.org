@@ -7,8 +7,6 @@
 正则化是为了防止过拟合， 进而增强泛化能力。
 #+end_quote
 
-[[http://ok8er9pip.bkt.clouddn.com/1540473965.png]]
-
 [[file:机器学习实战.org][机器学习实战]]
 
 [[file:深度神经网络(Deep Neural Networks).org][深度神经网络(Depp Nerual Networks)-资料收集]]

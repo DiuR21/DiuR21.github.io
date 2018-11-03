@@ -1,9 +1,12 @@
 #+TITLE: Emacs-configure-log
 
-* init-benchmarking
-** What is that for?  
-   用于测算启动耗时
-* mode-line
-  自定义mode-line..追求简单以及快速启动..
+* Emacs configure modularize ??
+
+* mode-line ??
+** error&warning counter ??
+** git support ??
   
-  后续还需要结合fly-cheack，做一个error&wrong的counter...暂时不管，bc在编辑器上开project，没这个需求。
+* org-mode mind map 2018-11-03
+  添加org-mode 对 mind-map的支持。 tool: [[https://github.com/theodorewiles/org-mind-map#including-text][org-mind-map]]
+
+  该工具支持将org文件直接输出为gif、pdf、png、jpg、jpeg等等
