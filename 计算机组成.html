@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-04 Sun 01:28 -->
+<!-- 2018-11-04 Sun 21:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>计算机组成</title>
@@ -237,7 +237,9 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#orga2646a9">1. 总线</a>
 <ul>
-<li><a href="#orgcba1d96">1.1. 总线通信控制</a></li>
+<li><a href="#org363d16a">1.1. 基本概念</a></li>
+<li><a href="#org46608f4">1.2. 总线判优控制</a></li>
+<li><a href="#orgcba1d96">1.3. 总线通信控制</a></li>
 </ul>
 </li>
 </ul>
@@ -248,9 +250,135 @@ for the JavaScript code in this tag.
 <h2 id="orga2646a9"><span class="section-number-2">1</span> 总线</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgcba1d96" class="outline-3">
-<h3 id="orgcba1d96"><span class="section-number-3">1.1</span> 总线通信控制</h3>
+<div id="outline-container-org363d16a" class="outline-3">
+<h3 id="org363d16a"><span class="section-number-3">1.1</span> 基本概念</h3>
 <div class="outline-text-3" id="text-1-1">
+
+<div class="figure">
+<p><img src="./mindmap/计算机组成-总线_diagram.png" alt="计算机组成-总线_diagram.png" />
+</p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">概念</th>
+<th scope="col" class="org-left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">传输特点</td>
+<td class="org-left">共享的传输介质，某时刻仅允许一个部件向总线发送，但多个部件可获取</td>
+</tr>
+
+<tr>
+<td class="org-left">传输周期</td>
+<td class="org-left">完成一次总线操作的时间，包括申请阶段、寻址阶段、传送阶段和结束阶段</td>
+</tr>
+
+<tr>
+<td class="org-left">总线宽度</td>
+<td class="org-left">总线上能同时传输的数据位数&#x2013;总线根数</td>
+</tr>
+
+<tr>
+<td class="org-left">总线带宽</td>
+<td class="org-left">单位时间内总线上传输数据的位数，通常用每秒钟传送信息的字节数来衡量</td>
+</tr>
+
+<tr>
+<td class="org-left">总线特性</td>
+<td class="org-left">机械特性、电气特性、功能特性和时间特性</td>
+</tr>
+
+<tr>
+<td class="org-left">总线标准</td>
+<td class="org-left">国际公布或推荐的互联各个模块的标准。</td>
+</tr>
+
+<tr>
+<td class="org-left">总线的主设备</td>
+<td class="org-left">获得总线控制权的设备</td>
+</tr>
+
+<tr>
+<td class="org-left">总线的从设备</td>
+<td class="org-left">被主设备访问的设备，只能响应从主设备发来的各种总线命令。</td>
+</tr>
+
+<tr>
+<td class="org-left">片内总线</td>
+<td class="org-left">芯片内的总线</td>
+</tr>
+
+<tr>
+<td class="org-left">系统总线</td>
+<td class="org-left">连接CPU、主存、I/O设备各部件间的信息传输线。</td>
+</tr>
+
+<tr>
+<td class="org-left">通信总线</td>
+<td class="org-left">链接计算机间或计算机系统间的信息传输线</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org46608f4" class="outline-3">
+<h3 id="org46608f4"><span class="section-number-3">1.2</span> 总线判优控制</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div class="figure">
+<p><img src="./mindmap/计算机组成-总线判优控制_diagram.png" alt="计算机组成-总线判优控制_diagram.png" />
+</p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">概念</th>
+<th scope="col" class="org-left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">链式查询</td>
+<td class="org-left">BS-总线忙;BR-总线请求;BG-总线同意。BG信号串式地从一个I/O接口传送到下一个I/O接口</td>
+</tr>
+
+<tr>
+<td class="org-left">计数器定时查询</td>
+<td class="org-left">相对上者，少了BG线。多了一组设备地址线。当BS=0(总线不忙)接收到BR信号后，则计数器开始计数，并通过地址线发出一组地址信号。</td>
+</tr>
+
+<tr>
+<td class="org-left">独立请求方式</td>
+<td class="org-left">每一组设备都有一组独立的BR/BG线。控制芯片内一般有排队电路。</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgcba1d96" class="outline-3">
+<h3 id="orgcba1d96"><span class="section-number-3">1.3</span> 总线通信控制</h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
 主要解决通信双方如何获知传输开始和传输结束，以及通信双方如何协调如何配合。
 </p>
@@ -348,7 +476,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-11-04 Sun 01:28</p>
+<p class="date">Created: 2018-11-04 Sun 21:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
