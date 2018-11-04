@@ -1,0 +1,7 @@
+#+TITLE: Emacs Lisp Manual备忘录
+
+| 章节             | 完成度 | 完成时间               |
+|------------------+--------+------------------------|
+| Introduction     |    0-5 | In the production line |
+| Mode Line Format |    5-8 | 2018-10-31             |
+
