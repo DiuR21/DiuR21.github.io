@@ -2,7 +2,7 @@
 
 *2018-11*
 
-[[file:机器学习实战.org][机器学习实战]]
+[[http://codingpy.com/article/a-quick-intro-to-pandas/][Pandas -- 10mins]]
 
 *2018-10*
 
@@ -18,8 +18,6 @@
 针对很多人把target function套到hypothesis funcion上..
 特贴此文
 #+end_quote
-
-[[file:机器学习为什么是可行的.org][机器学习为什么是可行的]]
 
 *2018-09*
 

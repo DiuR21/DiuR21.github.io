@@ -1,5 +1,9 @@
 #+TITLE: Emacs
 
+*2018-11*
+
+[[file:Emacs-configure log.org][Emacs-configure-log]]
+
 #+begin_quote
 宏中，第一次按照定义把你的代码进行展开和替换或者更复杂的操作。
 
@@ -14,10 +18,6 @@ Emacs虽小众，却灵活，亦强大。
 #+end_quote
 
 [[https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388][EmacsLispCNManual]] -- nil 和 t 2018-11-03
-
-*2018-11*
-
-[[file:Emacs-configure log.org][Emacs-configure-log]]
 
 *2018-10*
 

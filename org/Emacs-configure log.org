@@ -1,7 +1,7 @@
 #+TITLE: Emacs-configure-log
 
 * Emacs configure modularize
-
+  初步进行。慢慢来。  看看elpa部分的模块化
 * mode-line
 ** error and warning counterk
 ** git support

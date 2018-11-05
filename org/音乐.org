@@ -2,6 +2,10 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/music_page.css"/>
 *2018*
 
+[[https://itunes.apple.com/cn/album/%E5%B7%A6%E5%8F%B3%E7%82%BA%E9%9B%A3-%E5%BE%A9%E5%88%BB%E7%89%88/914651685][左右為難（復刻版）- 鄭中基]]
+
+[[./img/music/8.png]]
+
 [[https://itunes.apple.com/cn/album/%E6%94%BE%E6%A3%84%E6%B2%BB%E7%99%82-single/1232117218][放棄治療 -- Serrini]] -- 刺客唔碌柒bgm..離去時心肝彷彿少一塊 但這種進化不能買 get..
 
 [[./img/music/7.png]]
