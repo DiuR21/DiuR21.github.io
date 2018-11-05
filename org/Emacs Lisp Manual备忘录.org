@@ -1,7 +1,25 @@
 #+TITLE: Emacs Lisp Manual备忘录
 
-| 章节             | 完成度 | 完成时间               |
-|------------------+--------+------------------------|
-| Introduction     |    0-5 | In the production line |
-| Mode Line Format |    5-8 | 2018-10-31             |
+| 章节                         |   完成时间 |
+|------------------------------+------------|
+| Mode Line Format etc.        | 2018-10-31 |
+| 20.7 Yes-or-No Queries       | 2018-11-03 |
+| 25.9.1 File Name Components  | 2018-11-04 |
+| 8.1.4 The progn Special Form | 2018-11-06 |
 
+#+begin_quote
+20.7
+
+If either of these functions is called in a command that was invoked using the mouse—more precisely, 
+
+if last-nonmenu-event (see Command Loop Info) is either nil or a list—then it uses a dialog box or pop-up menu to ask the question. 
+
+Otherwise, it uses keyboard input. You can force use either of the mouse or of keyboard input by binding last-nonmenu-event to a suitable value around the call. 
+#+end_quote
+
+[[https://emacs.stackexchange.com/questions/18570/when-why-should-i-use-progn][When/why should I use progn?]] -- 日常被沙雕网友坑..
+#+begin_quote
+It is worth noting that using progn works in both cases, while omitting it only works if the macro accepts multiple forms. 
+
+As a result of this, some people prefer to simply always use progn,because it will always work.
+#+end_quote

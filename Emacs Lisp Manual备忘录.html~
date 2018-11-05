@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-06 Tue 01:18 -->
+<!-- 2018-11-04 Sun 20:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs Lisp Manual备忘录</title>
@@ -238,70 +238,34 @@ for the JavaScript code in this tag.
 <col  class="org-left" />
 
 <col  class="org-right" />
+
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">章节</th>
-<th scope="col" class="org-right">完成时间</th>
+<th scope="col" class="org-right">完成度</th>
+<th scope="col" class="org-left">完成时间</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">Mode Line Format etc.</td>
-<td class="org-right">2018-10-31</td>
+<td class="org-left">Introduction</td>
+<td class="org-right">0-5</td>
+<td class="org-left">In the production line</td>
 </tr>
 
 <tr>
-<td class="org-left">20.7 Yes-or-No Queries</td>
-<td class="org-right">2018-11-03</td>
-</tr>
-
-<tr>
-<td class="org-left">25.9.1 File Name Components</td>
-<td class="org-right">2018-11-04</td>
-</tr>
-
-<tr>
-<td class="org-left">8.1.4 The progn Special Form</td>
-<td class="org-right">2018-11-06</td>
+<td class="org-left">Mode Line Format</td>
+<td class="org-right">5-8</td>
+<td class="org-left">2018-10-31</td>
 </tr>
 </tbody>
 </table>
-
-<blockquote>
-<p>
-20.7
-</p>
-
-<p>
-If either of these functions is called in a command that was invoked using the mouse—more precisely, 
-</p>
-
-<p>
-if last-nonmenu-event (see Command Loop Info) is either nil or a list—then it uses a dialog box or pop-up menu to ask the question. 
-</p>
-
-<p>
-Otherwise, it uses keyboard input. You can force use either of the mouse or of keyboard input by binding last-nonmenu-event to a suitable value around the call. 
-</p>
-</blockquote>
-
-<p>
-<a href="https://emacs.stackexchange.com/questions/18570/when-why-should-i-use-progn">When/why should I use progn?</a> &#x2013; 日常被沙雕网友坑..
-</p>
-<blockquote>
-<p>
-It is worth noting that using progn works in both cases, while omitting it only works if the macro accepts multiple forms. 
-</p>
-
-<p>
-As a result of this, some people prefer to simply always use progn,because it will always work.
-</p>
-</blockquote>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-11-06 Tue 01:18</p>
+<p class="date">Created: 2018-11-04 Sun 20:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
