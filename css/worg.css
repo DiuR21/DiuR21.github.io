@@ -15,7 +15,7 @@
     body {
 	font-size: 12pt;
 	line-height: 18pt;
-	color: black;
+	color: white
 	margin-top: 0;
 
     }
@@ -975,7 +975,7 @@ content: "*** "
 	margin-left: 20px;
 	margin-top: 10px;
 	padding: .2em;
-	border: 1px solid gray;
+	//border: 1px solid gray;
 	background-color: #674970;
 	z-index: -1000;
 	color: white;
@@ -992,6 +992,7 @@ content: "*** "
 	max-width: 50%;
 	overflow: auto;
 	background-color: #2e2256;
+	color: white;
     }
 } /* END OF @media screen */
 
