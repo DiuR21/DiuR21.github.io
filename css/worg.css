@@ -269,6 +269,8 @@ content: "*** "
 	padding: 1.2em;
 	border: 1px solid pink;
 	overflow: auto;
+
+	box-shadow: 0px 0px 0px;
     }
 
     .org-info-box {
@@ -1001,3 +1003,6 @@ content: "*** "
 } /* END OF @media screen */
 
 
+p.validation{
+    visibility: hidden;
+}
