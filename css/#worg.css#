@@ -1,10 +1,4 @@
-/*
-author: dctrl
-mail: dctrlbox@gmail.com
-data: 2018-10-04
-*/
-/*@import url(https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif);*/
-} /* END OF @media screen */
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Droid+Serif);
 
 @media all
 {
@@ -221,17 +215,17 @@ content: "*** "
 	padding: 0px 0.2em;
     }
 
-    .figure {
+    img{
+	max-width: 650px;
+	box-shadow: 0 0 20px 1px black;
+    }
+
+    .figure{
 	padding: 0em;
     }
+
     .figure p{
 	text-align: left;
-    }
-    
-    img {
-	margin-left: 0px;
-	max-width: 200px;
-	box-shadow: 0 0 20px 1px black;	
     }
 
     .share img {
@@ -1013,4 +1007,5 @@ p.validation{
     visibility: hidden;
 }
 
-	   
+
+
