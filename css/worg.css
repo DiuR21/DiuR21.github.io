@@ -51,9 +51,9 @@
 	background: white;
 	line-height: 12pt;
 	text-align: right;
-	box-shadow: 0 0 1em #777777;
-	-webkit-box-shadow: 0 0 1em #777777;
-	-moz-box-shadow: 0 0 1em #777777;
+	box-shadow: 0 0 1em pink;
+	-webkit-box-shadow: 0 0 1em pink;
+	-moz-box-shadow: 0 0 1em pink;
 	-webkit-border-bottom-left-radius: 5px;
 	-moz-border-radius-bottomleft: 5px;
 	/* ensure doesn't flow off the screen when expanded */
@@ -263,11 +263,11 @@ content: "*** "
 
     pre {
 	font-family: Droid Sans Mono, Monaco, Consolas, "Lucida Console", monospace;
-	color: black;
-	font-size: 90%;
-	background-color: #ffffff;
+	color: white;
+	font-size: 100%;
+	background-color: ;#674970;
 	padding: 1.2em;
-	border: 2px solid #dddddd;
+	border: 1px solid pink;
 	overflow: auto;
     }
 
