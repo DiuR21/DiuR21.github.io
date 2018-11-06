@@ -116,7 +116,7 @@ content: "*** "
 	font-size:1.45em;
 	line-height:16px;
 	padding:10px 0 10px 0;
-	color: white
+	color: white;
 	border-bottom: 1px solid #ddd;
     }
 
@@ -265,7 +265,7 @@ content: "*** "
 	font-family: Droid Sans Mono, Monaco, Consolas, "Lucida Console", monospace;
 	color: white;
 	font-size: 100%;
-	background-color: ;#674970;
+	background-color: #674970;
 	padding: 1.2em;
 	border: 1px solid pink;
 	overflow: auto;
@@ -981,7 +981,7 @@ content: "*** "
 	margin-left: 20px;
 	margin-top: 10px;
 	padding: .2em;
-	//border: 1px solid gray;
+	/*border: 1px solid gray;*/
 	background-color: #674970;
 	z-index: -1000;
 	color: white;
