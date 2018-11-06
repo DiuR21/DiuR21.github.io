@@ -9,7 +9,7 @@
 	background-attachment: fixed;
 	background-position: right bottom;
 	background-repeat: no-repeat;
-	background-color: white;
+	background-color: #674970;
     }
 
     body {
@@ -24,7 +24,7 @@
 	max-width: 80%;
 	min-width: 700px;
 	margin-left: 20px;
-	background-color: white;
+	background-color: ##2e2256;
 	padding: 2em;
 	/* box-shadow: 3px 3px 5px #888; */
     }
@@ -113,7 +113,7 @@ content: "*** "
 	font-size:1.45em;
 	line-height:16px;
 	padding:10px 0 10px 0;
-	color: black;
+	color: white
 	border-bottom: 1px solid #ddd;
     }
 
@@ -146,7 +146,11 @@ content: "*** "
 	margin-left: 1.45em;
     }
 
-    a {text-decoration: none; font-weight: 400;}
+    a {
+	text-decoration: none;
+	font-weight: 400;
+	color: white;
+    }
     a:visited {text-decoration: none; font-weight: 400;}
     a:hover {text-decoration: underline;}
 
@@ -972,8 +976,9 @@ content: "*** "
 	margin-top: 10px;
 	padding: .2em;
 	border: 1px solid gray;
-	background-color: #ffffff;
+	background-color: #674970;
 	z-index: -1000;
+	color: white;
     }
 
 
@@ -986,6 +991,7 @@ content: "*** "
 	border: 1px solid #CCC;
 	max-width: 50%;
 	overflow: auto;
+	background-color: #2e2256;
     }
 } /* END OF @media screen */
 
