@@ -15,7 +15,7 @@
     body {
 	font-size: 12pt;
 	line-height: 18pt;
-	color: white
+	color: white;
 	margin-top: 0;
 
     }
@@ -30,7 +30,10 @@
     }
     body .title {
 	margin-left: 0px;
-	font-size: 22pt;
+	font-size: 30pt;
+	text-align: right;
+	color: black;
+	font-size: 30pt;
     }
 
     #org-div-home-and-up{
@@ -149,7 +152,8 @@ content: "*** "
     a {
 	text-decoration: none;
 	font-weight: 400;
-	color: white;
+	color: pink;
+	font-size: 14pt;
     }
     a:visited {text-decoration: none; font-weight: 400;}
     a:hover {text-decoration: underline;}
