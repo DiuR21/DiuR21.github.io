@@ -2,6 +2,9 @@
 
 *2018-11*
 
+[[file:kaggle备忘录.org][kaggle备忘录]]
+
+
 [[http://codingpy.com/article/a-quick-intro-to-pandas/][Pandas -- 10mins]]
 
 *2018-10*

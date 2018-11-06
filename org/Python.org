@@ -2,6 +2,7 @@
 
 *2018-11*
 
+[[https://pyzh.readthedocs.io/en/latest/python-pandas.html#id1https://pyzh.readthedocs.io/en/latest/python-pandas.html#id1][14. (译)十分钟搞定pandas + 实例]]
 
 *2018-09*
 
