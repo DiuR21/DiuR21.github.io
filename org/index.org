@@ -1,7 +1,7 @@
 #+TITLE: dctrl web site
 
 * [[file:音乐.org][音乐 music]]
-* [[file:+1s Excited.org][+1s Excited]]
+* [[file:好van♂.org][好van♂]]
 * [[file:Emacs.org][编辑器 Emacs]]
 * [[file:thinking.org][思考 Thinking]]
 * [[file:算法 Algorithm.org][算法 Algorithm]]

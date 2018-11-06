@@ -6,7 +6,7 @@
 <!-- 2018-11-07 Wed 02:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>dctrl web site</title>
+<title>+1s Excited</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,50 +230,146 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">dctrl web site</h1>
+<h1 class="title">+1s Excited</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5d0c6b6">1. 音乐 music</a></li>
-<li><a href="#orgf43a596">2. 好van♂col</a></li>
-<li><a href="#org6bfd599">3. 编辑器 Emacs</a></li>
-<li><a href="#org93db4de">4. 思考 Thinking</a></li>
-<li><a href="#orgfc5d965">5. 算法 Algorithm</a></li>
-<li><a href="#org199f0cb">6. 思维导图 Mind Map</a></li>
-<li><a href="#org899a2f9">7. 机器学习 Machine Learning</a></li>
-<li><a href="#org4670957">8. Python</a></li>
-<li><a href="#org75bb56d">9. C++</a></li>
+<li><a href="#org986e124">1. Linux文件系统</a></li>
+<li><a href="#orgae03f09">2. Else</a></li>
 </ul>
 </div>
 </div>
+<p>
+<b>2018-10</b>
+</p>
 
-<div id="outline-container-org5d0c6b6" class="outline-2">
-<h2 id="org5d0c6b6"><span class="section-number-2">1</span> <a href="音乐.html">音乐 music</a></h2>
+<p>
+<a href="食物备忘录.html">食物备忘录</a>
+</p>
+
+<p>
+<a href="https://www.cnbeta.com/articles/tech/782829.htm">苹果发布八核A12X处理器：自研GPU+7nm工艺</a>
+</p>
+<blockquote>
+<p>
+10月30日的这场发布会，苹果节奏非常快，而好多年没更新的产品都获得了更新，比如Mac mini，当然还有新版的MacBook Air，
+不过我们还是来看看新iPad Pro上的A12X处理器。A12X处理器也采用了台积电的7nm工艺制程，不过相比A12更夸张的是，
+它拥有100亿个晶体管（A12只有69亿个），至于这颗处理器的性能，苹果直接强调，超越了目前92%便携PC的处理器性能。
+</p>
+
+<p>
+炸裂a12x = 2 * a12
+</p>
+</blockquote>
+
+<p>
+<a href="https://github.com/Hawstein/snake-ai">snake-ai-github</a> &#x2013; 有空就蛇皮一下
+</p>
+
+<p>
+<a href="https://program-think.blogspot.com/2018/09/Why-You-Should-Switch-from-Chrome-to-Firefox.html">弃用 Chrome 改用 Firefox 的几点理由——Chrome69隐私丑闻</a> &#x2013; F**k Google. 手机端与pc的隔离.
+</p>
+
+<p>
+<a href="https://tls.ulfheim.net/">The Illustrated TLS Connection</a>
+</p>
+
+<p>
+<a href="https://segmentfault.com/a/1190000011185129">HTTP、SSL/TLS和HTTPS协议的区别与联系</a>
+</p>
+
+<p>
+<a href="常挂嘴边但实际不懂1.html">常挂嘴边但实际不懂的概念一. 带宽</a>
+</p>
+
+<p>
+<a href="https://github.com/ipfs/ipfs">ipfs</a> &#x2013; 分布式文件系统 <a href="https://zhuanlan.zhihu.com/p/32615963">什么是ipfs - 某乎</a>
+</p>
+
+<p>
+<b>2018-09</b>
+</p>
+<div id="outline-container-org986e124" class="outline-2">
+<h2 id="org986e124"><span class="section-number-2">1</span> Linux文件系统</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+元数据
+日志文件系统；日志系统的鲁棒性--原子操作；保证了，在日志未写入正确的情况下，文件系统的修改是可roll back的
+
+</pre>
+
+<p>
+<a href="http://linuxperf.com/?p=153">日志文件系统是怎样工作的</a> 
+</p>
+
+<p>
+<a href="http://www.ruanyifeng.com/blog/2007/03/metadata.html">元数据</a>
+</p>
+<blockquote>
+<p>
+描述数据的数据
+为计算机处理数据、分类提供了可能
+</p>
+</blockquote>
+
+<p>
+<a href="https://linux.cn/article-10000-1.html?utm_source=rss&amp;utm_medium=rss">ext4 Linux文件系统理解</a>
+</p>
+
+<blockquote>
+<p>
+在大部分情况下，ext2 在 Linux 发行版中工作得很好，但像 FAT、FAT32、HFS 和当时的其它文件系统一样 —— 在断电时容易发生灾难性的破坏。
+如果在将数据写入文件系统时候发生断电，则可能会将其留在所谓 不一致 的状态 —— 事情只完成一半而另一半未完成。
+这可能导致大量文件丢失或损坏，这些文件与正在保存的文件无关甚至导致整个文件系统无法卸载。
+</p>
+
+<p>
+ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，使用 日志 来解决这个问题。
+日志是磁盘上的一种特殊的分配区域，其写入被存储在事务中；如果该事务完成磁盘写入，则日志中的数据将提交给文件系统自身。
+如果系统在该操作提交前崩溃，则重新启动的系统识别其为未完成的事务而将其进行回滚，就像从未发生过一样。
+这意味着正在处理的文件可能依然会丢失，但文件系统 本身 保持一致，且其它所有数据都是安全的。&#x2013;这真是一个有趣的设计
+</p>
+</blockquote>
 </div>
-<div id="outline-container-orgf43a596" class="outline-2">
-<h2 id="orgf43a596"><span class="section-number-2">2</span> <a href="好van♂col.html">好van♂col</a></h2>
 </div>
-<div id="outline-container-org6bfd599" class="outline-2">
-<h2 id="org6bfd599"><span class="section-number-2">3</span> <a href="Emacs.html">编辑器 Emacs</a></h2>
+
+<div id="outline-container-orgae03f09" class="outline-2">
+<h2 id="orgae03f09"><span class="section-number-2">2</span> Else</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<b>2018-10</b>
+</p>
+
+<p>
+<a href="https://linux.cn/article-10113-1.html?utm_source=rss&amp;utm_medium=rss">给*nix系统包管理系统加个前端</a> &#x2013; xixi&#x2026;
+</p>
+
+<p>
+<a href="https://github.com/octowhale/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md">别像弱智一样提问</a>
+</p>
+
+<p>
+<a href="https://www.howsci.com/css-dot-and-pound-sign.html">届不到的css设计逻辑&#x2013;点号的意思</a>
+</p>
+
+<p>
+<b>2018-09</b>
+</p>
+
+<p>
+<a href="https://linux.cn/article-10027-1.html?utm_source=rss&amp;utm_medium=rss">Python Simple Gui</a>
+</p>
+
+<p>
+<a href="https://www.inmediahk.net/node/1043826">telegram 并不安全</a> ; <a href="https://security.stackexchange.com/questions/49782/is-telegram-secure">stack-exchange about tg security</a>
+</p>
+<blockquote>
+<p>
+只有「私密聊天」是端對端加密。根據原始設定，Telegram對話沒有進行端對端加密，你需要選擇私密聊天，才會啟動端對端加密。然而我們發現很多人不知道此分別，他們以為所有Telegram通訊都「自動地」安全。
+</p>
+</blockquote>
 </div>
-<div id="outline-container-org93db4de" class="outline-2">
-<h2 id="org93db4de"><span class="section-number-2">4</span> <a href="thinking.html">思考 Thinking</a></h2>
-</div>
-<div id="outline-container-orgfc5d965" class="outline-2">
-<h2 id="orgfc5d965"><span class="section-number-2">5</span> <a href="算法 Algorithm.html">算法 Algorithm</a></h2>
-</div>
-<div id="outline-container-org199f0cb" class="outline-2">
-<h2 id="org199f0cb"><span class="section-number-2">6</span> <a href="mindmap.html">思维导图 Mind Map</a></h2>
-</div>
-<div id="outline-container-org899a2f9" class="outline-2">
-<h2 id="org899a2f9"><span class="section-number-2">7</span> <a href="machine learning.html">机器学习 Machine Learning</a></h2>
-</div>
-<div id="outline-container-org4670957" class="outline-2">
-<h2 id="org4670957"><span class="section-number-2">8</span> <a href="Python.html">Python</a></h2>
-</div>
-<div id="outline-container-org75bb56d" class="outline-2">
-<h2 id="org75bb56d"><span class="section-number-2">9</span> <a href="C++.html">C++</a></h2>
 </div>
 </div>
 <div id="postamble" class="status">
