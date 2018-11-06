@@ -1,11 +1,13 @@
 #+TITLE: Emacs Lisp Manual备忘录
 
-| 章节                         |   完成时间 |
-|------------------------------+------------|
-| Mode Line Format etc.        | 2018-10-31 |
-| 20.7 Yes-or-No Queries       | 2018-11-03 |
-| 25.9.1 File Name Components  | 2018-11-04 |
-| 8.1.4 The progn Special Form | 2018-11-06 |
+| 章节                         |   完成时间 | 功能                                                                   |
+|------------------------------+------------+------------------------------------------------------------------------|
+| Mode Line Format etc.        | 2018-10-31 | Mode Line Format's %-construct & Mode Line Format Constructed Measures |
+| 20.7 Yes-or-No Queries       | 2018-11-03 | Intro About Yes-or-No Marco                                            |
+| 25.9.1 File Name Components  | 2018-11-04 | File Name Components and the way to control it                         |
+| 8.1.4 The progn Special Form | 2018-11-06 | Intro About progn Marco                                                |
+| 14.7.1 The append Function   | 2018-11-06 | Intro About Append Function                                            |
+| 25.9 File Names              | 2018-11-06 | Intro All About File Names                                             |
 
 #+begin_quote
 20.7

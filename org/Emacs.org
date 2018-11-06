@@ -2,6 +2,8 @@
 
 *2018-11*
 
+[[https://kuanyui.github.io/2016/02/24/dynamic-scoping-and-lexical-scoping/][搞懂 Lexical scoping 與 Dynamic scoping 的差異與用途]] -- 静态和动态竟然能混用...神特么Elisp
+
 [[file:Emacs-configure log.org][Emacs-configure-log]]
 
 #+begin_quote
