@@ -2,6 +2,10 @@
 
 *2018-11*
 
+[[file:K-NN Python.org][K-NN Python]]
+
+[[file:MLAlgorithm.org][ML-Algorithm备忘录]]
+
 [[file:kaggle备忘录.org][kaggle备忘录]]
 
 

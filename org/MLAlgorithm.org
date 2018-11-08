@@ -1,0 +1,9 @@
+#+TITLE: ML-Algorithm备忘录
+
+| name                          | key                       |
+|-------------------------------+---------------------------|
+| K nearest neighbors           | understand the K meanning |
+| Perceptron Learning Alogirhtm | hyper plane and loss fuc  |
+
+
+
