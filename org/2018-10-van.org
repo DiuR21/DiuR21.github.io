@@ -1,0 +1,37 @@
+#+TITLE: 2018-10-van
+
+[[https://www.cnbeta.com/articles/tech/782829.htm][苹果发布八核A12X处理器：自研GPU+7nm工艺]]
+#+begin_quote
+10月30日的这场发布会，苹果节奏非常快，而好多年没更新的产品都获得了更新，比如Mac mini，当然还有新版的MacBook Air，
+不过我们还是来看看新iPad Pro上的A12X处理器。A12X处理器也采用了台积电的7nm工艺制程，不过相比A12更夸张的是，
+它拥有100亿个晶体管（A12只有69亿个），至于这颗处理器的性能，苹果直接强调，超越了目前92%便携PC的处理器性能。
+
+炸裂a12x = 2 * a12
+#+end_quote
+
+[[https://github.com/Hawstein/snake-ai][snake-ai-github]] -- 有空就蛇皮一下
+
+[[https://program-think.blogspot.com/2018/09/Why-You-Should-Switch-from-Chrome-to-Firefox.html][弃用 Chrome 改用 Firefox 的几点理由——Chrome69隐私丑闻]] -- F**k Google. 手机端与pc的隔离.
+
+[[https://tls.ulfheim.net/][The Illustrated TLS Connection]]
+
+[[https://segmentfault.com/a/1190000011185129][HTTP、SSL/TLS和HTTPS协议的区别与联系]]
+
+[[file:常挂嘴边但实际不懂1.org][常挂嘴边但实际不懂的概念一. 带宽]]
+
+[[https://github.com/ipfs/ipfs][ipfs]] -- 分布式文件系统 [[https://zhuanlan.zhihu.com/p/32615963][什么是ipfs - 某乎]]
+
+[[https://linux.cn/article-10113-1.html?utm_source=rss&utm_medium=rss][给*nix系统包管理系统加个前端]] -- xixi...
+
+[[https://github.com/octowhale/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md][别像弱智一样提问]]
+
+[[https://www.howsci.com/css-dot-and-pound-sign.html][届不到的css设计逻辑--点号的意思]]
+
+*2018-09*
+
+[[https://linux.cn/article-10027-1.html?utm_source=rss&utm_medium=rss][Python Simple Gui]]
+
+[[https://www.inmediahk.net/node/1043826][telegram 并不安全]] ; [[https://security.stackexchange.com/questions/49782/is-telegram-secure][stack-exchange about tg security]]
+#+begin_quote
+只有「私密聊天」是端對端加密。根據原始設定，Telegram對話沒有進行端對端加密，你需要選擇私密聊天，才會啟動端對端加密。然而我們發現很多人不知道此分別，他們以為所有Telegram通訊都「自動地」安全。
+#+end_quote
