@@ -1,5 +1,13 @@
 #+TITLE: dctrl web site
 
+#+begin_quote
+别玩Emacs了..再玩剁手
+
+还不抓紧时间看《Python机器学习》你是想花钱买毕设吗？？
+
+还不抓紧时间看CS229，你是想上研后跟个残疾人一样被照顾吗？？
+#+end_quote
+
 * [[file:音乐.org][音乐 music]]
 * [[file:好van♂.org][好van♂]]
 * [[file:Emacs.org][编辑器 Emacs]]
