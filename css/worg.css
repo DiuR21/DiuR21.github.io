@@ -273,6 +273,10 @@ content: "*** "
 	box-shadow: 0px 0px 0px;
     }
 
+    .example {
+	color: white;
+    }
+
     .org-info-box {
 	clear:both;
 	margin-left:auto;
