@@ -1,5 +1,5 @@
 #+TITLE: dctrl web site
-s
+
 #+begin_quote
 别玩Emacs了..再玩剁手 求你快去看书&刷题
 #+end_quote
@@ -12,4 +12,3 @@ s
 * [[file:machine learning.org][机器学习 Machine Learning]]
 * [[file:Python.org][Python]]
 * [[file:C++.org][C++]]
-
