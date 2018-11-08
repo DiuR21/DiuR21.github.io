@@ -5,7 +5,6 @@
 * [[file:Emacs.org][编辑器 Emacs]]
 * [[file:thinking.org][思考 Thinking]]
 * [[file:算法 Algorithm.org][算法 Algorithm]]
-* [[file:mindmap.org][思维导图 Mind Map]]
 * [[file:machine learning.org][机器学习 Machine Learning]]
 * [[file:Python.org][Python]]
 * [[file:C++.org][C++]]
