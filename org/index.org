@@ -1,4 +1,5 @@
 #+TITLE: dctrl web site
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/css/index.css"/>
 
 [[./img/music/index-1.png]]
 

@@ -15,7 +15,7 @@
     body {
 	font-size: 12pt;
 	line-height: 18pt;
-	color: white
+	color: white;
 	margin-top: 0;
 
     }
@@ -24,13 +24,16 @@
 	max-width: 80%;
 	min-width: 700px;
 	margin-left: 20px;
-	background-color: ##2e2256;
+	background-color: #2e2256;
 	padding: 2em;
 	/* box-shadow: 3px 3px 5px #888; */
     }
     body .title {
 	margin-left: 0px;
-	font-size: 22pt;
+	font-size: 30pt;
+	text-align: right;
+	color: palevioletred;
+	font-size: 30pt;
     }
 
     #org-div-home-and-up{
@@ -48,9 +51,9 @@
 	background: white;
 	line-height: 12pt;
 	text-align: right;
-	box-shadow: 0 0 1em #777777;
-	-webkit-box-shadow: 0 0 1em #777777;
-	-moz-box-shadow: 0 0 1em #777777;
+	box-shadow: 0 0 1em pink;
+	-webkit-box-shadow: 0 0 1em pink;
+	-moz-box-shadow: 0 0 1em pink;
 	-webkit-border-bottom-left-radius: 5px;
 	-moz-border-radius-bottomleft: 5px;
 	/* ensure doesn't flow off the screen when expanded */
@@ -113,7 +116,7 @@ content: "*** "
 	font-size:1.45em;
 	line-height:16px;
 	padding:10px 0 10px 0;
-	color: white
+	color: white;
 	border-bottom: 1px solid #ddd;
     }
 
@@ -149,7 +152,8 @@ content: "*** "
     a {
 	text-decoration: none;
 	font-weight: 400;
-	color: white;
+	color: pink;
+	font-size: 14pt;
     }
     a:visited {text-decoration: none; font-weight: 400;}
     a:hover {text-decoration: underline;}
@@ -187,7 +191,7 @@ content: "*** "
 
     /* Column Style */
     td {
-	color: #000;
+	color: white;
     }
     /* Heading and Column Style */
     tr, th {
@@ -212,7 +216,7 @@ content: "*** "
     }
 
     img{
-	max-width: 650px;
+	max-width: 100px;
 	box-shadow: 0 0 20px 1px black;
     }
 
@@ -221,7 +225,7 @@ content: "*** "
     }
 
     .figure p{
-	text-align: left;
+	text-align: right;
     }
 
     .share img {
@@ -259,12 +263,18 @@ content: "*** "
 
     pre {
 	font-family: Droid Sans Mono, Monaco, Consolas, "Lucida Console", monospace;
-	color: black;
-	font-size: 90%;
-	background-color: #ffffff;
+	color: hotpink;
+	font-size: 100%;
+	background-color: #674970;
 	padding: 1.2em;
-	border: 2px solid #dddddd;
+	border: 1px solid pink;
 	overflow: auto;
+
+	box-shadow: 0px 0px 0px;
+    }
+
+    .example {
+	color: white;
     }
 
     .org-info-box {
@@ -969,13 +979,13 @@ content: "*** "
     #show_source {margin: 0; padding: 0;}
 
     #postamble {
-	font-size: 75%;
+	font-size: 88%;
 	min-width: 700px;
 	max-width: 80%;
 	margin-left: 20px;
 	margin-top: 10px;
 	padding: .2em;
-	//border: 1px solid gray;
+	/*border: 1px solid gray;*/
 	background-color: #674970;
 	z-index: -1000;
 	color: white;
@@ -997,3 +1007,6 @@ content: "*** "
 } /* END OF @media screen */
 
 
+p.validation{
+    visibility: hidden;
+}
