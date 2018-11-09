@@ -1,4 +1,6 @@
-#+TITLE: C++
+#+TITLE: *nix&&C/C++
+
+[[https://segmentfault.com/a/1190000003063859#articleHeader15][Linux IO模式及 select、poll、epoll详解]]
 
 [[http://www.cplusplus.com/reference/vector/vector/][vector C++ Reference]]
 #+begin_quote

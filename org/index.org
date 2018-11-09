@@ -1,8 +1,10 @@
 #+TITLE: dctrl web site
 
-* [[file:好van♂.org][好van♂]]
-* [[file:Emacs.org][编辑器 Emacs]]
-* [[file:算法 Algorithm.org][算法 Algorithm]]
-* [[file:machine learning.org][机器学习 Machine Learning]]
+[[./img/music/index-1.png]]
+
+* [[file:好van♂.org][haovan♂]]
+* [[file:Emacs.org][Emacs]]
+* [[file:算法 Algorithm.org][Algorithm]]
+* [[file:machine learning.org][Machine Learning]]
 * [[file:Python.org][Python]]
-* [[file:C++.org][C++]]
+* [[file:C++.org][*nix&&C/C++]]
