@@ -1,13 +1,7 @@
 #+TITLE: dctrl web site
 
-#+begin_quote
-别玩Emacs了..再玩剁手 求你快去看书&刷题
-#+end_quote
-
-* [[file:音乐.org][音乐 music]]
 * [[file:好van♂.org][好van♂]]
 * [[file:Emacs.org][编辑器 Emacs]]
-* [[file:thinking.org][思考 Thinking]]
 * [[file:算法 Algorithm.org][算法 Algorithm]]
 * [[file:machine learning.org][机器学习 Machine Learning]]
 * [[file:Python.org][Python]]

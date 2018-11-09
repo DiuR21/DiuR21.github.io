@@ -4,29 +4,11 @@
 
 [[https://kuanyui.github.io/2016/02/24/dynamic-scoping-and-lexical-scoping/][搞懂 Lexical scoping 與 Dynamic scoping 的差異與用途]] -- 静态和动态竟然能混用...神特么Elisp
 
-[[file:Emacs-configure log.org][Emacs-configure-log]]
-
-#+begin_quote
-宏中，第一次按照定义把你的代码进行展开和替换或者更复杂的操作。
-
-第二次，则将展开后的代码用于求值。
-
-Emacs虽小众，却灵活，亦强大。
-#+end_quote
-
 [[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Manual]]  [[file:Emacs Lisp Manual备忘录.org][Emacs Lisp Manual备忘录]]
-#+begin_quote
-小修小补的search是真的没意义..乖乖看文档吧
-#+end_quote
-
-[[https://www.emacswiki.org/emacs/EmacsLispManual_Chinese_Notes#toc388][EmacsLispCNManual]] -- nil 和 t 2018-11-03
 
 *2018-10*
 
 [[http://www.zmonster.me/2015/07/12/org-mode-introduction.html][强大的Org mode(1):简单介绍与基本使用]]
-#+begin_quote
-不错的系列文..mark
-#+end_quote
 
 [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html][Emacs Hooks]]
 #+begin_quote
@@ -39,19 +21,9 @@ to be called on some *well-defined occasion.*
 '-functions' is a abnormal hook -- hook function that with arguments.
 #+end_quote
 
-[[http://www.newsmth.net/bbsanc.php?path=%2Fgroups%2Fcomp.faq%2FEmacs%2Felisp%2Fhappierbee%2FM.1184679743.j0&ap=64311][E-lisp tutorial]]
-
-[[file:mode-line configure.org][mode-line configure]]
-
 *2018-09*
 
-[[file:E-lisp.org][E-lisp]] -- unfinish.
-
-[[file:Emacs-Eshell.org][Emacs-Eshell-no-finifhs]]
-
 [[https://www.youtube.com/watch?v=lsgPNVIMkIE][Emacs ido-mode Demon]]
-
-[[file:PythonProgrammingInEmacs.org][Python Programming]]
 
 [[file:org-mode之小细节归纳.org][org-mode之小细节归纳]]
 
