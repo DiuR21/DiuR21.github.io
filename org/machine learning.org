@@ -4,10 +4,9 @@
 
 [[file:K-NN Python.org][K-NN Python]]
 
-[[file:MLAlgorithm.org][ML-Algorithm备忘录]]
+[[file:MLAlgorithm.org][ML备忘录]]
 
 [[file:kaggle备忘录.org][kaggle备忘录]]
-
 
 [[http://codingpy.com/article/a-quick-intro-to-pandas/][Pandas -- 10mins]]
 
