@@ -1,0 +1,33 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/mpcer/Google 云端硬盘/WH GLB/blog/org/matplotlibplayground.org
+
+
+* figure 图像
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2018-11-25 Sun 15:04
+  :ARCHIVE_FILE: ~/Google 云端硬盘/WH GLB/blog/org/matplotlibplayground.org
+  :ARCHIVE_CATEGORY: matplotlibplayground
+  :END:
+
+figure为一个单独小窗口，小窗口内可绘制多个小图片。
+
+#+BEGIN_SRC python :results file :exports both
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-5, 5, 100)
+y1 = x**2
+y2 = np.sin(x)
+
+plt.figure(num=0, figsize(8, 8)))
+plt.plot(x, y1)
+plt.plot(x, y2, color='red', linestyle='--')
+
+plt.savefig('../img/playground/figure1.png')
+return './img/playground/figure1.png'
+#+END_SRC
+
+#+RESULTS:
+[[file:./img/playground/figure1.png]]

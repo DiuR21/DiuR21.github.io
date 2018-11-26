@@ -21,5 +21,3 @@
 | [[https://matplotlib.org/tutorials/colors/colors.html#sphx-glr-tutorials-colors-colors-py][Specifying Colors]]             | 2018-11-19 | colors-intro |
 | [[https://matplotlib.org/tutorials/colors/colorbar_only.html#sphx-glr-tutorials-colors-colorbar-only-py][Customized Colorbars Tutorial]] | 2018-11-19 | colorbars    |
 |                               |            |              |
-* Else
-  [[https://zhuanlan.zhihu.com/p/29957294][ML 入门：归一化、标准化和正则化]]

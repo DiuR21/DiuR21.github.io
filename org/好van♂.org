@@ -1,7 +1,5 @@
 #+TITLE: 好van♂
 
-[[http://aandds.com/categories.html#][aandds]]--难得发现的，依然在坚持用org-mode撰写博客的前辈。Emacs部分的笔记，叹为观止，大有裨益。
-
 [[file:2018-11-van.org][2018-11-van]]
 
 [[file:2018-10-van.org][2018-10-van]]

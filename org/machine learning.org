@@ -2,9 +2,9 @@
 
 *2018-11*
 
-[[file:K-NN Python.org][K-NN Python]]
+[[file:ML备忘录.org][ML备忘录]]
 
-[[file:MLAlgorithm.org][ML备忘录]]
+[[file:K-NN Python.org][K-NN Python]]
 
 [[file:kaggle备忘录.org][kaggle备忘录]]
 

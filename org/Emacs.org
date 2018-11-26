@@ -2,9 +2,18 @@
 
 *2018-11*
 
-[[https://kuanyui.github.io/2016/02/24/dynamic-scoping-and-lexical-scoping/][搞懂 Lexical scoping 與 Dynamic scoping 的差異與用途]] -- 静态和动态竟然能混用...神特么Elisp
+[[file:Doc备忘录.org][Doc备忘录]]
 
-[[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Manual]]  [[file:Emacs Lisp Manual备忘录.org][Emacs Lisp Manual备忘录]]
+[[https://orgmode.org/worg/org-contrib/babel/][org babel]]
+#+begin_quote
+Babel is Org-mode's ability to execute source code within Org-mode documents. 
+#+end_quote
+
+[[file:Common Lisp.org][Common Lisp Learning]]
+
+[[http://aandds.com][aandds]]--难得发现的，依然在坚持用org-mode撰写博客的前辈。Emacs部分的笔记，叹为观止，大有裨益。
+
+[[https://kuanyui.github.io/2016/02/24/dynamic-scoping-and-lexical-scoping/][搞懂 Lexical scoping 與 Dynamic scoping 的差異與用途]] -- 静态和动态竟然能混用...神特么Elisp
 
 *2018-10*
 

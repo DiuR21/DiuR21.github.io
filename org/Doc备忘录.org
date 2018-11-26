@@ -1,4 +1,8 @@
-#+TITLE: Emacs Lisp Manual备忘录
+#+TITLE: Doc备忘录
+
+* Emacs-lisp
+
+  [[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Manual]]
 
 | 章节                                    |   完成时间 | 功能                                                                   |
 |-----------------------------------------+------------+------------------------------------------------------------------------|
@@ -14,12 +18,7 @@
 | 11.1 Sequencing                         | 2018-11-15 | progn prog1 prog2                                                      |
 | 13.5 Calling Functions                  | 2018-11-15 | funcall & apply                                                        |
 | 13.11 Advising Emacs Lisp Functions     | 2018-11-15 | advice-add & advice-remove & add-function & remove-function            |
-
-
-
-
-
-
+| 23.2.7 Tabulated List mode              | 2018-11-16 | Tabulated List mode is a major mode for displaying tabulated data      |
 
 #+begin_src Emacs-lisp
 (required-vars...
@@ -29,7 +28,6 @@
 
 #+begin_quote
 20.7
-
 If either of these functions is called in a command that was invoked using the mouse—more precisely, 
 
 if last-nonmenu-event (see Command Loop Info) is either nil or a list—then it uses a dialog box or pop-up menu to ask the question. 
@@ -43,3 +41,17 @@ It is worth noting that using progn works in both cases, while omitting it only 
 
 As a result of this, some people prefer to simply always use progn,because it will always work.
 #+end_quote
+
+* Org
+
+  [[https://orgmode.org/manual/][The Org Manual]]
+  
+  | topic                                     |       date | contents                                                                                                                                          |
+  |-------------------------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------|
+  | [[https://orgmode.org/manual/Literal-examples.html#Literal-examples][11.5 Literal examples]]                     | 2018-11-22 | dont'knoe                                                                                                                                         |
+  | [[https://orgmode.org/manual/Paragraphs.html#Paragraphs][11.1 Paragraphs, line breaks, and quoting]] | 2018-11-22 | VERSE, QUOTE, CENTER                                                                                                                              |
+  | [[https://orgmode.org/manual/Emphasis-and-monospace.html#Emphasis-and-monospace][11.2 Emphasis and monospace]]               | 2018-11-22 | *bold*, /italic/, _underlined_, =verbatim= and ~code~, and, if you must, ‘+strike-through+’.                                                      |
+  | [[https://orgmode.org/manual/Horizontal-rules.html#Horizontal-rules][11.3 Horizontal rules]]                     | 2018-11-22 | A line consisting of only dashes, and at least 5 of them, will be exported as a horizontal line.                                                  |
+  | [[https://orgmode.org/manual/Literal-examples.html#FOOT115][11.5Literal examples]]                      | 2018-11-22 | In literal examples, Org will interpret strings like as labels, and use them as targets for special hyperlinks like                               |
+  | [[https://orgmode.org/manual/Easy-templates.html#Easy-templates][15.2 Easy templates]]                       | 2018-11-22 | Easy templates use an expansion mechanism, which is native to Org, in a process similar to yasnippet and other Emacs template expansion packages. |
+  | [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html#org8d46df4][Python Babel]]                              | 2018-11-25 | Python source code blocks in Org Mode                                                                                                             |
