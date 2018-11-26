@@ -1,4 +1,4 @@
-#+TITLE: matplotlibplayground
+#+TITLE: pltplayground
 
 * figure 图像
 
