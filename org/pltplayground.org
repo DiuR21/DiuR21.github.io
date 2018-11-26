@@ -107,7 +107,7 @@ return './img/playground/figure4.png'
 * Legend
 
 ** basis
-Legend图例给出图中数据对应信息
+   Legend图例给出图中数据对应信息
 
 #+BEGIN_SRC python :results file :exports both
 import numpy as np
@@ -132,7 +132,8 @@ return './img/playground/figure5.png'
 #+END_SRC
 
 #+RESULTS:
-[[file:./img/playground/figure5.png]
+[[file:./img/playground/figure5.png]]
+
 * Annotation
   添加针对某点(处)的注释信息
 
