@@ -1,0 +1,12 @@
+#+TITLE: Emacs-lisp Note
+
+* 求值
+#+BEGIN_SRC emacs-lisp :results value
+(+ 1 1)
+(+ 1 (+ 2 3))
+#+END_SRC
+
+
+
+#+RESULTS:
+: 6

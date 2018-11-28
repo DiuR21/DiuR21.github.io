@@ -201,7 +201,7 @@ return './img/playground/figure7.png'
 #+RESULTS:
 [[file:./img/playground/figure7.png]]
 * Bar
-#+BEGIN_SRC python :results both :exports both
+#+BEGIN_SRC python :results file :exports both
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -230,7 +230,7 @@ return './img/playground/figure8.png'
 #+END_SRC
 
 #+RESULTS:
-: ./img/playground/figure8.png
+[[file:./img/playground/figure8.png]]
 * Contours
 #+BEGIN_SRC python :results file :exports both
 import numpy as np

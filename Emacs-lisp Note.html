@@ -6,7 +6,7 @@
 <!-- 2018-11-28 Wed 15:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Emacs</title>
+<title>Emacs-lisp Note</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,86 +230,26 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Emacs</h1>
-<p>
-<b>2018-11</b>
-</p>
+<h1 class="title">Emacs-lisp Note</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgde8bc85">1. 求值</a></li>
+</ul>
+</div>
+</div>
 
-<p>
-<a href="Emacs-lisp Note.html">Emacs-lisp Note</a>
-</p>
-
-<p>
-<a href="Doc备忘录.html">Doc备忘录</a>
-</p>
-
-<p>
-<a href="https://orgmode.org/worg/org-contrib/babel/">org babel</a>
-</p>
-<blockquote>
-<p>
-Babel is Org-mode's ability to execute source code within Org-mode documents. 
-</p>
-</blockquote>
-
-<p>
-<a href="Common Lisp.html">Common Lisp Learning</a>
-</p>
-
-<p>
-<a href="http://aandds.com">aandds</a>&#x2013;难得发现的，依然在坚持用org-mode撰写博客的前辈。Emacs部分的笔记，叹为观止，大有裨益。
-</p>
-
-<p>
-<a href="https://kuanyui.github.io/2016/02/24/dynamic-scoping-and-lexical-scoping/">搞懂 Lexical scoping 與 Dynamic scoping 的差異與用途</a> &#x2013; 静态和动态竟然能混用&#x2026;神特么Elisp
-</p>
-
-<p>
-<b>2018-10</b>
-</p>
-
-<p>
-<a href="http://www.zmonster.me/2015/07/12/org-mode-introduction.html">强大的Org mode(1):简单介绍与基本使用</a>
-</p>
-
-<p>
-<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Hooks.html">Emacs Hooks</a>
-</p>
-<blockquote>
-<p>
-Hooks are an important mechanism for customizing Emacs.
-A hook is a Lisp variable which holds a list of functions, 
-to be called on some <b>well-defined occasion.</b>
-</p>
-
-<p>
-'-hooks' is a normal hook &#x2013; hook function that with no arguments.
-</p>
-
-<p>
-'-functions' is a abnormal hook &#x2013; hook function that with arguments.
-</p>
-</blockquote>
-
-<p>
-<b>2018-09</b>
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=lsgPNVIMkIE">Emacs ido-mode Demon</a>
-</p>
-
-<p>
-<a href="org-mode之小细节归纳.html">org-mode之小细节归纳</a>
-</p>
-
-<p>
-<a href="https://orgmode.org/worg/org-tutorials/">org tutorial</a>
-</p>
-
-<p>
-<a href="如何使用org-mode&amp;github搭建个人博客.html">如何使用org-mode&amp;github搭建个人博客</a>
-</p>
+<div id="outline-container-orgde8bc85" class="outline-2">
+<h2 id="orgde8bc85"><span class="section-number-2">1</span> 求值</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(+ 1 1)
+(+ 1 (+ 2 3))
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>

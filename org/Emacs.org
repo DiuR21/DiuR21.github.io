@@ -2,6 +2,8 @@
 
 *2018-11*
 
+[[file:Emacs-lisp Note.org][Emacs-lisp Note]]
+
 [[file:Doc备忘录.org][Doc备忘录]]
 
 [[https://orgmode.org/worg/org-contrib/babel/][org babel]]
