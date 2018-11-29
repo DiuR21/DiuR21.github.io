@@ -4,11 +4,9 @@
 
 [[file:pltplayground.org][pltplayground]]
 
-[[file:ML备忘录.org][ML备忘录]]
+[[file:MLdoc.org][MLdoc]]
 
 [[file:K-NN Python.org][K-NN Python]]
-
-[[file:kaggle备忘录.org][kaggle备忘录]]
 
 [[http://codingpy.com/article/a-quick-intro-to-pandas/][Pandas -- 10mins]]
 

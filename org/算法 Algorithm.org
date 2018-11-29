@@ -11,13 +11,14 @@
 
   [[https://cn.vjudge.net/article/187][Kuangbin目录]]
 
-  | topic    |       Date | General                                | Key                                     |
-  |----------+------------+----------------------------------------+-----------------------------------------|
-  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]] | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags   |
-  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]] | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                           |
-  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]] | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search               |
-  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]] | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other |
-  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]] | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                      |
+  | topic    |       Date | General                                | Key                                                  |
+  |----------+------------+----------------------------------------+------------------------------------------------------|
+  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]] | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags                |
+  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]] | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                                        |
+  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]] | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search                            |
+  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]] | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other              |
+  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]] | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                   |
+  | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]] | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient |
    
 * 排序
   [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09
