@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-11-30 Fri 09:52 -->
+<!-- 2018-12-02 Sun 01:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>*nix&amp;&amp;C/C++</title>
+<title>MIT6.828</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,56 +230,105 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">*nix&amp;&amp;C/C++</h1>
+<h1 class="title">MIT6.828</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1839bc9">1. 2018 - 12 - 1</a>
+<ul>
+<li><a href="#org9690197">1.1. The UNIX Operating System</a></li>
+<li><a href="#org3a93bff">1.2. prepare</a></li>
+</ul>
+</li>
+<li><a href="#org7add07b">2. 2018 - 12 - 2</a></li>
+<li><a href="#orga79b33f">3. note</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1839bc9" class="outline-2">
+<h2 id="org1839bc9"><span class="section-number-2">1</span> 2018 - 12 - 1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9690197" class="outline-3">
+<h3 id="org9690197"><span class="section-number-3">1.1</span> The UNIX Operating System</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-<a href="http://www.cplusplus.com/reference/map/map/">std::map</a>
-</p>
-<blockquote>
-<p>
-In a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. 
+In the old time, computing business is constantly searching for ways to do a better job for developing computer applications.
 </p>
 
 <p>
-The types of key and mapped value may differ, and are grouped together in member type value_type, which is a pair type combining both:
-</p>
-</blockquote>
-
-<p>
-<a href="https://segmentfault.com/a/1190000003063859#articleHeader15">Linux IO模式及 select、poll、epoll详解</a>
+Since computer applications scale is growing at an amazing rate.People at that time need a much more helpful environment to 
 </p>
 
 <p>
-<a href="http://www.cplusplus.com/reference/vector/vector/">vector C++ Reference</a>
-</p>
-<blockquote>
-<p>
-std::vector::at
+advence their job.
 </p>
 
 <p>
-The function automatically checks whether n is within the bounds of valid elements in the vector, 
+That's maybe the reason why people had build the Operating System.
 </p>
 
 <p>
-throwing an out_of_range exception if it is not (i.e., if n is greater than, or equal to, its size). 
+Unix System is made up sort of three layers. The Central part is the kernel that controls the resources of the machine.
 </p>
 
 <p>
-This is in contrast with member operator[], that does not check against bounds.
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.cplusplus.com/reference/iterator/">C++ iterator</a>
+The part which wrapped around the central part is something called the shell which is the interface between most users and the kernel.
 </p>
 
 <p>
-<a href="https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords#">Where and why do I have to put the “template” and “typename” keywords?</a>
+And the outermost layer is which called UTILITIES. It contain sort of useful programs.
 </p>
+
+<p>
+The notion of pipeline is the fundamental contribution in Unix. It provided a feature that can stick a bunch of programs together.
+</p>
+
+<p>
+The data simply flows from the one on the left to the one on the right and the system itself looks after all the connections and all of the synchronization
+</p>
+
+<p>
+making sure that the data goes from the one into another.
+</p>
+
+<p>
+input output redirection.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a93bff" class="outline-3">
+<h3 id="org3a93bff"><span class="section-number-3">1.2</span> prepare</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The courses was run under *nix system. To aviod a lots of installation works and tends to not take up valuable system resources in my f**king mbp.
+</p>
+
+<p>
+Aliyun is not a bad choice and 9.5 yuan(student disconunt) a month is also very affordable.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7add07b" class="outline-2">
+<h2 id="org7add07b"><span class="section-number-2">2</span> 2018 - 12 - 2</h2>
+</div>
+<div id="outline-container-orga79b33f" class="outline-2">
+<h2 id="orga79b33f"><span class="section-number-2">3</span> note</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+pwd &#x2013; print my working directory
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-11-30 Fri 09:52</p>
+<p class="date">Created: 2018-12-02 Sun 01:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

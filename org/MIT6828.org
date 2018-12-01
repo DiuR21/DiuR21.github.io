@@ -1,0 +1,37 @@
+#+TITLE: MIT6.828
+
+* 2018 - 12 - 1
+
+** The UNIX Operating System
+
+  In the old time, computing business is constantly searching for ways to do a better job for developing computer applications.
+
+  Since computer applications scale is growing at an amazing rate.People at that time need a much more helpful environment to 
+
+  advence their job.
+
+  That's maybe the reason why people had build the Operating System.
+
+  Unix System is made up sort of three layers. The Central part is the kernel that controls the resources of the machine.
+  
+  The part which wrapped around the central part is something called the shell which is the interface between most users and the kernel.
+
+  And the outermost layer is which called UTILITIES. It contain sort of useful programs.
+
+  The notion of pipeline is the fundamental contribution in Unix. It provided a feature that can stick a bunch of programs together.
+
+  The data simply flows from the one on the left to the one on the right and the system itself looks after all the connections and all of the synchronization
+
+  making sure that the data goes from the one into another.
+
+  input output redirection.
+
+** prepare
+   The courses was run under *nix system. To aviod a lots of installation works and tends to not take up valuable system resources in my f**king mbp.
+
+   Aliyun is not a bad choice and 9.5 yuan(student disconunt) a month is also very affordable.
+
+* 2018 - 12 - 2
+* note
+
+  pwd -- print my working directory

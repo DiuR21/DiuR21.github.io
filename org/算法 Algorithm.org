@@ -19,6 +19,7 @@
   | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]] | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other              |
   | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]] | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                   |
   | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]] | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient |
+  | [[https://cn.vjudge.net/problem/POJ-3087#author=wuyang1002431655][POJ-3087]] | 2018-11-30 | Ez Simulator                           | None                                                 |
    
 * 排序
   [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09
