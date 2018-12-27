@@ -28,7 +28,7 @@
   | [[https://cn.vjudge.net/problem/HDU-2612#author=open1231][HDU-2612]]  | 2018-12-07 | Find a way                             | BFS*2 key point: @ that cannot reach.                |
   | [[https://cn.vjudge.net/problem/HDU-1043][HDU-1043]]  | 2018-12-xx | Eight Code Problem                     | A* or BFS                                            |
   | [[https://cn.vjudge.net/problem/HDU-3567][HDU-3567]]  | 2018-12-xx | Eight Code Problem2                    | A* or BFS                                            |
-  | [[https://cn.vjudge.net/problem/HDU-2181][HDU2191]]   | 2018-12-26 | EZ DFS                                 | DFS                                                  |
+  | [[https://cn.vjudge.net/problem/HDU-2181][HDU-2191]]  | 2018-12-26 | EZ DFS                                 | DFS                                                  |
    
 * 排序
   [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09
