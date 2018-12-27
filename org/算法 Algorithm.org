@@ -11,15 +11,24 @@
 
   [[https://cn.vjudge.net/article/187][Kuangbin目录]]
 
-  | topic    |       Date | General                                | Key                                                  |
-  |----------+------------+----------------------------------------+------------------------------------------------------|
-  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]] | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags                |
-  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]] | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                                        |
-  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]] | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search                            |
-  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]] | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other              |
-  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]] | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                   |
-  | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]] | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient |
-  | [[https://cn.vjudge.net/problem/POJ-3087#author=wuyang1002431655][POJ-3087]] | 2018-11-30 | Ez Simulator                           | None                                                 |
+  | topic     |       Date | General                                | Key                                                  |
+  |-----------+------------+----------------------------------------+------------------------------------------------------|
+  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]]  | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags                |
+  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]]  | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                                        |
+  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]]  | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search                            |
+  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]]  | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other              |
+  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]]  | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                   |
+  | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]]  | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient |
+  | [[https://cn.vjudge.net/problem/POJ-3087#author=wuyang1002431655][POJ-3087]]  | 2018-11-30 | Ez Simulator                           | None                                                 |
+  | [[https://cn.vjudge.net/problem/POJ-3414][POJ-3414]]  | 2018-12-01 | Pots                                   | BFS                                                  |
+  | [[https://cn.vjudge.net/problem/UVA-11624][UVA-11624]] | 2018-12-02 | Fire!                                  | Mutiple Fire                                         |
+  | [[https://cn.vjudge.net/problem/POJ-3984][POJ-3984]]  | 2018-12-04 | Puzzle Maze                            | DFS Ez                                               |
+  | [[https://cn.vjudge.net/problem/HDU-1241#author=prayerhgq][HDU-1241]]  | 2018-12-05 | Oil Deposits                           | DFS Ez                                               |
+  | [[https://cn.vjudge.net/problem/HDU-1495][HDU-1495]]  | 2018-12-06 | cola                                   | BFS Water problem ez                                 |
+  | [[https://cn.vjudge.net/problem/HDU-2612#author=open1231][HDU-2612]]  | 2018-12-07 | Find a way                             | BFS*2 key point: @ that cannot reach.                |
+  | [[https://cn.vjudge.net/problem/HDU-1043][HDU-1043]]  | 2018-12-xx | Eight Code Problem                     | A* or BFS                                            |
+  | [[https://cn.vjudge.net/problem/HDU-3567][HDU-3567]]  | 2018-12-xx | Eight Code Problem2                    | A* or BFS                                            |
+  | [[https://cn.vjudge.net/problem/HDU-2181][HDU2191]]   | 2018-12-26 | EZ DFS                                 | DFS                                                  |
    
 * 排序
   [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09

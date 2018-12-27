@@ -4,21 +4,22 @@
 
   [[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Manual]]
 
-| 章节                                    |   完成时间 | 功能                                                                   |
-|-----------------------------------------+------------+------------------------------------------------------------------------|
-| Mode Line Format etc.                   | 2018-10-31 | Mode Line Format's %-construct & Mode Line Format Constructed Measures |
-| 20.7 Yes-or-No Queries                  | 2018-11-03 | Intro About Yes-or-No Marco                                            |
-| 25.9.1 File Name Components             | 2018-11-04 | File Name Components and the way to control it                         |
-| 8.1.4 The progn Special Form            | 2018-11-06 | Intro About progn Marco                                                |
-| 14.7.1 The append Function              | 2018-11-06 | Intro About Append Function                                            |
-| 25.9 File Names                         | 2018-11-06 | Intro All About File Names                                             |
-| 25.10 Contents of Directories           | 2018-11-11 | Intro Contents of Dir..About how to contrl the contents in dir.        |
-| 13.2.3 Other Features of Argument Lists | 2018-11-15 | Option Argument & Rest Argument                                        |
-| 40.5 Time of Day                        | 2018-11-15 | the formula: high * 2**16 + low + micro * 10**−6 + pico * 10**−12.     |
-| 11.1 Sequencing                         | 2018-11-15 | progn prog1 prog2                                                      |
-| 13.5 Calling Functions                  | 2018-11-15 | funcall & apply                                                        |
-| 13.11 Advising Emacs Lisp Functions     | 2018-11-15 | advice-add & advice-remove & add-function & remove-function            |
-| 23.2.7 Tabulated List mode              | 2018-11-16 | Tabulated List mode is a major mode for displaying tabulated data      |
+| 章节                                     |   完成时间 | 功能                                                                   |
+|------------------------------------------+------------+------------------------------------------------------------------------|
+| Mode Line Format etc.                    | 2018-10-31 | Mode Line Format's %-construct & Mode Line Format Constructed Measures |
+| 20.7 Yes-or-No Queries                   | 2018-11-03 | Intro About Yes-or-No Marco                                            |
+| 25.9.1 File Name Components              | 2018-11-04 | File Name Components and the way to control it                         |
+| 8.1.4 The progn Special Form             | 2018-11-06 | Intro About progn Marco                                                |
+| 14.7.1 The append Function               | 2018-11-06 | Intro About Append Function                                            |
+| 25.9 File Names                          | 2018-11-06 | Intro All About File Names                                             |
+| 25.10 Contents of Directories            | 2018-11-11 | Intro Contents of Dir..About how to contrl the contents in dir.        |
+| 13.2.3 Other Features of Argument Lists  | 2018-11-15 | Option Argument & Rest Argument                                        |
+| 40.5 Time of Day                         | 2018-11-15 | the formula: high * 2**16 + low + micro * 10**−6 + pico * 10**−12.     |
+| 11.1 Sequencing                          | 2018-11-15 | progn prog1 prog2                                                      |
+| 13.5 Calling Functions                   | 2018-11-15 | funcall & apply                                                        |
+| 13.11 Advising Emacs Lisp Functions      | 2018-11-15 | advice-add & advice-remove & add-function & remove-function            |
+| 23.2.7 Tabulated List mode               | 2018-11-16 | Tabulated List mode is a major mode for displaying tabulated data      |
+| 4.5 Comparison of Characters and Strings | 2018-12-26 | Characters and Strings comparing module.                               |
 
 #+begin_src Emacs-lisp
 (required-vars...
