@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-27 Thu 11:21 -->
+<!-- 2019-01-11 Fri 13:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>算法 Algorithm</title>
@@ -235,17 +235,114 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org44497de">1. LeetCode</a></li>
-<li><a href="#org58da8c4">2. Kuangbin带飞系列</a></li>
-<li><a href="#org3bcb035">3. 排序</a></li>
-<li><a href="#org1cb9ed9">4. Else</a></li>
+<li><a href="#orga1b7460">1. Search总结</a>
+<ul>
+<li><a href="#org10a992a">1.1. DFS</a>
+<ul>
+<li><a href="#orgc965eea">1.1.1. 迭代加深搜索 &#x2013; IDDFS</a></li>
+</ul>
+</li>
+<li><a href="#orge4e98a2">1.2. BFS</a></li>
+<li><a href="#orgfa3a1cf">1.3. A* &#x2013; 启发式搜索</a></li>
+</ul>
+</li>
+<li><a href="#org44497de">2. LeetCode</a></li>
+<li><a href="#org58da8c4">3. Kuangbin带飞系列</a></li>
+<li><a href="#org3bcb035">4. 排序</a></li>
+<li><a href="#org1cb9ed9">5. Else</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org44497de" class="outline-2">
-<h2 id="org44497de"><span class="section-number-2">1</span> LeetCode</h2>
+<div id="outline-container-orga1b7460" class="outline-2">
+<h2 id="orga1b7460"><span class="section-number-2">1</span> Search总结</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org10a992a" class="outline-3">
+<h3 id="org10a992a"><span class="section-number-3">1.1</span> DFS</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+深度优先搜索，思路简单。要注意函数调用特性，会使得暴栈可能性增大。
+</p>
+
+<p>
+问题的终结状态的良好定义，剪枝是DFS的重点。
+</p>
+</div>
+<div id="outline-container-orgc965eea" class="outline-4">
+<h4 id="orgc965eea"><span class="section-number-4">1.1.1</span> 迭代加深搜索 &#x2013; IDDFS</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+在解决问题时，当搜索深度过大。则算法效率不达标，或暴栈并不是十分罕见的情形。
+</p>
+
+<p>
+在传统DFS中，我们让算法盲目地增加搜索深度(重点)，直到该方向搜索return(该方向无解 or 有解，但不是最优解)。
+</p>
+
+<p>
+如此，在退回后，算法更换搜索方向，继续进行搜索。最终，以最优解(搜索深度最低)，作为搜索结果。但，值得注意，这个过程中，大量的无意义搜索，实际上不仅浪费时间，
+</p>
+
+<p>
+也提高了暴栈的风险。
+</p>
+
+<p>
+而IDDFS，则通过，迭代式的增大搜索深度，而达到避免上述问题的目的。其实质，我个人理解，就是一个比较单纯的剪枝手法。
+</p>
+
+<p>
+<b>某程度，其搜索行为类似于BFS。因为，IDDFS由于当前搜索深度的限制，其不会盲目的一搜到底。相反，会先搜索给出的搜索深度的所有节点。</b>
+</p>
+
+<p>
+<a href="http://poj.org/problem?id=3134">经典例题</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4e98a2" class="outline-3">
+<h3 id="orge4e98a2"><span class="section-number-3">1.2</span> BFS</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+宽度优先搜索，思路简单。得益于BFS的结构，问题的终结状态，一般比DFS更好定义。
+</p>
+
+<p>
+BFS &#x2013; 双向BFS、逆向BFS、BFS结果回溯
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa3a1cf" class="outline-3">
+<h3 id="orgfa3a1cf"><span class="section-number-3">1.3</span> A* &#x2013; 启发式搜索</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+A*搜索的经典问题 - Eight Code。
+</p>
+
+<p>
+个人理解为，带有方向倾向的搜索。这种倾向，可帮助搜索更好的避免无意义的搜索(大概率是错的方向，就不搜了)。
+</p>
+
+<p>
+如此，可以有效的降低搜索空间。
+</p>
+
+<p>
+启发 -&gt; 指导启发 -&gt; 评估当前搜索方向代价 -&gt; 评估函数 f(n) = g'(n) + h'(n)
+</p>
+
+<p>
+A*算法的重点是良好的h函数定义。不严谨的总结，A*+递归，A*+优先堆&#x2026;两种实现?? 暂且先这么认为。
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org44497de" class="outline-2">
+<h2 id="org44497de"><span class="section-number-2">2</span> LeetCode</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 <a href="https://leetcode.com/problems/two-sum/description/">1. Two Sum</a> &#x2013; D
 </p>
@@ -261,8 +358,8 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-org58da8c4" class="outline-2">
-<h2 id="org58da8c4"><span class="section-number-2">2</span> Kuangbin带飞系列</h2>
-<div class="outline-text-2" id="text-2">
+<h2 id="org58da8c4"><span class="section-number-2">3</span> Kuangbin带飞系列</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 <a href="https://cn.vjudge.net/article/187">Kuangbin目录</a>
 </p>
@@ -399,6 +496,20 @@ for the JavaScript code in this tag.
 <td class="org-left">EZ DFS</td>
 <td class="org-left">DFS</td>
 </tr>
+
+<tr>
+<td class="org-left"><a href="https://cn.vjudge.net/problem/HDU-1560#author=zmyhh">HDU-1560</a></td>
+<td class="org-right">2019-01-07</td>
+<td class="org-left">A* or IDDFS</td>
+<td class="org-left">IMPORTANT IMPORTRANT IMPORTANT</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://cn.vjudge.net/problem/POJ-3134">POJ-3134</a></td>
+<td class="org-right">2019-01-11</td>
+<td class="org-left">IDDFS</td>
+<td class="org-left">compare IDDFS with BFS. The first result that searched successfully by IDDFS and BFS usually is the optimal solution</td>
+</tr>
 </tbody>
 </table>
 <p>
@@ -407,8 +518,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="outline-container-org3bcb035" class="outline-2">
-<h2 id="org3bcb035"><span class="section-number-2">3</span> 排序</h2>
-<div class="outline-text-2" id="text-3">
+<h2 id="org3bcb035"><span class="section-number-2">4</span> 排序</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 <a href="归并排序.html">归并排序</a> &#x2013; 递归/非递归(NDY)/自然归并(D)09
 </p>
@@ -416,8 +527,8 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-org1cb9ed9" class="outline-2">
-<h2 id="org1cb9ed9"><span class="section-number-2">4</span> Else</h2>
-<div class="outline-text-2" id="text-4">
+<h2 id="org1cb9ed9"><span class="section-number-2">5</span> Else</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 <a href="动态规划.html">动态规划</a> &#x2013; 01/lis/最短编辑距离
 </p>
@@ -426,7 +537,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2018-12-27 Thu 11:21</p>
+<p class="date">Created: 2019-01-11 Fri 13:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

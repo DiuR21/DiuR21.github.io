@@ -1,5 +1,39 @@
 #+TITLE: 算法 Algorithm
 
+* Search总结
+** DFS
+   深度优先搜索，思路简单。要注意函数调用特性，会使得暴栈可能性增大。
+   
+   问题的终结状态的良好定义，剪枝是DFS的重点。
+*** 迭代加深搜索 -- IDDFS
+    在解决问题时，当搜索深度过大。则算法效率不达标，或暴栈并不是十分罕见的情形。
+
+    在传统DFS中，我们让算法盲目地增加搜索深度(重点)，直到该方向搜索return(该方向无解 or 有解，但不是最优解)。
+
+    如此，在退回后，算法更换搜索方向，继续进行搜索。最终，以最优解(搜索深度最低)，作为搜索结果。但，值得注意，这个过程中，大量的无意义搜索，实际上不仅浪费时间，
+    
+    也提高了暴栈的风险。
+
+    而IDDFS，则通过，迭代式的增大搜索深度，而达到避免上述问题的目的。其实质，我个人理解，就是一个比较单纯的剪枝手法。
+
+    *某程度，其搜索行为类似于BFS。因为，IDDFS由于当前搜索深度的限制，其不会盲目的一搜到底。相反，会先搜索给出的搜索深度的所有节点。*
+
+    [[http://poj.org/problem?id=3134][经典例题]]
+** BFS
+   宽度优先搜索，思路简单。得益于BFS的结构，问题的终结状态，一般比DFS更好定义。
+
+   BFS -- 双向BFS、逆向BFS、BFS结果回溯
+** A* -- 启发式搜索
+   A*搜索的经典问题 - Eight Code。
+   
+   个人理解为，带有方向倾向的搜索。这种倾向，可帮助搜索更好的避免无意义的搜索(大概率是错的方向，就不搜了)。
+
+   如此，可以有效的降低搜索空间。
+
+   启发 -> 指导启发 -> 评估当前搜索方向代价 -> 评估函数 f(n) = g'(n) + h'(n)
+   
+   A*算法的重点是良好的h函数定义。不严谨的总结，A*+递归，A*+优先堆...两种实现?? 暂且先这么认为。
+
 * LeetCode
   [[https://leetcode.com/problems/two-sum/description/][1. Two Sum]] -- D
 
@@ -11,24 +45,26 @@
 
   [[https://cn.vjudge.net/article/187][Kuangbin目录]]
 
-  | topic     |       Date | General                                | Key                                                  |
-  |-----------+------------+----------------------------------------+------------------------------------------------------|
-  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]]  | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags                |
-  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]]  | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                                        |
-  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]]  | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search                            |
-  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]]  | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other              |
-  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]]  | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                   |
-  | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]]  | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient |
-  | [[https://cn.vjudge.net/problem/POJ-3087#author=wuyang1002431655][POJ-3087]]  | 2018-11-30 | Ez Simulator                           | None                                                 |
-  | [[https://cn.vjudge.net/problem/POJ-3414][POJ-3414]]  | 2018-12-01 | Pots                                   | BFS                                                  |
-  | [[https://cn.vjudge.net/problem/UVA-11624][UVA-11624]] | 2018-12-02 | Fire!                                  | Mutiple Fire                                         |
-  | [[https://cn.vjudge.net/problem/POJ-3984][POJ-3984]]  | 2018-12-04 | Puzzle Maze                            | DFS Ez                                               |
-  | [[https://cn.vjudge.net/problem/HDU-1241#author=prayerhgq][HDU-1241]]  | 2018-12-05 | Oil Deposits                           | DFS Ez                                               |
-  | [[https://cn.vjudge.net/problem/HDU-1495][HDU-1495]]  | 2018-12-06 | cola                                   | BFS Water problem ez                                 |
-  | [[https://cn.vjudge.net/problem/HDU-2612#author=open1231][HDU-2612]]  | 2018-12-07 | Find a way                             | BFS*2 key point: @ that cannot reach.                |
-  | [[https://cn.vjudge.net/problem/HDU-1043][HDU-1043]]  | 2018-12-xx | Eight Code Problem                     | A* or BFS                                            |
-  | [[https://cn.vjudge.net/problem/HDU-3567][HDU-3567]]  | 2018-12-xx | Eight Code Problem2                    | A* or BFS                                            |
-  | [[https://cn.vjudge.net/problem/HDU-2181][HDU-2191]]  | 2018-12-26 | EZ DFS                                 | DFS                                                  |
+  | topic     |       Date | General                                | Key                                                                                                                  |
+  |-----------+------------+----------------------------------------+----------------------------------------------------------------------------------------------------------------------|
+  | [[https://cn.vjudge.net/problem/POJ-1321][POJ-1321]]  | 2018-11-20 | DFS, Eight Queens deformation problem. | Pruning and checkerboard status flags                                                                                |
+  | [[https://cn.vjudge.net/problem/POJ-2251][POJ-2251]]  | 2018-11-25 | Dungeon Master, BFS                    | 6 Way Forward                                                                                                        |
+  | [[https://cn.vjudge.net/problem/POJ-3278][POJ-3278]]  | 2018-11-26 | Catch That Cow, BFS                    | Easy BFS, 3 Way to search                                                                                            |
+  | [[https://cn.vjudge.net/problem/POJ-3279][POJ-3279]]  | 2018-11-28 | Fliptile, enum                         | First Rows Condition determin the other                                                                              |
+  | [[https://cn.vjudge.net/problem/POJ-1426][POJ-1426]]  | 2018-11-28 | Find The Multiple, BFS and Make List   | Ez                                                                                                                   |
+  | [[https://cn.vjudge.net/problem/POJ-3126#author=0][POJ-3126]]  | 2018-11-29 | Print Prime Number & BFS               | BFS search through each dight is much moro efficient                                                                 |
+  | [[https://cn.vjudge.net/problem/POJ-3087#author=wuyang1002431655][POJ-3087]]  | 2018-11-30 | Ez Simulator                           | None                                                                                                                 |
+  | [[https://cn.vjudge.net/problem/POJ-3414][POJ-3414]]  | 2018-12-01 | Pots                                   | BFS                                                                                                                  |
+  | [[https://cn.vjudge.net/problem/UVA-11624][UVA-11624]] | 2018-12-02 | Fire!                                  | Mutiple Fire                                                                                                         |
+  | [[https://cn.vjudge.net/problem/POJ-3984][POJ-3984]]  | 2018-12-04 | Puzzle Maze                            | DFS Ez                                                                                                               |
+  | [[https://cn.vjudge.net/problem/HDU-1241#author=prayerhgq][HDU-1241]]  | 2018-12-05 | Oil Deposits                           | DFS Ez                                                                                                               |
+  | [[https://cn.vjudge.net/problem/HDU-1495][HDU-1495]]  | 2018-12-06 | cola                                   | BFS Water problem ez                                                                                                 |
+  | [[https://cn.vjudge.net/problem/HDU-2612#author=open1231][HDU-2612]]  | 2018-12-07 | Find a way                             | BFS*2 key point: @ that cannot reach.                                                                                |
+  | [[https://cn.vjudge.net/problem/HDU-1043][HDU-1043]]  | 2018-12-xx | Eight Code Problem                     | A* or BFS                                                                                                            |
+  | [[https://cn.vjudge.net/problem/HDU-3567][HDU-3567]]  | 2018-12-xx | Eight Code Problem2                    | A* or BFS                                                                                                            |
+  | [[https://cn.vjudge.net/problem/HDU-2181][HDU-2191]]  | 2018-12-26 | EZ DFS                                 | DFS                                                                                                                  |
+  | [[https://cn.vjudge.net/problem/HDU-1560#author=zmyhh][HDU-1560]]  | 2019-01-07 | A* or IDDFS                            | IMPORTANT IMPORTRANT IMPORTANT                                                                                       |
+  | [[https://cn.vjudge.net/problem/POJ-3134][POJ-3134]]  | 2019-01-11 | IDDFS                                  | compare IDDFS with BFS. The first result that searched successfully by IDDFS and BFS usually is the optimal solution |
    
 * 排序
   [[file:归并排序.org][归并排序]] -- 递归/非递归(NDY)/自然归并(D)09

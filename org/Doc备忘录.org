@@ -4,22 +4,28 @@
 
   [[https://www.gnu.org/software/emacs/manual/html_node/elisp/][Emacs Lisp Manual]]
 
-| 章节                                     |   完成时间 | 功能                                                                   |
-|------------------------------------------+------------+------------------------------------------------------------------------|
-| Mode Line Format etc.                    | 2018-10-31 | Mode Line Format's %-construct & Mode Line Format Constructed Measures |
-| 20.7 Yes-or-No Queries                   | 2018-11-03 | Intro About Yes-or-No Marco                                            |
-| 25.9.1 File Name Components              | 2018-11-04 | File Name Components and the way to control it                         |
-| 8.1.4 The progn Special Form             | 2018-11-06 | Intro About progn Marco                                                |
-| 14.7.1 The append Function               | 2018-11-06 | Intro About Append Function                                            |
-| 25.9 File Names                          | 2018-11-06 | Intro All About File Names                                             |
-| 25.10 Contents of Directories            | 2018-11-11 | Intro Contents of Dir..About how to contrl the contents in dir.        |
-| 13.2.3 Other Features of Argument Lists  | 2018-11-15 | Option Argument & Rest Argument                                        |
-| 40.5 Time of Day                         | 2018-11-15 | the formula: high * 2**16 + low + micro * 10**−6 + pico * 10**−12.     |
-| 11.1 Sequencing                          | 2018-11-15 | progn prog1 prog2                                                      |
-| 13.5 Calling Functions                   | 2018-11-15 | funcall & apply                                                        |
-| 13.11 Advising Emacs Lisp Functions      | 2018-11-15 | advice-add & advice-remove & add-function & remove-function            |
-| 23.2.7 Tabulated List mode               | 2018-11-16 | Tabulated List mode is a major mode for displaying tabulated data      |
-| 4.5 Comparison of Characters and Strings | 2018-12-26 | Characters and Strings comparing module.                               |
+| 章节                                     |   完成时间 | 功能                                                                                                                                                                                                                                          |
+|------------------------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Mode Line Format etc.                    | 2018-10-31 | Mode Line Format's %-construct & Mode Line Format Constructed Measures                                                                                                                                                                        |
+| 20.7 Yes-or-No Queries                   | 2018-11-03 | Intro About Yes-or-No Marco                                                                                                                                                                                                                   |
+| 25.9.1 File Name Components              | 2018-11-04 | File Name Components and the way to control it                                                                                                                                                                                                |
+| 8.1.4 The progn Special Form             | 2018-11-06 | Intro About progn Marco                                                                                                                                                                                                                       |
+| 14.7.1 The append Function               | 2018-11-06 | Intro About Append Function                                                                                                                                                                                                                   |
+| 25.9 File Names                          | 2018-11-06 | Intro All About File Names                                                                                                                                                                                                                    |
+| 25.10 Contents of Directories            | 2018-11-11 | Intro Contents of Dir..About how to contrl the contents in dir.                                                                                                                                                                               |
+| 13.2.3 Other Features of Argument Lists  | 2018-11-15 | Option Argument & Rest Argument                                                                                                                                                                                                               |
+| 40.5 Time of Day                         | 2018-11-15 | the formula: high * 2**16 + low + micro * 10**−6 + pico * 10**−12.                                                                                                                                                                            |
+| 11.1 Sequencing                          | 2018-11-15 | progn prog1 prog2                                                                                                                                                                                                                             |
+| 13.5 Calling Functions                   | 2018-11-15 | funcall & apply                                                                                                                                                                                                                               |
+| 13.11 Advising Emacs Lisp Functions      | 2018-11-15 | advice-add & advice-remove & add-function & remove-function                                                                                                                                                                                   |
+| 23.2.7 Tabulated List mode               | 2018-11-16 | Tabulated List mode is a major mode for displaying tabulated data                                                                                                                                                                             |
+| 4.5 Comparison of Characters and Strings | 2018-12-26 | Characters and Strings comparing module.                                                                                                                                                                                                      |
+| 11 Loops and Recursion                   | 2019-01-03 | while、dolist、recursion                                                                                                                                                                                                                      |
+| 7.5 setcar                               | 2019-01-04 | setcar is set the car of a list to a new value.                                                                                                                                                                                               |
+| 7.6 setcdr                               | 2019-01-04 | setcdr is set the cdr of a list to a new value.                                                                                                                                                                                               |
+| 5. Lists                                 | 2019-01-04 | A list represents a sequence of zero or more elements (which may be any Lisp objects).                                                                                                                                                        |
+| 6. Sequences, Arrays, and Vectors        | 2019-01-04 | The sequence type is the union of two other Lisp types: lists and arrays. In other words, any list is a sequence, and any array is a sequence. The common property that all sequences have is that each is an ordered collection of elements. |
+| 2.3.6 Cons Cell and List Types           | 2019-01-04 | A cons cell is an object that consists of two slots, called the car slot and the cdr slot.                                                                                                                                                    |
 
 #+begin_src Emacs-lisp
 (required-vars...
@@ -56,3 +62,5 @@ As a result of this, some people prefer to simply always use progn,because it wi
   | [[https://orgmode.org/manual/Literal-examples.html#FOOT115][11.5Literal examples]]                      | 2018-11-22 | In literal examples, Org will interpret strings like as labels, and use them as targets for special hyperlinks like                               |
   | [[https://orgmode.org/manual/Easy-templates.html#Easy-templates][15.2 Easy templates]]                       | 2018-11-22 | Easy templates use an expansion mechanism, which is native to Org, in a process similar to yasnippet and other Emacs template expansion packages. |
   | [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-python.html#org8d46df4][Python Babel]]                              | 2018-11-25 | Python source code blocks in Org Mode                                                                                                             |
+* Else
+  [[https://github.com/lujun9972/emacs-document/blob/master/elisp-common/%E8%81%8A%E4%B8%80%E8%81%8AEmacs%E7%9A%84%E5%AD%97%E8%8A%82%E7%BC%96%E8%AF%91.org][Emacs-字节编译]]
