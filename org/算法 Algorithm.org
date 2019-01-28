@@ -32,8 +32,7 @@
 
    启发 -> 指导启发 -> 评估当前搜索方向代价 -> 评估函数 f(n) = g'(n) + h'(n)
    
-   A*算法的重点是良好的h函数定义。不严谨的总结，A*+递归，A*+优先堆...两种实现?? 暂且先这么认为。
-
+   open集合 & close集合的理解
 * LeetCode
   [[https://leetcode.com/problems/two-sum/description/][1. Two Sum]] -- D
 
