@@ -24,7 +24,7 @@
 	max-width: 80%;
 	min-width: 700px;
 	margin-left: 20px;
-	background-color: #2e2256;
+	background-color: black;
 	padding: 2em;
 	/* box-shadow: 3px 3px 5px #888; */
     }
@@ -32,7 +32,7 @@
 	margin-left: 0px;
 	font-size: 30pt;
 	text-align: right;
-	color: palevioletred;
+	color: white;
 	font-size: 30pt;
     }
 
