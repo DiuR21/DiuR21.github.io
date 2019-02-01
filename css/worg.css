@@ -210,8 +210,8 @@ content: "*** "
     
     code {
 	font-size: 100%;
-	color: black;
-	border: 1px solid #DEDEDE;
+	color: white;
+	border: 1px solid lightgreen;
 	padding: 0px 0.2em;
     }
 
@@ -263,7 +263,7 @@ content: "*** "
 
     pre {
 	font-family: Droid Sans Mono, Monaco, Consolas, "Lucida Console", monospace;
-	color: hotpink;
+	color: snow;
 	font-size: 100%;
 	background-color: #674970;
 	padding: 1.2em;
