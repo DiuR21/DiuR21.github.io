@@ -994,19 +994,6 @@ content: "*** "
 
 } /* END OF @media all */
 
-@media screen
-{
-    #table-of-contents {
-	float: right;
-	border: 1px solid #CCC;
-	max-width: 50%;
-	overflow: auto;
-	background-color: #2e2256;
-	color: white;
-    }
-} /* END OF @media screen */
-
-
 p.validation{
     visibility: hidden;
 }
