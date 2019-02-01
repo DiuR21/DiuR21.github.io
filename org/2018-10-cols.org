@@ -1,4 +1,4 @@
-#+TITLE: 2018-10-van
+#+TITLE: 2018-10-cols
 
 [[https://www.cnbeta.com/articles/tech/782829.htm][苹果发布八核A12X处理器：自研GPU+7nm工艺]]
 #+begin_quote

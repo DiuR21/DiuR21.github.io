@@ -1,7 +1,0 @@
-#+TITLE: 好van♂
-
-[[file:2018-11-van.org][2018-11-van]]
-
-[[file:2018-10-van.org][2018-10-van]]
-
-[[file:2018-09-van.org][2018-09-van]]

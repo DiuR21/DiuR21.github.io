@@ -1,7 +1,7 @@
 #+TITLE: dctrl web site
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/css/index.css"/>
 
-* [[file:好van♂.org][haovan♂]]
+* [[file:cols.org][Cols]]
 * [[file:Emacs.org][Emacs]]
 * [[file:算法 Algorithm.org][Algorithm]]
 * [[file:machine learning.org][Machine Learning]]

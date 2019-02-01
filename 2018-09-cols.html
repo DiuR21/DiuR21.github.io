@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-01 Fri 18:10 -->
+<!-- 2019-02-01 Fri 18:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>dctrl web site</title>
+<title>2018-09-cols</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -180,7 +180,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="/css/worg.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -230,43 +230,63 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">dctrl web site</h1>
+<h1 class="title">2018-09-cols</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgccabf6f">1. Cols</a></li>
-<li><a href="#org8a8363a">2. Emacs</a></li>
-<li><a href="#orgc989a99">3. Algorithm</a></li>
-<li><a href="#orgd99caaf">4. Machine Learning</a></li>
-<li><a href="#org4670957">5. Python</a></li>
-<li><a href="#org1645ce3">6. *nix&amp;&amp;C/C++</a></li>
+<li><a href="#orge2bbaf1">1. Linux文件系统</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgccabf6f" class="outline-2">
-<h2 id="orgccabf6f"><span class="section-number-2">1</span> <a href="cols.html">Cols</a></h2>
+<div id="outline-container-orge2bbaf1" class="outline-2">
+<h2 id="orge2bbaf1"><span class="section-number-2">1</span> Linux文件系统</h2>
+<div class="outline-text-2" id="text-1">
+<pre class="example">
+元数据
+日志文件系统；日志系统的鲁棒性--原子操作；保证了，在日志未写入正确的情况下，文件系统的修改是可roll back的
+
+</pre>
+
+<p>
+<a href="http://linuxperf.com/?p=153">日志文件系统是怎样工作的</a> 
+</p>
+
+<p>
+<a href="http://www.ruanyifeng.com/blog/2007/03/metadata.html">元数据</a>
+</p>
+<blockquote>
+<p>
+描述数据的数据
+为计算机处理数据、分类提供了可能
+</p>
+</blockquote>
+
+<p>
+<a href="https://linux.cn/article-10000-1.html?utm_source=rss&amp;utm_medium=rss">ext4 Linux文件系统理解</a>
+</p>
+
+<blockquote>
+<p>
+在大部分情况下，ext2 在 Linux 发行版中工作得很好，但像 FAT、FAT32、HFS 和当时的其它文件系统一样 —— 在断电时容易发生灾难性的破坏。
+如果在将数据写入文件系统时候发生断电，则可能会将其留在所谓 不一致 的状态 —— 事情只完成一半而另一半未完成。
+这可能导致大量文件丢失或损坏，这些文件与正在保存的文件无关甚至导致整个文件系统无法卸载。
+</p>
+
+<p>
+ext3 和 20 世纪 90 年代后期的其它文件系统，如微软的 NTFS，使用 日志 来解决这个问题。
+日志是磁盘上的一种特殊的分配区域，其写入被存储在事务中；如果该事务完成磁盘写入，则日志中的数据将提交给文件系统自身。
+如果系统在该操作提交前崩溃，则重新启动的系统识别其为未完成的事务而将其进行回滚，就像从未发生过一样。
+这意味着正在处理的文件可能依然会丢失，但文件系统 本身 保持一致，且其它所有数据都是安全的。&#x2013;这真是一个有趣的设计
+</p>
+</blockquote>
 </div>
-<div id="outline-container-org8a8363a" class="outline-2">
-<h2 id="org8a8363a"><span class="section-number-2">2</span> <a href="Emacs.html">Emacs</a></h2>
-</div>
-<div id="outline-container-orgc989a99" class="outline-2">
-<h2 id="orgc989a99"><span class="section-number-2">3</span> <a href="算法 Algorithm.html">Algorithm</a></h2>
-</div>
-<div id="outline-container-orgd99caaf" class="outline-2">
-<h2 id="orgd99caaf"><span class="section-number-2">4</span> <a href="machine learning.html">Machine Learning</a></h2>
-</div>
-<div id="outline-container-org4670957" class="outline-2">
-<h2 id="org4670957"><span class="section-number-2">5</span> <a href="Python.html">Python</a></h2>
-</div>
-<div id="outline-container-org1645ce3" class="outline-2">
-<h2 id="org1645ce3"><span class="section-number-2">6</span> <a href="nix&amp;C++.html">*nix&amp;&amp;C/C++</a></h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2019-02-01 Fri 18:10</p>
+<p class="date">Created: 2019-02-01 Fri 18:09</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
