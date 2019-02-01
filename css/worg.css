@@ -9,7 +9,7 @@
 	background-attachment: fixed;
 	background-position: right bottom;
 	background-repeat: no-repeat;
-	background-color: #674970;
+	background-color: black;
     }
 
     body {
@@ -24,7 +24,7 @@
 	max-width: 80%;
 	min-width: 700px;
 	margin-left: 20px;
-	background-color: #2e2256;
+	background-color: black;
 	padding: 2em;
 	/* box-shadow: 3px 3px 5px #888; */
     }
@@ -32,7 +32,7 @@
 	margin-left: 0px;
 	font-size: 30pt;
 	text-align: right;
-	color: palevioletred;
+	color: white;
 	font-size: 30pt;
     }
 
@@ -152,7 +152,7 @@ content: "*** "
     a {
 	text-decoration: none;
 	font-weight: 400;
-	color: pink;
+	color: white;
 	font-size: 14pt;
     }
     a:visited {text-decoration: none; font-weight: 400;}
@@ -986,7 +986,7 @@ content: "*** "
 	margin-top: 10px;
 	padding: .2em;
 	/*border: 1px solid gray;*/
-	background-color: #674970;
+	background-color: black;
 	z-index: -1000;
 	color: white;
     }
