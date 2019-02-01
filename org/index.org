@@ -6,4 +6,4 @@
 * [[file:算法 Algorithm.org][Algorithm]]
 * [[file:machine learning.org][Machine Learning]]
 * [[file:Python.org][Python]]
-* [[file:C++.org][*nix&&C/C++]]
+* [[file:nix&C++.org][*nix&&C/C++]]
