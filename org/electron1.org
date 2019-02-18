@@ -1,0 +1,6 @@
+#+TITLE: electron-入门
+
+
+* electron是什么
+
+  对于electron具体是什么的理解，需先对node.js有一个

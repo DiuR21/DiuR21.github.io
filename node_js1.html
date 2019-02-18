@@ -6,7 +6,7 @@
 <!-- 2019-02-18 Mon 09:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>*nix&amp;&amp;C/C++</title>
+<title>node.js - 入门</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,128 +230,78 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">*nix&amp;&amp;C/C++</h1>
-<p>
-<a href="http://blog.sina.com.cn/s/blog_6af9566301013xp4.html">sigsuspend</a>
-</p>
+<h1 class="title">node.js - 入门</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3380c8e">1. What is node.js</a></li>
+<li><a href="#orga99d8c5">2. Installation</a></li>
+<li><a href="#org6fc16e5">3. 基本用法</a></li>
+</ul>
+</div>
+</div>
 
-<blockquote>
+<div id="outline-container-org3380c8e" class="outline-2">
+<h2 id="org3380c8e"><span class="section-number-2">1</span> What is node.js</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-66
-</p>
-</blockquote>
-
-<p>
-<a href="https://blog.csdn.net/wangzuxi/article/details/44814825">signal -c99 vs signal vs sigaction</a>
-</p>
-
-<div class="source">
-<p>
-/*
- 对除了SIGALRM之外的信号中断的系统调用，我们都希望其能自动重启动。
- 这是因为，对于SIGALRM，我们希望其用于计时系统调用，以对于超时的系统调用可以正常的中断。
-<b>*/
-Sigfunc signal(int signo, Sigfunc</b> func)
-{
-   struct sigaction act, oact;
-   act.sa_handler = func;
-   sigemptyset(&amp;act.sa_mask);
-   act.sa_flags = 0;
-   if( signo == SIGALRM ) {
-#ifdef SA_INTERRUPT
-      act.sa_flags |= SA_INTERRUPT;
-#endif
-    } 
-    else{
-      act.sa_flags |= SA_RESTART;
-    }
-    if( sigaction(signo, &amp;act, &amp;oact) &lt;0 )
-       return(SIG_ERR);
+想必不少人听说过如下说法："node.js是一款以Javascript为开发语言的后端框架" or "node.js是v8引擎的线下版本"。但实际上，这种说法是极端不准确的。
 </p>
 
 <p>
-    return(oact.sa_handler);
-}
+那么实际上而言，node.js到底是什么呢？一言以蔽之，Node是JavaScript语言的运行环境(Node.js is a JavaScript runtime environment.)
 </p>
 
+
+<div class="figure">
+<p><img src="./img/else/2.png" alt="2.png" />
+</p>
 </div>
 
 <p>
-<a href="https://blog.gtwang.org/programming/c-setjmp-longjmp-function-tutorial/">setjmp &amp; longjmp</a>
+在拥有Node之前，Js无非是一门用于调用浏览器(Browser)API的脚本语言。在Node为Js提供了大量的工具库后，使得Js具备了与系统互动的能力后，Js所能做的事情一下子便得到了拓宽。
 </p>
 
 <p>
-<a href="https://developer.ibm.com/tutorials/l-lpic1-108-2/">System logging</a>
-</p>
-<blockquote>
-<p>
-*nix系统的日志系统，
-</p>
-</blockquote>
-
-<p>
-<a href="http://c-faq.com/decl/spiral.anderson.html">The ''Clockwise/Spiral Rule''</a>
-</p>
-<blockquote>
-<p>
-ultimate 
-void (*signal(int, void (*fp)(int)))(int);
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html">systemd</a>
+通过Node.js开发的程序，此时可以作为一个独立的运行于你的机器上的应用。
 </p>
 
 <p>
-<a href="MIT6828.html">MIT6.828</a>
+Node.js 以及 浏览器中的Js皆运行于V8Js引擎。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga99d8c5" class="outline-2">
+<h2 id="orga99d8c5"><span class="section-number-2">2</span> Installation</h2>
+</div>
+<div id="outline-container-org6fc16e5" class="outline-2">
+<h2 id="org6fc16e5"><span class="section-number-2">3</span> 基本用法</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+安装完成node后，运行node.js程序，就是使用node命令读取JavaScript脚本。
 </p>
 
 <p>
-<a href="http://www.cplusplus.com/reference/map/map/">std::map</a>
+执行当前目录的demo.js脚本文件
 </p>
-<blockquote>
-<p>
-In a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. 
-</p>
+<div class="org-src-container">
+<pre class="src src-JavaScript">$ node demo
+$ node demo.js
+</pre>
+</div>
 
 <p>
-The types of key and mapped value may differ, and are grouped together in member type value_type, which is a pair type combining both:
+使用 -e 参数，可以执行代码字符串。
 </p>
-</blockquote>
-
-<p>
-<a href="https://segmentfault.com/a/1190000003063859#articleHeader15">Linux IO模式及 select、poll、epoll详解</a>
-</p>
-
-<p>
-<a href="http://www.cplusplus.com/reference/vector/vector/">vector C++ Reference</a>
-</p>
-<blockquote>
-<p>
-std::vector::at
-</p>
-
-<p>
-The function automatically checks whether n is within the bounds of valid elements in the vector, 
-</p>
-
-<p>
-throwing an out_of_range exception if it is not (i.e., if n is greater than, or equal to, its size). 
-</p>
-
-<p>
-This is in contrast with member operator[], that does not check against bounds.
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.cplusplus.com/reference/iterator/">C++ iterator</a>
-</p>
-
-<p>
-<a href="https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords#">Where and why do I have to put the “template” and “typename” keywords?</a>
-</p>
+<div class="org-src-container">
+<pre class="src src-JavaScript">$ node -e 'console.log("hello world")'
+hello world
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>

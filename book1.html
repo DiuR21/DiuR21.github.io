@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-18 Mon 09:46 -->
+<!-- 2019-02-18 Mon 09:34 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>*nix&amp;&amp;C/C++</title>
+<title>财务自由之路</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,132 +230,242 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">*nix&amp;&amp;C/C++</h1>
-<p>
-<a href="http://blog.sina.com.cn/s/blog_6af9566301013xp4.html">sigsuspend</a>
-</p>
-
-<blockquote>
-<p>
-66
-</p>
-</blockquote>
-
-<p>
-<a href="https://blog.csdn.net/wangzuxi/article/details/44814825">signal -c99 vs signal vs sigaction</a>
-</p>
-
-<div class="source">
-<p>
-/*
- 对除了SIGALRM之外的信号中断的系统调用，我们都希望其能自动重启动。
- 这是因为，对于SIGALRM，我们希望其用于计时系统调用，以对于超时的系统调用可以正常的中断。
-<b>*/
-Sigfunc signal(int signo, Sigfunc</b> func)
-{
-   struct sigaction act, oact;
-   act.sa_handler = func;
-   sigemptyset(&amp;act.sa_mask);
-   act.sa_flags = 0;
-   if( signo == SIGALRM ) {
-#ifdef SA_INTERRUPT
-      act.sa_flags |= SA_INTERRUPT;
-#endif
-    } 
-    else{
-      act.sa_flags |= SA_RESTART;
-    }
-    if( sigaction(signo, &amp;act, &amp;oact) &lt;0 )
-       return(SIG_ERR);
-</p>
-
-<p>
-    return(oact.sa_handler);
-}
-</p>
-
+<h1 class="title">财务自由之路</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org43c6c80">1. 生活的五个坐标：健康、财务、与人间的关系、情感生活和人生的意义</a>
+<ul>
+<li><a href="#org4e2ae69">1.1. 健康</a></li>
+<li><a href="#org98e0b24">1.2. 财务</a></li>
+<li><a href="#org6a46512">1.3. 人间关系</a></li>
+<li><a href="#orgb559cbb">1.4. 情感生活</a></li>
+<li><a href="#org9ecd6d6">1.5. 人生的意义</a></li>
+</ul>
+</li>
+<li><a href="#orgb022b8b">2. 1000万是个奇迹吗</a>
+<ul>
+<li><a href="#orgaa2bb66">2.1. 创造奇迹的5个层次</a>
+<ul>
+<li><a href="#org180621b">2.1.1. 1st: 对于现状的极度不满 -&gt; 对于现今自身所处的处境感到难堪</a></li>
+<li><a href="#org5f85f31">2.1.2. 2nd: 期望的结果没有出现 -&gt; 认识到目前的决策并不足以达成目标</a></li>
+<li><a href="#orgf377874">2.1.3. 3th: 具有影响力的朋友</a></li>
+<li><a href="#org7bd147e">2.1.4. 4th: 多加思考，打破思维定势，拒绝盲从</a></li>
+<li><a href="#org05e6108">2.1.5. 5th: 改变自身认知，带来巨大改变</a></li>
+</ul>
+</li>
+<li><a href="#orgc5ce5b0">2.2. 如何创造奇迹 &#x2013; 奇迹是与个人经验相矛盾的事实</a>
+<ul>
+<li><a href="#org70fde27">2.2.1. 不断学习和成长</a>
+<ul>
+<li><a href="#org89fa07c">2.2.1.1. 书籍、个人成功日记、讲座以及榜样</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org00d11c8">3. 为什么没有更多的人致富</a>
+<ul>
+<li><a href="#org6135b30">3.1. 你为什么是穷人</a>
+<ul>
+<li><a href="#orge7bb5b0">3.1.1. 穷人看钱如雾里看花</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 
+<div id="outline-container-org43c6c80" class="outline-2">
+<h2 id="org43c6c80"><span class="section-number-2">1</span> 生活的五个坐标：健康、财务、与人间的关系、情感生活和人生的意义</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org4e2ae69" class="outline-3">
+<h3 id="org4e2ae69"><span class="section-number-3">1.1</span> 健康</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-<a href="https://blog.gtwang.org/programming/c-setjmp-longjmp-function-tutorial/">setjmp &amp; longjmp</a>
+显然，健康是一切的根基。脱离了健康，一切皆为虚无。
 </p>
 
 <p>
-<a href="https://developer.ibm.com/tutorials/l-lpic1-108-2/">System logging</a>
+但实在而言，健康的剥夺的再获取其成本是极度高昂的。
 </p>
-<blockquote>
+</div>
+</div>
+<div id="outline-container-org98e0b24" class="outline-3">
+<h3 id="org98e0b24"><span class="section-number-3">1.2</span> 财务</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-*nix系统的日志系统，
+财务的重要性，一言以蔽之 -&gt; 思想及肉体的自由度的唯一决定因素。
 </p>
-</blockquote>
+</div>
+</div>
 
-<p>
-<a href="http://c-faq.com/decl/spiral.anderson.html">The ''Clockwise/Spiral Rule''</a>
-</p>
-<blockquote>
-<p>
-ultimate 
-void (*signal(int, void (*fp)(int)))(int);
-</p>
-</blockquote>
 
-<p>
-<a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html">systemd</a>
-</p>
+<div id="outline-container-org6a46512" class="outline-3">
+<h3 id="org6a46512"><span class="section-number-3">1.3</span> 人间关系</h3>
+</div>
 
-<p>
-<a href="MIT6828.html">MIT6.828</a>
-</p>
+<div id="outline-container-orgb559cbb" class="outline-3">
+<h3 id="orgb559cbb"><span class="section-number-3">1.4</span> 情感生活</h3>
+</div>
+<div id="outline-container-org9ecd6d6" class="outline-3">
+<h3 id="org9ecd6d6"><span class="section-number-3">1.5</span> 人生的意义</h3>
+</div>
+</div>
 
+<div id="outline-container-orgb022b8b" class="outline-2">
+<h2 id="orgb022b8b"><span class="section-number-2">2</span> 1000万是个奇迹吗</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgaa2bb66" class="outline-3">
+<h3 id="orgaa2bb66"><span class="section-number-3">2.1</span> 创造奇迹的5个层次</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org180621b" class="outline-4">
+<h4 id="org180621b"><span class="section-number-4">2.1.1</span> 1st: 对于现状的极度不满 -&gt; 对于现今自身所处的处境感到难堪</h4>
+</div>
+<div id="outline-container-org5f85f31" class="outline-4">
+<h4 id="org5f85f31"><span class="section-number-4">2.1.2</span> 2nd: 期望的结果没有出现 -&gt; 认识到目前的决策并不足以达成目标</h4>
+</div>
+<div id="outline-container-orgf377874" class="outline-4">
+<h4 id="orgf377874"><span class="section-number-4">2.1.3</span> 3th: 具有影响力的朋友</h4>
+</div>
+<div id="outline-container-org7bd147e" class="outline-4">
+<h4 id="org7bd147e"><span class="section-number-4">2.1.4</span> 4th: 多加思考，打破思维定势，拒绝盲从</h4>
+<div class="outline-text-4" id="text-2-1-4">
 <p>
-<a href="http://www.cplusplus.com/reference/map/map/">std::map</a>
-</p>
-<blockquote>
-<p>
-In a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. 
-</p>
-
-<p>
-The types of key and mapped value may differ, and are grouped together in member type value_type, which is a pair type combining both:
-</p>
-</blockquote>
-
-<p>
-<a href="https://segmentfault.com/a/1190000003063859#articleHeader15">Linux IO模式及 select、poll、epoll详解</a>
-</p>
-
-<p>
-<a href="http://www.cplusplus.com/reference/vector/vector/">vector C++ Reference</a>
-</p>
-<blockquote>
-<p>
-std::vector::at
-</p>
-
-<p>
-The function automatically checks whether n is within the bounds of valid elements in the vector, 
+许多人不加思考就把世界想像成丛林，认为需要通过尖利的爪牙才能生存。
 </p>
 
 <p>
-throwing an out_of_range exception if it is not (i.e., if n is greater than, or equal to, its size). 
+而至于为何许多人会养成这种思维方式，或许因为人有倾向于放大自己的不幸以获取更大的安慰。
 </p>
 
 <p>
-This is in contrast with member operator[], that does not check against bounds.
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.cplusplus.com/reference/iterator/">C++ iterator</a>
+而又因为这种倾向本身具有极优良的潜藏性，因而这种倾向的获得是普遍的。
 </p>
 
 <p>
-<a href="https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords#">Where and why do I have to put the “template” and “typename” keywords?</a>
+如果我们使用非黑即白的眼光来看待世界，那么肯定也有其他的“眼睛”使我们的生活更加幸福。那些“眼睛”让我们看到机会，
 </p>
+
+<p>
+而不是错误和陷阱。
+</p>
+</div>
+</div>
+<div id="outline-container-org05e6108" class="outline-4">
+<h4 id="org05e6108"><span class="section-number-4">2.1.5</span> 5th: 改变自身认知，带来巨大改变</h4>
+<div class="outline-text-4" id="text-2-1-5">
+<p>
+我们的自我认识实际上就是对自我实现的预言
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc5ce5b0" class="outline-3">
+<h3 id="orgc5ce5b0"><span class="section-number-3">2.2</span> 如何创造奇迹 &#x2013; 奇迹是与个人经验相矛盾的事实</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org70fde27" class="outline-4">
+<h4 id="org70fde27"><span class="section-number-4">2.2.1</span> 不断学习和成长</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div>
+<div id="outline-container-org89fa07c" class="outline-5">
+<h5 id="org89fa07c"><span class="section-number-5">2.2.1.1</span> 书籍、个人成功日记、讲座以及榜样</h5>
+<div class="outline-text-5" id="text-2-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgea88335"></a>书籍<br />
+<div class="outline-text-6" id="text-2-2-1-1-1">
+<p>
+低成本的继承长时间跨度的经验的最佳手段
+</p>
+</div>
+</li>
+<li><a id="orge389daa"></a>个人成功日记<br />
+<div class="outline-text-6" id="text-2-2-1-1-2">
+<p>
+于我个人，我的个人分析，是否需要日记呢？
+</p>
+
+<p>
+我个人倾向于不断回味痛苦。的确，思维上的自虐倾向。东亚人通病？
+</p>
+
+<p>
+于是是否是必要的呢？创意日记、关系日记、认识日记、其他日记。日后再说。
+</p>
+</div>
+</li>
+<li><a id="org0c5db5d"></a>讲座<br />
+<div class="outline-text-6" id="text-2-2-1-1-3">
+<p>
+讲座某程度类似于书籍，只是在讲座中，经多感官刺激，学习效果也许会更好。
+</p>
+
+<p>
+同时，讲座将我们从日常事务中解脱出来，应而使得我们可以远距离的观察自己。
+</p>
+</div>
+</li>
+<li><a id="orgda89fe9"></a>榜样<br />
+<div class="outline-text-6" id="text-2-2-1-1-4">
+<p>
+几乎所有的知识和技能都是通过模仿学习的。环境对我们的影响远超于我们的认知。
+</p>
+
+<p>
+因而，树立一个良好的榜样，其影响是远超书籍和一切课程的。
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org00d11c8" class="outline-2">
+<h2 id="org00d11c8"><span class="section-number-2">3</span> 为什么没有更多的人致富</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+在德国从22岁开始，在65岁成为百万富翁的概率是0.2%。
+</p>
+
+<p>
+因为与成功学相比较，保持一定的温饱的生活并不讨人厌。且后者显然是更加舒适且轻松的。
+</p>
+</div>
+<div id="outline-container-org6135b30" class="outline-3">
+<h3 id="org6135b30"><span class="section-number-3">3.1</span> 你为什么是穷人</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orge7bb5b0" class="outline-4">
+<h4 id="orge7bb5b0"><span class="section-number-4">3.1.1</span> 穷人看钱如雾里看花</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+财富的定义应当是准确的，我们必须用明确的数字来表达财富对于个人的意义。
+</p>
+
+<p>
+确定的金钱以及实现这个目标的时间: 在xxxx年我将拥有xxxx。
+</p>
+
+<p>
+定义财富的三个要求：明确的数目，记录总数，并可以形象地加以想象。
+</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2019-02-18 Mon 09:46</p>
+<p class="date">Created: 2019-02-18 Mon 09:34</p>
 <p class="validation"></p>
 </div>
 </body>

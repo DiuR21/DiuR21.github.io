@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-02-18 Mon 09:46 -->
+<!-- 2019-02-18 Mon 09:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>*nix&amp;&amp;C/C++</title>
+<title>electron-入门</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dctrl" />
 <style type="text/css">
@@ -230,132 +230,29 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">*nix&amp;&amp;C/C++</h1>
-<p>
-<a href="http://blog.sina.com.cn/s/blog_6af9566301013xp4.html">sigsuspend</a>
-</p>
-
-<blockquote>
-<p>
-66
-</p>
-</blockquote>
-
-<p>
-<a href="https://blog.csdn.net/wangzuxi/article/details/44814825">signal -c99 vs signal vs sigaction</a>
-</p>
-
-<div class="source">
-<p>
-/*
- 对除了SIGALRM之外的信号中断的系统调用，我们都希望其能自动重启动。
- 这是因为，对于SIGALRM，我们希望其用于计时系统调用，以对于超时的系统调用可以正常的中断。
-<b>*/
-Sigfunc signal(int signo, Sigfunc</b> func)
-{
-   struct sigaction act, oact;
-   act.sa_handler = func;
-   sigemptyset(&amp;act.sa_mask);
-   act.sa_flags = 0;
-   if( signo == SIGALRM ) {
-#ifdef SA_INTERRUPT
-      act.sa_flags |= SA_INTERRUPT;
-#endif
-    } 
-    else{
-      act.sa_flags |= SA_RESTART;
-    }
-    if( sigaction(signo, &amp;act, &amp;oact) &lt;0 )
-       return(SIG_ERR);
-</p>
-
-<p>
-    return(oact.sa_handler);
-}
-</p>
-
+<h1 class="title">electron-入门</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org98911b9">1. electron是什么</a></li>
+</ul>
+</div>
 </div>
 
-<p>
-<a href="https://blog.gtwang.org/programming/c-setjmp-longjmp-function-tutorial/">setjmp &amp; longjmp</a>
-</p>
 
+<div id="outline-container-org98911b9" class="outline-2">
+<h2 id="org98911b9"><span class="section-number-2">1</span> electron是什么</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-<a href="https://developer.ibm.com/tutorials/l-lpic1-108-2/">System logging</a>
+对于electron具体是什么的理解，需先对node.js有一个
 </p>
-<blockquote>
-<p>
-*nix系统的日志系统，
-</p>
-</blockquote>
-
-<p>
-<a href="http://c-faq.com/decl/spiral.anderson.html">The ''Clockwise/Spiral Rule''</a>
-</p>
-<blockquote>
-<p>
-ultimate 
-void (*signal(int, void (*fp)(int)))(int);
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html">systemd</a>
-</p>
-
-<p>
-<a href="MIT6828.html">MIT6.828</a>
-</p>
-
-<p>
-<a href="http://www.cplusplus.com/reference/map/map/">std::map</a>
-</p>
-<blockquote>
-<p>
-In a map, the key values are generally used to sort and uniquely identify the elements, while the mapped values store the content associated to this key. 
-</p>
-
-<p>
-The types of key and mapped value may differ, and are grouped together in member type value_type, which is a pair type combining both:
-</p>
-</blockquote>
-
-<p>
-<a href="https://segmentfault.com/a/1190000003063859#articleHeader15">Linux IO模式及 select、poll、epoll详解</a>
-</p>
-
-<p>
-<a href="http://www.cplusplus.com/reference/vector/vector/">vector C++ Reference</a>
-</p>
-<blockquote>
-<p>
-std::vector::at
-</p>
-
-<p>
-The function automatically checks whether n is within the bounds of valid elements in the vector, 
-</p>
-
-<p>
-throwing an out_of_range exception if it is not (i.e., if n is greater than, or equal to, its size). 
-</p>
-
-<p>
-This is in contrast with member operator[], that does not check against bounds.
-</p>
-</blockquote>
-
-<p>
-<a href="http://www.cplusplus.com/reference/iterator/">C++ iterator</a>
-</p>
-
-<p>
-<a href="https://stackoverflow.com/questions/610245/where-and-why-do-i-have-to-put-the-template-and-typename-keywords#">Where and why do I have to put the “template” and “typename” keywords?</a>
-</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: dctrl</p>
-<p class="date">Created: 2019-02-18 Mon 09:46</p>
+<p class="date">Created: 2019-02-18 Mon 09:39</p>
 <p class="validation"></p>
 </div>
 </body>

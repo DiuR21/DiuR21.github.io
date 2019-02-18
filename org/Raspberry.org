@@ -1,0 +1,23 @@
+#+TITLE: Raspberry & Cam & RTSP Server
+
+#+begin_quote
+OS: Raspbian 4.14
+Raspberry Pi 3 Mode B+
+Image Sensor: OV5647 1080p 30fps; 720p 60fps 500MP
+#+end_quote
+
+* 基本目的
+  实现在树莓派3B+上，通过摄像头获取图像，并经 *实时流传输协议(RTSP,Real Time Streaming Protocol)* 实现多媒体数据的传输。
+
+* 遇到的问题的归纳    
+  市面上大多摄像头
+** 摄像头种类及兼容问题
+   
+** 方案的性能问题
+
+* 选用方案：
+
+* 最终结构
+  经树莓派获取图像后，于PC端使用OpenCV获取视频流。
+
+  如何获取性能最优？ buffer th1、sol th2

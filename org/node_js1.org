@@ -1,0 +1,30 @@
+#+TITLE: node.js - 入门
+
+* What is node.js
+  想必不少人听说过如下说法："node.js是一款以Javascript为开发语言的后端框架" or "node.js是v8引擎的线下版本"。但实际上，这种说法是极端不准确的。
+
+  那么实际上而言，node.js到底是什么呢？一言以蔽之，Node是JavaScript语言的运行环境(Node.js is a JavaScript runtime environment.)
+
+  [[file:./img/else/2.png]]
+
+  在拥有Node之前，Js无非是一门用于调用浏览器(Browser)API的脚本语言。在Node为Js提供了大量的工具库后，使得Js具备了与系统互动的能力后，Js所能做的事情一下子便得到了拓宽。
+
+  通过Node.js开发的程序，此时可以作为一个独立的运行于你的机器上的应用。
+
+  Node.js 以及 浏览器中的Js皆运行于V8Js引擎。
+
+* Installation
+* 基本用法
+  安装完成node后，运行node.js程序，就是使用node命令读取JavaScript脚本。
+
+  执行当前目录的demo.js脚本文件
+  #+begin_src JavaScript
+  $ node demo
+  $ node demo.js
+  #+end_src
+
+  使用 -e 参数，可以执行代码字符串。
+  #+begin_src JavaScript
+  $ node -e 'console.log("hello world")'
+  hello world
+  #+end_src

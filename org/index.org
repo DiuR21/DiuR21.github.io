@@ -3,6 +3,8 @@
 
 * [[file:cols.org][Cols]]
 * [[file:Emacs.org][Emacs]]
+* [[file:projs.org][projs]]
+* [[file:node_js.org][node.js]]
 * [[file:算法 Algorithm.org][Algorithm]]
 * [[file:machine learning.org][Machine Learning]]
 * [[file:Python.org][Python]]

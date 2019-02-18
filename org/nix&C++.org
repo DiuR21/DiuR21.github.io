@@ -1,5 +1,39 @@
 #+TITLE: *nix&&C/C++
 
+[[http://blog.sina.com.cn/s/blog_6af9566301013xp4.html][sigsuspend]]
+
+#+begin_quote
+66
+#+end_quote
+
+[[https://blog.csdn.net/wangzuxi/article/details/44814825][signal -c99 vs signal vs sigaction]]
+
+#+begin_source c
+/*
+ 对除了SIGALRM之外的信号中断的系统调用，我们都希望其能自动重启动。
+ 这是因为，对于SIGALRM，我们希望其用于计时系统调用，以对于超时的系统调用可以正常的中断。
+**/
+Sigfunc signal(int signo, Sigfunc* func)
+{
+   struct sigaction act, oact;
+   act.sa_handler = func;
+   sigemptyset(&act.sa_mask);
+   act.sa_flags = 0;
+   if( signo == SIGALRM ) {
+#ifdef SA_INTERRUPT
+      act.sa_flags |= SA_INTERRUPT;
+#endif
+    } 
+    else{
+      act.sa_flags |= SA_RESTART;
+    }
+    if( sigaction(signo, &act, &oact) <0 )
+       return(SIG_ERR);
+
+    return(oact.sa_handler);
+}
+#+end_source
+
 [[https://blog.gtwang.org/programming/c-setjmp-longjmp-function-tutorial/][setjmp & longjmp]]
 
 [[https://developer.ibm.com/tutorials/l-lpic1-108-2/][System logging]]
